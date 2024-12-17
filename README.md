@@ -1,93 +1,85 @@
 # UNCO 888
 
+# Deploy
 
+# First time setup
 
-## Getting started
+1. Clone the project
+2. Install packages: `npm run i`
+3. Run `npm run build`
+4. Run `npm run start`
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### Regular Deploy
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+1. Run `npm run build`
+2. Run `npm run start`
 
-## Add your files
+## Stack
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+- [TS](https://www.typescriptlang.org/)
+- [Next](https://nextjs.org/) ([App router](https://nextjs.org/docs/app)) static export
+- SCSS
+- Eslint + GIT hooks
+- i18n
+- husky
+- eslint
 
-```
-cd existing_repo
-git remote add origin https://gitlab.unco.market/landings/unco-888.git
-git branch -M main
-git push -uf origin main
-```
+### Project Workflow
 
-## Integrate with your tools
+1. **Decompose Tasks into Subtasks**
+   - Break down each task into manageable subtasks to ensure clarity and focus.
+2. **Task Distribution**
 
-- [ ] [Set up project integrations](https://gitlab.unco.market/landings/unco-888/-/settings/integrations)
+   - Assign subtasks to team members based on their expertise and availability.
 
-## Collaborate with your team
+3. **Communication and Collaboration**
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+   - Maintain open lines of communication. Regularly discuss progress, ask questions, and inform the team about any problems or successes.
 
-## Test and Deploy
+4. **Completion of a Task**
+   1. **Synchronize with Main Branch**
+      - Before considering a task complete, pull the latest changes from the develop branch (`develop`) into your task branch to ensure it is up to date.
+   2. **Local Merge**
+      - Perform a local merge to integrate the latest changes and resolve any conflicts.
+   3. **Functionality Check**
+      - Verify that the functionality of your task works as expected. Perform thorough testing.
+   4. **Create a Merge Request (MR)**
+      - Create a Merge Request (MR) in GitLab, ensuring that it does not have any conflicts with the main branch.
+   5. **MR Description**
+      - Fill out the MR template, detailing the content and purpose of the task in the appropriate section.
+   6. **Code Review**
+      - Assign 1-2 team members to review the MR. Code should not be merged without their approval, except in emergencies, which must be discussed and approved in the team chat.
+   7. **Merge Process**
+      - Upon approval, merge the feature branch into the `develop` branch using the "Squash and merge" option to maintain a clean commit history.
+   8. **Cleanup**
+      - Delete the feature branch after the merge to keep the repository tidy and organized.
 
-Use the built-in continuous integration in GitLab.
+## Project structure
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+### GIT:
 
-***
+- The **main** branch - for deploy
+- The **develop** branch is a working branch, from which we create branches to perform tasks
+- Feature branches are called like **feature/task-name**
+- Other branches in the same style - **bugfix/issue-name** (doc, refactor etc.)
 
-# Editing this README
+Commit names - follow [commit convention](https://www.conventionalcommits.org/en/v1.0.0/) e.g. `feat: add submit button`
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### Structure
 
-## Suggestions for a good README
+Stick to [one of the recommendations from Next](https://nextjs.org/docs/app/building-your-application/routing/colocation) - we use the app folder only for pages, layout and routing (page styles, etc.). etc. are included there too).
+We place components and other logical entities in scr in the appropriate directories (for example components, etc.)
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+- Next suggests writing file names in **kebab-case**, with a small letter
+- Component file names are capitalized in **UpperCamelCase**
+- Hook file names are **lowerCamelCase** (useSomteehing.tsx)
 
-## Name
-Choose a self-explaining name for your project.
+In the component folder, use index.ts, in which we do the re-export.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+### TS
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+- class / interface / type / enum / decorator / type parameter - **UpperCamelCase**
+- variable / parameter / function / method / property / module aliases - **lowerCamelCase**
+- global constants, including enum element names - **CONSTANT_CASE**
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Describe props types directly in the component file, general types are placed in the constants directory.
