@@ -7,6 +7,11 @@
   src: url('/fonts/Montserrat-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'Jura';
+  src: url('/fonts/Jura-Regular.ttf');
+}
+
 $bg-dark-gradient: linear-gradient(174.62deg, #13071e 27.24%, #1e083b 95.87%);
 $bg-primary-gradient: linear-gradient(146.2deg, #131112 18.13%, #210644 69.95%);
 $button-gradient: linear-gradient(
@@ -33,3 +38,4 @@ $cold-yellow: #fff5cf;
 
 $font-michroma: 'Michroma', 'Montserrat', Arial, Helvetica, sans-serif;
 $font-montserrat: 'Montserrat', Arial, Helvetica, sans-serif;
+$font-jura: 'Jura', Arial, Helvetica, sans-serif;
