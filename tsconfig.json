@@ -21,7 +21,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/constants/*": ["./src/constants/*"],
-      "@/components/*": ["./src/components/*"]
+      "@/components/*": ["./src/components/*"],
+      "@/functions/": ["./src/functions/*"]
     },
     "baseUrl": ".",
     "noUnusedLocals": true,

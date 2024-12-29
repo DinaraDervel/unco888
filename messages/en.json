@@ -1,5 +1,14 @@
 {
   "header": {
-    "title": "Header"
+    "links": {
+      "link_1": "Buy/Sell",
+      "link_2": "UFF",
+      "link_3": "Pitch-deck",
+      "link_4": "News",
+      "link_5": "Q&A",
+      "link_6": "Roadmap",
+      "link_7": "UNCO Eco-System"
+    },
+    "button": "OUR NEWS"
   }
 }
