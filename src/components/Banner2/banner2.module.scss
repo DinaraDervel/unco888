@@ -2,7 +2,7 @@
 
 .container {
     max-width: 1920px;
-    background: var(--primery-linear-background, linear-gradient(146deg, #131112 18.13%, #210644 69.95%));
+    background: var.$bg-primary-gradient;
     margin: 0 auto;
     padding: 70px 159px 130px 159px;
     display: flex;
@@ -48,6 +48,7 @@
     gap: 18px;
     border-radius: 150px 12px;
     border: 2px solid var.$gold;
+    font-family: var.$font-montserrat;
     ul {
         padding-left: 20px;
     }
@@ -58,7 +59,6 @@
 
 .subtitle {
     color: var.$white;
-    font-family: var.$font-montserrat;
     font-size: clamp(16px, 1.25vw, 24px);
     font-weight: 600;
     line-height: 140%;
@@ -66,7 +66,6 @@
 
 .text {
     color: var.$gray;
-    font-family: var.$font-montserrat;
     font-size: clamp(16px, 1.042vw, 20px);
     font-weight: 500;
     line-height: 140%;
@@ -74,7 +73,6 @@
 
 .caption {
     color: var.$gray;
-    font-family: var.$font-montserrat;
     font-size: 14px;
     font-weight: 400;
     line-height: 140%;
