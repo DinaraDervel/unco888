@@ -3,6 +3,8 @@
 .banner3 {
   background: var.$bg-primary-gradient;
   padding: 170px;
+  display: flex;
+  flex-direction: column;
 
   h1 {
     font-family: var.$font-michroma;
@@ -11,6 +13,12 @@
     text-align: center;
     color: var.$gray;
     text-transform: uppercase;
+  }
+
+  a {
+    max-width: 380px;
+    height: 68px;
+    align-self: center;
   }
 }
 

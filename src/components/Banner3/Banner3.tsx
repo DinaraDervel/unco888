@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import styles from './banner3.module.scss';
+import Button from '../Button/Button';
 
 function Banner3() {
   const t = useTranslations('banner3');
@@ -27,6 +28,7 @@ function Banner3() {
           <Image src='/images/Banner3/icon4.png' alt='icon4' width={84} height={84} />
         </div>
       </div>
+      <Button text={t('button')} link='/' />
     </div>
   );
 }
