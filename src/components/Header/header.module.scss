@@ -1,10 +1,14 @@
 @use '../../styles/_var' as var;
 
 .header {
-  background-color: #261932;
+  // background-color: #261932;
+  position: sticky;
+  z-index: 1;
   padding: 19.45px 135px;
   display: flex;
   justify-content: space-between;
+  height: 106px;
+  filter: drop-shadow(0px 15px 100px rgba(23, 1, 61, 0.4));
 
   .wrapper {
     display: flex;
