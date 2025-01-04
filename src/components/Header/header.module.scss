@@ -1,10 +1,13 @@
 @use '../../styles/_var' as var;
 
 .header {
-  background-color: #261932;
-  padding: 19.45px 135px;
+  position: sticky;
+  z-index: 1;
+  padding: 19.45px clamp(4.813rem, 12.083vw - 6.063rem, 8.438rem);
   display: flex;
   justify-content: space-between;
+  height: 106px;
+  filter: drop-shadow(0px 15px 100px rgba(23, 1, 61, 0.4));
 
   .wrapper {
     display: flex;
@@ -109,7 +112,7 @@
   font-family: var.$font-montserrat;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: clamp(1rem, 0.417vw + 0.625rem, 1.125rem);
   line-height: 140%;
   color: var.$gray;
   cursor: pointer;
@@ -142,23 +145,10 @@
 }
 
 .news_button {
-  width: 252px;
   padding: 20px;
-  background: var.$button-gradient;
-  font-family: 'Jura';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 25px;
-  line-height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 128px;
-  border-bottom-left-radius: 128px;
-  border-bottom-right-radius: 12px;
-  border: 1px;
+  & > a {
+    width: 252px;
+    height: clamp(3.375rem, 2.917vw + 0.75rem, 4.25rem);
+    padding: 20.5px 16px;
+  }
 }
