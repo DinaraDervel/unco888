@@ -16,7 +16,9 @@ function News() {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>{t('title')}</h2>
+      <h2 className={styles.title}>
+        <span>UNKO</span> {t('title')}
+      </h2>
       <div className={styles.cards}>
         <div className={styles.card}>
           <div className={styles.card__badges}>
