@@ -29,5 +29,9 @@
       "text_2": "Important: When exchanging for comp any shares, KYC is a mandatory process.*"
     },
     "button_text": "Buy UNCO888"
+  },
+  "feedback": {
+    "subtitle": "Feedback",
+    "button_text": "Leave a review"
   }
 }
