@@ -1,18 +1,12 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { cn } from '@/functions/cn';
+import { GetSocialData } from '@/constants/GetSocialsData';
 import styles from './news.module.scss';
 
 function News() {
   const t = useTranslations('news');
-  const socials = [
-    'https://www.facebook.com/share/g/D2K3RZ7RDtemx9Tq',
-    'https://www.instagram.com/uff_eu',
-    'https://t.me/UNCOFOODFUTURES_eng',
-    'https://www.linkedin.com/company/unco-club',
-    'https://twitter.com/UncoClub',
-    'https://www.youtube.com/@UNCOFoodFutures',
-  ];
+  const socials = GetSocialData();
 
   return (
     <div className={styles.container}>
