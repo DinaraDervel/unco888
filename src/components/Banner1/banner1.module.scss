@@ -10,7 +10,7 @@
   content: '';
   position: absolute;
   top: -109px;
-  background: url('/images/Banner1/banner1.jpg');
+  background: url('/images/Banner1/background.jpg');
   z-index: -1;
   height: 1142px;
   width: 100%;
@@ -56,9 +56,7 @@
   padding: 48px 120px 42px 82px;
   width: clamp(37.5rem, 37.578vw + 3.656rem, 48.75rem);
   border: 2px solid transparent;
-  background:
-    var.$block-gradient padding-box,
-    var.$line-gradient border-box;
+
   transition: transform 0.5s ease-in-out;
   &:hover {
     transition: 0.3 all;
@@ -70,20 +68,30 @@
 }
 
 .card_left {
-  // background: var.$block-gradient;
-  border-top-left-radius: 150px;
-  border-top-right-radius: 12px;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 150px;
+  border-radius: 150px 12px;
+  background:
+    var.$block-gradient padding-box,
+    linear-gradient(
+        0deg,
+        rgba(25, 5, 48, 1) 56%,
+        rgba(249, 214, 145, 1) 86%,
+        rgba(210, 156, 104, 1) 100%
+      )
+      border-box;
 }
 
 .card_right {
-  background: var.$button-gradient;
+  background:
+    var.$button-gradient padding-box,
+    linear-gradient(
+        16deg,
+        rgba(251, 241, 180, 1) 56%,
+        rgba(249, 214, 145, 1) 86%,
+        rgba(210, 156, 104, 1) 100%
+      )
+      border-box;
   color: var.$black;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 150px;
-  border-bottom-left-radius: 150px;
-  border-bottom-right-radius: 12px;
+  border-radius: 12px 150px;
 }
 .card_title {
   font-weight: 400;
@@ -101,7 +109,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: 0.3 all;
 }
 .card_link {
   text-decoration: none;
@@ -109,14 +116,16 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
-  &:hover {
-    transition: 0.3 all;
+  transition: all 0.4s ease;
+  &:hover,
+  &:active {
     color: var.$purple;
     text-decoration: underline;
   }
 }
 
 .card_button {
+  margin-top: 6px;
   border: none;
   background: transparent;
 }

@@ -7,6 +7,7 @@ import LanguageButton from './LanguageButton';
 import LanguageMenu from './LanguageMenu';
 import { createRef, Ref, useRef, useState } from 'react';
 import { languagesList } from '@/constants/GetHeaderData';
+import Button from '../Button/Button';
 
 function Header() {
   const t = useTranslations('header');
@@ -62,7 +63,9 @@ function Header() {
           <li className={styles.link}>Roadmap</li>
           <li className={styles.link}>UNCO Eco-System</li>
         </ul>
-        <button className={styles.news_button}>{t('button')}</button>
+        <div className={styles.news_button}>
+          <Button text={t('button')} link='' font='clamp(1.25rem, 1.042vw + 0.313rem, 1.563rem' />
+        </div>
       </div>
     </header>
   );
