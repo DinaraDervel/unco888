@@ -1,12 +1,37 @@
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
-import { cn } from '@/functions/cn';
-import { GetSocialData } from '@/constants/GetSocialsData';
 import styles from './news.module.scss';
+import NewsCard from '../NewsCard/NewsCard';
 
 function News() {
   const t = useTranslations('news');
-  const socials = GetSocialData();
+
+  const newsData = [
+    {
+      title: 'Velitsodales egetonec.',
+      text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.',
+      caption: 'LOUIS NELSON / JULY 10, 2022',
+    },
+    {
+      title: 'Velitsodales egetonec.',
+      text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.',
+      caption: 'LOUIS NELSON / JULY 10, 2022',
+    },
+    {
+      title: 'Velitsodales egetonec.',
+      text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.',
+      caption: 'LOUIS NELSON / JULY 10, 2022',
+    },
+    {
+      title: 'Velitsodales egetonec.',
+      text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.',
+      caption: 'LOUIS NELSON / JULY 10, 2022',
+    },
+    {
+      title: 'Velitsodales egetonec.',
+      text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.',
+      caption: 'LOUIS NELSON / JULY 10, 2022',
+    },
+  ];
 
   return (
     <div className={styles.container}>
@@ -14,140 +39,9 @@ function News() {
         <span>UNKO</span> {t('title')}
       </h2>
       <div className={styles.cards}>
-        <div className={styles.card}>
-          <div className={styles.card__badges}>
-            <div className={styles.card__badge}>SPACE</div>
-            <div className={styles.card__badge}>SPACE</div>
-            <div className={styles.card__badge}>SPACE</div>
-          </div>
-          <h3 className={styles.card__title}>Velitsodales egetonec.</h3>
-          <div className={styles.card__image}></div>
-          <p className={styles.card__text}>
-            Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare
-            accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.
-          </p>
-          <div className={styles.card__bottom}>
-            <p className={styles.card__caption}>LOUIS NELSON / JULY 10, 2022</p>
-            <div className={styles.socials__wrapper}>
-              {socials.map((item, i) => (
-                <Link
-                  key={`${i}_${item}`}
-                  className={cn(styles.socials__link, styles[`socials__icon_${i + 1}`])}
-                  href={item}
-                  target='_blank'
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.card}>
-          <div className={styles.card__badges}>
-            <div className={styles.card__badge}>SPACE</div>
-            <div className={styles.card__badge}>SPACE</div>
-            <div className={styles.card__badge}>SPACE</div>
-          </div>
-          <h3 className={styles.card__title}>Velitsodales egetonec.</h3>
-          <div className={styles.card__image}></div>
-          <p className={styles.card__text}>
-            Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare
-            accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.
-          </p>
-          <div className={styles.card__bottom}>
-            <p className={styles.card__caption}>LOUIS NELSON / JULY 10, 2022</p>
-            <div className={styles.socials__wrapper}>
-              {socials.map((item, i) => (
-                <Link
-                  key={`${i}_${item}`}
-                  className={cn(styles.socials__link, styles[`socials__icon_${i + 1}`])}
-                  href={item}
-                  target='_blank'
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.card}>
-          <div className={styles.card__badges}>
-            <div className={styles.card__badge}>SPACE</div>
-            <div className={styles.card__badge}>SPACE</div>
-            <div className={styles.card__badge}>SPACE</div>
-          </div>
-          <h3 className={styles.card__title}>Velitsodales egetonec.</h3>
-          <div className={styles.card__image}></div>
-          <p className={styles.card__text}>
-            Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare
-            accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.
-          </p>
-          <div className={styles.card__bottom}>
-            <p className={styles.card__caption}>LOUIS NELSON / JULY 10, 2022</p>
-            <div className={styles.socials__wrapper}>
-              {socials.map((item, i) => (
-                <Link
-                  key={`${i}_${item}`}
-                  className={cn(styles.socials__link, styles[`socials__icon_${i + 1}`])}
-                  href={item}
-                  target='_blank'
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.card}>
-          <div className={styles.card__badges}>
-            <div className={styles.card__badge}>SPACE</div>
-            <div className={styles.card__badge}>SPACE</div>
-            <div className={styles.card__badge}>SPACE</div>
-          </div>
-          <h3 className={styles.card__title}>Velitsodales egetonec.</h3>
-          <div className={styles.card__image}></div>
-          <p className={styles.card__text}>
-            Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare
-            accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.
-          </p>
-          <div className={styles.card__bottom}>
-            <p className={styles.card__caption}>LOUIS NELSON / JULY 10, 2022</p>
-            <div className={styles.socials__wrapper}>
-              {socials.map((item, i) => (
-                <Link
-                  key={`${i}_${item}`}
-                  className={cn(styles.socials__link, styles[`socials__icon_${i + 1}`])}
-                  href={item}
-                  target='_blank'
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.card}>
-          <div className={styles.card__badges}>
-            <div className={styles.card__badge}>SPACE</div>
-            <div className={styles.card__badge}>SPACE</div>
-            <div className={styles.card__badge}>SPACE</div>
-          </div>
-          <h3 className={styles.card__title}>Velitsodales egetonec.</h3>
-          <div className={styles.card__image}></div>
-          <p className={styles.card__text}>
-            Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare
-            accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.
-          </p>
-          <div className={styles.card__bottom}>
-            <p className={styles.card__caption}>LOUIS NELSON / JULY 10, 2022</p>
-            <div className={styles.socials__wrapper}>
-              {socials.map((item, i) => (
-                <Link
-                  key={`${i}_${item}`}
-                  className={cn(styles.socials__link, styles[`socials__icon_${i + 1}`])}
-                  href={item}
-                  target='_blank'
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+        {newsData.map((news, index) => (
+          <NewsCard key={index} title={news.title} text={news.text} caption={news.caption} />
+        ))}
       </div>
     </div>
   );
