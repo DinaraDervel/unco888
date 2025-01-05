@@ -1,8 +1,7 @@
-'use client';
-
-import styles from './banner1.module.scss';
-import { useState } from 'react';
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
+import styles from "./banner1.module.scss";
+import { useState } from "react";
 
 type Props = {
   onClick: () => void;

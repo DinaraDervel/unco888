@@ -1,7 +1,7 @@
-import Banner1 from '@/components/Banner1/Banner1';
-import styles from './page.module.scss';
-import Header from '@/components/Header/Header';
-import Banner2 from '@/components/Banner2/Banner2';
+import Banner1 from "@/components/Banner1/Banner1";
+import Banner2 from "@/components/Banner2/Banner2";
+import Header from "@/components/Header/Header";
+import styles from "./page.module.scss";
 
 export default async function Home() {
   return (
