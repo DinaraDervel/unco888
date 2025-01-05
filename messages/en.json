@@ -29,5 +29,21 @@
       "text_2": "Important: When exchanging for comp any shares, KYC is a mandatory process.*"
     },
     "button_text": "Buy UNCO888"
+  },
+
+  "c-level": {
+    "title": "FOR c-level",
+    "subtitle": "Innovation in access to real assets",
+    "cards": {
+      "card_1": "Our model combines sustainability, transparency and technological trends, providing you with new revenue streams and opportunities",
+      "card_2": "Place on the Board: advise and management ",
+      "card_3": "Share of profits and share of  UNCO",
+      "card_4": "Collaboration and advise: increase your investment",
+      "card_5": "Invest in where you are professional"
+    },
+    "buttons": {
+      "button_1": "buy NFT “UNCO888”",
+      "button_2": "Download pitch"
+    }
   }
 }
