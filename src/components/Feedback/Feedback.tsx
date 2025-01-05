@@ -60,6 +60,7 @@ function Feedback() {
     <div className={styles.container}>
       <div>
         <h2 className={styles.title}>UNCO</h2>
+        <hr className={styles.line}></hr>
         <h3 className={styles.subtitle}>{t('subtitle')}</h3>
       </div>
       <div className={styles.cards__wrapper}>

@@ -21,6 +21,19 @@
     text-transform: uppercase;
 }
 
+.line {
+    max-width: 1053px;
+    margin: 0 auto;
+    border: none;
+    height: 2px;
+    background-image: linear-gradient(
+      to right,
+      rgba(246, 243, 243, 0),
+      rgb(239, 212, 142, 0.75),
+      rgba(247, 240, 240, 0)
+    );
+  }
+
 .subtitle {
     padding: 10px 0;
     color: var.$gray;
@@ -30,9 +43,6 @@
     font-weight: 400;
     line-height: 100%;
     letter-spacing: 4.6px;
-    border-top: 2px solid var.$gold;
-    max-width: 1053px;
-    margin: 0 auto;
 }
 
 .cards {
