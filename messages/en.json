@@ -30,6 +30,9 @@
     },
     "button_text": "Buy UNCO888"
   },
+  "news": {
+    "title": "NEWS"
+  },
   "contactForm": {
     "placeholderName": "Enter your name",
     "placeholderMessage": "Enter your message",
