@@ -1,7 +1,7 @@
-import { useTranslations } from 'next-intl';
-import Image from 'next/image';
-import styles from './banner2.module.scss';
-import Button from '../Button/Button';
+import Button from "../Button/Button";
+import Image from "next/image";
+import styles from "./banner2.module.scss";
+import { useTranslations } from "next-intl";
 
 function Banner2() {
   const t = useTranslations('banner2');
@@ -41,7 +41,7 @@ function Banner2() {
         </div>
       </div>
       <div className={styles.button}>
-        <Button text={t('button_text')} link='' font='clamp(16px, 1.302vw, 25px)' />
+        <Button text={t('button_text')} link='' />
       </div>
     </div>
   );
