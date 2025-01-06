@@ -1,8 +1,8 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from './banner1.module.scss';
 import { useState } from 'react';
-import Image from 'next/image';
 
 function Banner1() {
   const [arrowHover, setArrowHover] = useState(false);
