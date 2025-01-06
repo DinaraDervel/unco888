@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { cn } from '@/functions/cn';
 import { GetSocialData } from '@/constants/GetSocialsData';

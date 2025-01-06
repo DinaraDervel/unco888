@@ -36,7 +36,7 @@ function News() {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>
-        <span>UNKO</span> {t('title')}
+        <span>UNCO</span> {t('title')}
       </h2>
       <div className={styles.cards}>
         {newsData.map((news, index) => (
