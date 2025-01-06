@@ -30,6 +30,9 @@
     },
     "button_text": "Buy UNCO888"
   },
+  "news": {
+    "title": "NEWS"
+  },
   "contactForm": {
     "placeholderName": "Enter your name",
     "placeholderMessage": "Enter your message",
@@ -52,5 +55,6 @@
       "button_1": "buy NFT “UNCO888”",
       "button_2": "Download pitch"
     }
+>>>>>>> messages/en.json
   }
 }
