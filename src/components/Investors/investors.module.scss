@@ -24,6 +24,7 @@
 }
 
 .line {
+  margin-bottom: 10px;
   width: 100%;
   border: none;
   height: 2px;
@@ -36,7 +37,6 @@
 }
 
 .subtitle {
-  padding: 10px 0 60px;
   text-align: center;
   font-family: var.$font-montserrat;
   font-weight: 400;
@@ -46,15 +46,18 @@
 }
 
 .cards {
+  padding-top: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 22px;
+  color: var.$black;
 }
 
 .card_left {
-  padding: 213px 100px;
+  max-width: 789px;
+  padding: 311px 100px;
   border-radius: 12px 12px 128px 128px;
-  background-image: url('/images/C-Level/background.png');
+  background-image: url('/images/Investors/background.png');
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -64,11 +67,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 22px;
+  grid-gap: 23px;
 
   .card {
-    padding: 67px 40px 0;
-    background-color: var.$violet;
+    padding: 104px 20px 0 40px;
+    background-color: var.$cold-yellow;
     &:first-child,
     &:nth-child(2) {
       border-radius: 12px;

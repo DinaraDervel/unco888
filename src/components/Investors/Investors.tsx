@@ -1,15 +1,16 @@
 import { useTranslations } from 'next-intl';
 import Button from '../Button/Button';
-import styles from './c-level.module.scss';
+import styles from './investors.module.scss';
 import Button2 from '../Button2/Button2';
 
-function CLevel() {
-  const t = useTranslations('c-level');
+function Investors() {
+  const t = useTranslations('investors');
   return (
-    <section className={styles.container} id='clevel'>
+    <section className={styles.container} id='investors'>
       <h2 className={styles.title}>{t('title')}</h2>
       <hr className={styles.line}></hr>
-      <h3 className={styles.subtitle}>{t('subtitle')}</h3>
+      <h3 className={styles.subtitle}>{t('subtitle_1')}</h3>
+      <h3 className={styles.subtitle}>{t('subtitle_2')}</h3>
       <div className={styles.cards}>
         <div className={styles.card_left}>
           <p className={styles.card_text}>{t('cards.card_1')}</p>
@@ -37,4 +38,4 @@ function CLevel() {
     </section>
   );
 }
-export default CLevel;
+export default Investors;
