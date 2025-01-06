@@ -9,7 +9,8 @@ function Investors() {
     <section className={styles.container} id='investors'>
       <h2 className={styles.title}>{t('title')}</h2>
       <hr className={styles.line}></hr>
-      <h3 className={styles.subtitle}>{t('subtitle')}</h3>
+      <h3 className={styles.subtitle}>{t('subtitle_1')}</h3>
+      <h3 className={styles.subtitle}>{t('subtitle_2')}</h3>
       <div className={styles.cards}>
         <div className={styles.card_left}>
           <p className={styles.card_text}>{t('cards.card_1')}</p>

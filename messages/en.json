@@ -36,7 +36,7 @@
     "labelName": "Your name",
     "labelMessage": "Message text",
     "agreeText": "I agree with the Privacy policy on this resource",
-    "btnText":"SEND"
+    "btnText": "SEND"
   },
   "c-level": {
     "title": "FOR c-level",
@@ -55,7 +55,8 @@
   },
   "investors": {
     "title": "For Angel Investors",
-    "subtitle": "Investment income and development of “UNCO Exchange” - the food investment platform",
+    "subtitle_1": "Investment income and development",
+    "subtitle_2": "of “UNCO Exchange” - the food investment platform",
     "cards": {
       "card_1": "Your next investment in digital assets linked to the real economy",
       "card_2": "Place on the board: control and advise",

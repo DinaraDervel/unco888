@@ -24,6 +24,7 @@
 }
 
 .line {
+  margin-bottom: 10px;
   width: 100%;
   border: none;
   height: 2px;
@@ -36,7 +37,6 @@
 }
 
 .subtitle {
-  padding: 10px 0 60px;
   text-align: center;
   font-family: var.$font-montserrat;
   font-weight: 400;
@@ -46,6 +46,7 @@
 }
 
 .cards {
+  padding-top: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 22px;
