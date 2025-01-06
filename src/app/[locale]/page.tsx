@@ -1,8 +1,9 @@
-import Banner1 from '@/components/Banner1/Banner1';
 import styles from './page.module.scss';
 import Header from '@/components/Header/Header';
+import Banner1 from '@/components/Banner1/Banner1';
 import Banner2 from '@/components/Banner2/Banner2';
 import CLevel from '@/components/C-Level/CLevel';
+import Investors from '@/components/Investors/Investors';
 
 export default async function Home() {
   return (
@@ -12,6 +13,7 @@ export default async function Home() {
       <Banner2 />
 
       <CLevel />
+      <Investors />
     </div>
   );
 }

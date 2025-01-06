@@ -1,17 +1,11 @@
 'use client';
-
+import Link from 'next/link';
 import styles from './banner1.module.scss';
 import { useState } from 'react';
 import Image from 'next/image';
 
-type Props = {
-  onClick: () => void;
-};
-
-function Banner1({ onClick }: Props) {
-  const [isHovering, setIsHovered] = useState(false);
-  const onMouseEnter = () => setIsHovered(true);
-  const onMouseLeave = () => setIsHovered(false);
+function Banner1() {
+  const [arrowHover, setArrowHover] = useState(false);
 
   return (
     <section className={styles.banner}>
@@ -30,35 +24,22 @@ function Banner1({ onClick }: Props) {
               Profitable innovation, a seat on the Board and income with “UNCO Food Futures”
               products
             </p>
-            <div className={styles.card_links}>
-              <a className={styles.card_link} href=''>
-                More details
-              </a>
+            <Link className={styles.card_links} href='#clevel'>
+              <p className={styles.card_link}>More details</p>
               <button
                 className={styles.card_button}
-                onClick={onClick}
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
+                onMouseEnter={() => setArrowHover(true)}
+                onMouseLeave={() => setArrowHover(false)}
               >
-                {isHovering ? (
-                  <Image
-                    className={styles.card_arrow}
-                    src='/images/Banner1/arrow-hover.svg'
-                    alt='arrow'
-                    width={14}
-                    height={14}
-                  />
-                ) : (
-                  <Image
-                    className={styles.card_arrow}
-                    src='/images/Banner1/arrow.svg'
-                    alt='arrow'
-                    width={14}
-                    height={14}
-                  />
-                )}
+                <Image
+                  className={styles.card_arrow}
+                  src={arrowHover ? '/images/Banner1/arrow-hover.svg' : '/images/Banner1/arrow.svg'}
+                  alt='arrow'
+                  width={14}
+                  height={14}
+                />
               </button>
-            </div>
+            </Link>
           </div>
           <div className={styles.card_right}>
             <h4 className={styles.card_title}>Pree - seed</h4>
@@ -66,35 +47,26 @@ function Banner1({ onClick }: Props) {
             <p className={styles.card_text}>
               RWA Fintech: service for micro-investments in retail food.
             </p>
-            <div className={styles.card_links}>
-              <a className={styles.card_link} href=''>
-                More details
-              </a>
+            <Link className={styles.card_links} href='#investors'>
+              <p className={styles.card_link}>More details</p>
               <button
                 className={styles.card_button}
-                onClick={onClick}
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
+                onMouseEnter={() => setArrowHover(true)}
+                onMouseLeave={() => setArrowHover(false)}
               >
-                {isHovering ? (
-                  <Image
-                    className={styles.card_arrow}
-                    src='/images/Banner1/arrow-hover.svg'
-                    alt='arrow'
-                    width={14}
-                    height={14}
-                  />
-                ) : (
-                  <Image
-                    className={styles.card_arrow}
-                    src='/images/Banner1/arrow-black.svg'
-                    alt='arrow'
-                    width={14}
-                    height={14}
-                  />
-                )}
+                <Image
+                  className={styles.card_arrow}
+                  src={
+                    arrowHover
+                      ? '/images/Banner1/arrow-hover.svg'
+                      : '/images/Banner1/arrow-black.svg'
+                  }
+                  alt='arrow'
+                  width={14}
+                  height={14}
+                />
               </button>
-            </div>
+            </Link>
           </div>
         </div>
         <p className={styles.text}>
