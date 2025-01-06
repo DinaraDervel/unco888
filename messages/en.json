@@ -30,7 +30,14 @@
     },
     "button_text": "Buy UNCO888"
   },
-
+  "contactForm": {
+    "placeholderName": "Enter your name",
+    "placeholderMessage": "Enter your message",
+    "labelName": "Your name",
+    "labelMessage": "Message text",
+    "agreeText": "I agree with the Privacy policy on this resource",
+    "btnText":"SEND"
+  },
   "c-level": {
     "title": "FOR c-level",
     "subtitle": "Innovation in access to real assets",
