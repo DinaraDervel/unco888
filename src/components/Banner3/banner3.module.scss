@@ -4,7 +4,7 @@
   max-width: 1920px;
   margin: 0 auto;
   background: var.$bg-primary-gradient;
-  padding: 130px 170px 96px 170px;
+  padding: 130px 179px 118px 160px;
   display: flex;
   flex-direction: column;
 
@@ -89,7 +89,7 @@
 
 @media (max-width: 1440px) {
   .banner3 {
-    padding: 60px 40px 78px 40px;
+    padding: 60px 40px;
 
     h1 {
       font-size: 45px;
@@ -120,7 +120,7 @@
 
 @media (max-width: 767px) {
   .banner3 {
-    padding: 60px 27px;
+    padding: 60px 55px;
 
     h1 {
       font-size: 28px;
