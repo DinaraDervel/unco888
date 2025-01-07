@@ -9,8 +9,68 @@
       "link_6": "Roadmap",
       "link_7": "UNCO Eco-System"
     },
-    "button": "OUR NEWS",
-    "title": "Header"
+    "button": "OUR NEWS"
+  },
+  "banner2": {
+    "title": "NFT UNCO",
+    "card_1": {
+      "subtitle": "Active Role in Business",
+      "text": "Each NFT “UNCO888” is 1 vote in the UNCO Board for the current owner: for influencing strategy and business decisions with direct connection to management."
+    },
+    "card_2": {
+      "subtitle": "NFT ”UNCO888” grows with the  Company!",
+      "text_1": "It is combining short-term returns with long-term value.",
+      "text_2": "Up to 4x+* in the next round* or in P2P",
+      "text_3": "Always available for P2P"
+    },
+    "card_3": {
+      "subtitle": "“UNCO888” is a bearer option contract",
+      "text_1": "Can be exchanged once for shares in the company*",
+      "text_2": "Important: When exchanging for comp any shares, KYC is a mandatory process.*"
+    },
+    "button_text": "Buy UNCO888"
+  },
+  "news": {
+    "title": "NEWS"
+  },
+  "contactForm": {
+    "placeholderName": "Enter your name",
+    "placeholderMessage": "Enter your message",
+    "labelName": "Your name",
+    "labelMessage": "Message text",
+    "agreeText": "I agree with the Privacy policy on this resource",
+    "btnText": "SEND"
+  },
+  "c-level": {
+    "title": "FOR c-level",
+    "subtitle": "Innovation in access to real assets",
+    "cards": {
+      "card_1": "Our model combines sustainability, transparency and technological trends, providing you with new revenue streams and opportunities",
+      "card_2": "Place on the Board: advise and management",
+      "card_3": "Share of profits and share of  UNCO",
+      "card_4": "Collaboration and advise: increase your investment",
+      "card_5": "Invest in where you are professional"
+    },
+    "buttons": {
+      "button_1": "buy NFT “UNCO888”",
+      "button_2": "Download pitch"
+    }
+  },
+  "investors": {
+    "title": "For Angel Investors",
+    "subtitle_1": "Investment income and development",
+    "subtitle_2": "of “UNCO Exchange” - the food investment platform",
+    "cards": {
+      "card_1": "Your next investment in digital assets linked to the real economy",
+      "card_2": "Place on the board: control and advise",
+      "card_3": "Share of  UNCO with an open exit option",
+      "card_4": "Team of professionals and AI ERP",
+      "card_5": "Interns from all over the World "
+    },
+    "buttons": {
+      "button_1": "buy NFT “UNCO888”",
+      "button_2": "Download pitch"
+    }
   },
   "banner3": {
     "title": "UNCO Food Futures",
