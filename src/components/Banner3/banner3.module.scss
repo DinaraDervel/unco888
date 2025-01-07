@@ -78,7 +78,11 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: radial-gradient(50% 50% at 50% 50%, #ffffff 0%, #000000 100%);
+  background:
+    linear-gradient(to bottom right, #fff 0%, #000 50%) bottom right / 50% 50% no-repeat,
+    linear-gradient(to bottom left, #fff 0%, #000 50%) bottom left / 50% 50% no-repeat,
+    linear-gradient(to top left, #fff 0%, #000 50%) top left / 50% 50% no-repeat,
+    linear-gradient(to top right, #fff 0%, #000 50%) top right / 50% 50% no-repeat;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   mix-blend-mode: color-dodge;
 }
