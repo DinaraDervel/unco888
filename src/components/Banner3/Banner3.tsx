@@ -11,6 +11,7 @@ function Banner3() {
     <div className={styles.banner3}>
       <h1>{t('title')}</h1>
       <div className={styles.container}>
+        <div className={styles.star}></div>
         <div className={styles.container__item}>
           <Image src='/images/Banner3/icon1.png' alt='icon1' width={84} height={84} />
           <div className={styles.container__item__text}>{t('text1')}</div>
@@ -28,7 +29,9 @@ function Banner3() {
           <Image src='/images/Banner3/icon4.png' alt='icon4' width={84} height={84} />
         </div>
       </div>
-      <Button text={t('button')} link='/' />
+      <div className={styles.button}>
+        <Button text={t('button')} link='' />
+      </div>
     </div>
   );
 }
