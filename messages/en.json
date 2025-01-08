@@ -30,6 +30,10 @@
     },
     "button_text": "Buy UNCO888"
   },
+  "feedback": {
+    "subtitle": "Feedback",
+    "button_text": "Leave a review"
+  },
   "news": {
     "title": "NEWS"
   },

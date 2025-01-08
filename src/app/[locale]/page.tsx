@@ -5,6 +5,7 @@ import Banner3 from '@/components/Banner3/Banner3';
 import Header from '@/components/Header/Header';
 import News from '@/components/News/News';
 import Investors from '@/components/Investors/Investors';
+import Feedback from '@/components/Feedback/Feedback';
 import Services from '@/components/Services/Services';
 import Footer from '@/components/Footer/Footer';
 import styles from './page.module.scss';
@@ -19,6 +20,7 @@ export default async function Home() {
       <Banner3 />
       <CLevel />
       <Investors />
+      <Feedback />
       <Services />
       <Footer />
     </div>
