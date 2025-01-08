@@ -15,32 +15,32 @@ function Feedback() {
 
   const feedbacks = [
     {
-      name: 'Name',
+      name: 'Name1',
       age: 'age',
       text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.',
     },
     {
-      name: 'Name',
+      name: 'Name2',
       age: 'age',
       text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.',
     },
     {
-      name: 'Name',
+      name: 'Name3',
       age: 'age',
       text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.',
     },
     {
-      name: 'Name',
+      name: 'Name4',
       age: 'age',
       text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.',
     },
     {
-      name: 'Name',
+      name: 'Name5',
       age: 'age',
       text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.',
     },
     {
-      name: 'Name',
+      name: 'Name6',
       age: 'age',
       text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.',
     },

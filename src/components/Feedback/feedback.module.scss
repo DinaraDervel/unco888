@@ -50,9 +50,11 @@
     display: flex;
     gap: 18px;
     max-width: 1727px;
-    justify-content: center;
     &__viewport {
         overflow: hidden;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
     }
     &__wrapper {
         display: flex;
