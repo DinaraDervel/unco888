@@ -1,0 +1,51 @@
+@use '../../styles/_var' as var;
+
+.main {
+    background: url('../../../public/images/Contact/Form(1).png') center/cover no-repeat;
+    background-color: black;
+    height: 749px;
+    padding-left: 160px;
+    padding-top: 218px;
+}
+
+.container {
+    max-width: 936px;
+}
+
+.title {
+    font-family: var.$font-montserrat;
+    color: rgba(210, 205, 216, 1);
+    padding-bottom: 14px;
+    letter-spacing: 3px;
+}
+
+.subtitle {
+    font-family: var.$font-montserrat;
+    color: rgba(210, 205, 216, 1);
+    font-size: 20px;
+    padding-bottom: 60px;
+}
+
+.form {
+    display: flex;
+    gap: 51px;
+}
+
+.input {
+    width: 570px;
+    height: 58px;
+    padding-left: 28px;
+    border-radius: 12px;
+    font-family: Inter;
+    font-size: 14px;
+    color: rgba(210, 205, 216, 1);
+}
+
+.button {
+    border-radius: 12px;
+    width: 284px;
+    margin-right: 30px;
+    font-family: var.$font-jura;
+    font-size: 25px;
+    color: rgba(20, 7, 31, 1);
+}
