@@ -52,7 +52,6 @@
     max-width: 1727px;
     justify-content: center;
     &__viewport {
-        width: calc(405px * 3 + 18px * 2);
         overflow: hidden;
     }
     &__wrapper {
@@ -94,6 +93,7 @@
     width: 376px;
     height: 68px;
     margin: 0 auto;
+    font-size: clamp(16px, 1.302vw, 25px);
 }
 
 

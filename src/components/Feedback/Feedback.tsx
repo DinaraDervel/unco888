@@ -10,7 +10,7 @@ function Feedback() {
   const t = useTranslations('feedback');
   const sliderRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleCards = 3;
+  const visibleCards = 4;
   const cardWidth = 405 + 18;
 
   const feedbacks = [
@@ -84,7 +84,7 @@ function Feedback() {
         <button className={styles.cards__button} onClick={handleNext}></button>
       </div>
       <div className={styles.button}>
-        <Button text={t('button_text')} link='' font='clamp(16px, 1.302vw, 25px)' />
+        <Button text={t('button_text')} link='' />
       </div>
     </div>
   );
