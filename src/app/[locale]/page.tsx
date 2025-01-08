@@ -6,6 +6,7 @@ import Header from '@/components/Header/Header';
 import News from '@/components/News/News';
 import styles from './page.module.scss';
 import Investors from '@/components/Investors/Investors';
+import Services from '@/components/Services/Services';
 
 export default async function Home() {
   return (
@@ -17,6 +18,8 @@ export default async function Home() {
       <Banner3 />
       <CLevel />
       <Investors />
+
+      <Services />
     </div>
   );
 }
