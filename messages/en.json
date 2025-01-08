@@ -83,5 +83,10 @@
 
   "services": {
     "title": "Eco - System"
+  },
+
+  "not found": {
+    "text": "Page not found",
+    "button": "Go to main page"
   }
 }
