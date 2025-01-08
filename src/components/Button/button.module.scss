@@ -1,4 +1,4 @@
-@use '../../styles/_var' as var;
+@use "../../styles/_var" as var;
 
 .button {
   display: flex;
@@ -19,10 +19,12 @@
   text-decoration: none;
   text-align: center;
   transition: all 0.3s ease;
+
   &:hover {
     opacity: 0.5;
     color: var.$purple;
   }
+
   &:active {
     border: 1px solid var.$gold;
     background: transparent;
@@ -30,5 +32,23 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+}
+
+@media (max-width: 390px) {
+  .button {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 391px) and (max-width: 760px) {
+  .button {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .button {
+    font-size: 25px;
   }
 }
