@@ -5,7 +5,7 @@ import Header from '@/components/Header/Header';
 import News from '@/components/News/News';
 import styles from './page.module.scss';
 import Investors from '@/components/Investors/Investors';
-import Contact_Component from '@/components/Сontact-component/Сontact-component';
+import Contact_Component from '@/components/СontactСomponent/СontactСomponent';
 
 export default async function Home() {
   return (

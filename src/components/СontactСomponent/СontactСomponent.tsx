@@ -1,8 +1,9 @@
 'use client'
 
 import React, { useState } from "react";
-// import ModalComponent from "./ModalComponent";
-import styles from "./Сontact-component.module.scss";
+import styles from "./СontactСomponent.module.scss";
+import ModalComponent from "../ModalСomponent/ModalСomponent";
+import ContactForm from "../ContactForm/ContactForm";
 
 const Contact_Component: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -36,12 +37,14 @@ const Contact_Component: React.FC = () => {
                         placeholder="Enter your name"
                         required
                     />
-                    <button type="submit" className={styles.button}>
+                    <button onClick={handleOpenModal} className={styles.button}>
                         CONTACT US
                     </button>
                 </form>
 
-                {/* <ModalComponent isOpen={isModalOpen} onClose={handleCloseModal} /> */}
+                <ModalComponent isOpen={isModalOpen} onRequestClose={handleCloseModal}>
+                    <ContactForm onClose={handleCloseModal} />
+                </ ModalComponent>
             </div>
         </main>
     );

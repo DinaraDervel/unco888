@@ -4,15 +4,19 @@ import styles from "./contactForm.module.scss";
 import { useTranslations } from "next-intl";
 import { ChangeEvent, useState } from "react";
 
-const ContactForm = () => {
+type ContactFormProps = {
+    onClose: () => void; 
+};
+
+const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
     const t = useTranslations('contactForm');
 
     const [isAgreed, setIsAgreed] = useState<boolean>(false);
     const [visibleWindow, setIsVisibleWindow] = useState<boolean>(true);
 
-    const handleClickClose = () => {
-        setIsVisibleWindow(false);
-    }
+    // const handleClickClose = () => {
+    //     setIsVisibleWindow(false);
+    // }
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         setIsAgreed(event.target.checked);
@@ -23,7 +27,7 @@ const ContactForm = () => {
     return (
         <form className={styles.main_container_contact_form}>
             <div className={styles.wrapper_contact_form}>
-                <button className={styles.close} onClick={handleClickClose} />
+                <button className={styles.close} onClick={onClose} />
                 <div className={styles.container_contact_form}>
                     <div className={styles.container_name}>
                         <p className={styles.container_text}>{t('labelName')}</p>
