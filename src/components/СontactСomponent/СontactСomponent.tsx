@@ -43,7 +43,7 @@ const Contact_Component: React.FC = () => {
                 </form>
 
                 <ModalComponent isOpen={isModalOpen} onRequestClose={handleCloseModal}>
-                    <ContactForm onClose={handleCloseModal} />
+                    <ContactForm  onClose = {handleCloseModal}/>
                 </ ModalComponent>
             </div>
         </main>

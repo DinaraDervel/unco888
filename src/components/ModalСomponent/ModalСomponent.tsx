@@ -1,14 +1,19 @@
 "use client";
-import React, { ReactElement } from "react";
+import React, { ReactElement, useState, useEffect, useCallback } from "react";
 import Modal from "react-modal";
 import styles from "./ModalComponent.module.scss";
+
+
+interface ChildrenProps {
+    onClose?: () => void;
+}
 
 Modal.setAppElement("body");
 
 type ModalComponentProps = {
     isOpen: boolean;
     onRequestClose: () => void;
-    children: ReactElement;
+    children: ReactElement<ChildrenProps>;
 };
 
 const ModalComponent: React.FC<ModalComponentProps> = ({
@@ -16,18 +21,25 @@ const ModalComponent: React.FC<ModalComponentProps> = ({
     onRequestClose,
     children,
 }) => {
+    const [isClosing, setIsClosing] = useState(false);
 
     const handleKeyDown = (event: KeyboardEvent) => {
         if (event.key === "Escape") {
-            onRequestClose();
+            handleClose();
         }
     };
 
-    React.useEffect(() => {
+    const handleClose = () => {
+        setIsClosing(true);
+        setTimeout(() => {
+            setIsClosing(false);
+            onRequestClose();
+        }, 600);
+    };
+
+    useEffect(() => {
         if (isOpen) {
             document.addEventListener("keydown", handleKeyDown);
-        } else {
-            document.removeEventListener("keydown", handleKeyDown);
         }
 
         return () => {
@@ -35,26 +47,29 @@ const ModalComponent: React.FC<ModalComponentProps> = ({
         };
     }, [isOpen]);
 
-    return (
-        // <Modal
-        //     isOpen={isOpen}
-        //     onRequestClose={onRequestClose}
-        //     overlayClassName={styles.overlay}
-        //     className={isOpen ? `${styles.content} ${styles.contentOpen}` : styles.content}
-        // >
-        //     <div className={styles.modalContent}>
-        //         {children}
-        //     </div>
-        // </Modal>
+    const overlayClassName = `${styles.overlay} ${isClosing ? styles.closing : ''}`;
+    const contentClassName = `${styles.content} ${isClosing ? styles.closing : ''}`;
 
-       <Modal
+    const childrenWithProps = React.cloneElement(children, { onClose: handleClose });
+
+    return (
+
+        <Modal
             isOpen={isOpen}
-            onRequestClose={onRequestClose}
-            overlayClassName={styles.overlay}
-            className={styles.content}
+            onRequestClose={handleClose}
+            overlayClassName={overlayClassName}
+            className={contentClassName}
+            shouldCloseOnEsc={false}
+            preventScroll={true}
+        // style={{
+        //     overlay: {
+        //         backgroundColor: 'transparent'
+        //     }
+        // }}
         >
             <div className={styles.modalContent}>
-                {children}
+                {/* {children} */}
+                {childrenWithProps}
             </div>
         </Modal>
     );

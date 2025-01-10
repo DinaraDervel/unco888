@@ -10,24 +10,21 @@ type ContactFormProps = {
 
 const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
     const t = useTranslations('contactForm');
-
     const [isAgreed, setIsAgreed] = useState<boolean>(false);
-    const [visibleWindow, setIsVisibleWindow] = useState<boolean>(true);
 
-    // const handleClickClose = () => {
-    //     setIsVisibleWindow(false);
-    // }
+    const handleCloseClick = (e: React.MouseEvent) => {
+        e.preventDefault(); 
+        onClose();
+    };
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         setIsAgreed(event.target.checked);
     };
 
-    if (!visibleWindow) return null;
-
     return (
         <form className={styles.main_container_contact_form}>
             <div className={styles.wrapper_contact_form}>
-                <button className={styles.close} onClick={onClose} />
+                <button className={styles.close} onClick={handleCloseClick} />
                 <div className={styles.container_contact_form}>
                     <div className={styles.container_name}>
                         <p className={styles.container_text}>{t('labelName')}</p>
