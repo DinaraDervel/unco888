@@ -1,4 +1,5 @@
 "use client";
+import { name } from "eslint-plugin-prettier/recommended";
 import Button from "../Button/Button";
 import styles from "./contactForm.module.scss";
 import { useTranslations } from "next-intl";
@@ -6,9 +7,10 @@ import { ChangeEvent, useState } from "react";
 
 type ContactFormProps = {
     onClose: () => void; 
+    name?: string;
 };
 
-const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
+const ContactForm: React.FC<ContactFormProps> = ({ onClose, name }) => {
     const t = useTranslations('contactForm');
     const [isAgreed, setIsAgreed] = useState<boolean>(false);
 
@@ -28,7 +30,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose }) => {
                 <div className={styles.container_contact_form}>
                     <div className={styles.container_name}>
                         <p className={styles.container_text}>{t('labelName')}</p>
-                        <input placeholder={t('placeholderName')} type='text' className={styles.name} />
+                        <input placeholder={t('placeholderName')} type='text' className={styles.name} value={name}/>
+
                     </div>
 
                     <div className={styles.container_message}>

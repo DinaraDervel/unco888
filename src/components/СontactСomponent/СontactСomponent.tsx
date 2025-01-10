@@ -7,6 +7,11 @@ import ContactForm from "../ContactForm/ContactForm";
 
 const Contact_Component: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+    const [name, setName] = useState('');
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setName(event.target.value);
+    };
 
     const handleOpenModal = () => {
         setIsModalOpen(true);
@@ -14,6 +19,7 @@ const Contact_Component: React.FC = () => {
 
     const handleCloseModal = () => {
         setIsModalOpen(false);
+        setName('');
     };
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -25,7 +31,7 @@ const Contact_Component: React.FC = () => {
         <main className={styles.main}>
             <div className={styles.container}>
                 <h1 className={styles.title}>
-                PLEASE FEEL FREE TO CONTACT US WITH ANY QUESTIONS
+                    PLEASE FEEL FREE TO CONTACT US WITH ANY QUESTIONS
                 </h1>
                 <p className={styles.subtitle}>
                     Write your request, a convenient way of communication and we will answer you
@@ -36,6 +42,8 @@ const Contact_Component: React.FC = () => {
                         className={styles.input}
                         placeholder="Enter your name"
                         required
+                        onChange={handleChange}
+                        value={name}
                     />
                     <button onClick={handleOpenModal} className={styles.button}>
                         CONTACT US
@@ -43,7 +51,7 @@ const Contact_Component: React.FC = () => {
                 </form>
 
                 <ModalComponent isOpen={isModalOpen} onRequestClose={handleCloseModal}>
-                    <ContactForm  onClose = {handleCloseModal}/>
+                    <ContactForm name={name} onClose={handleCloseModal} />
                 </ ModalComponent>
             </div>
         </main>
