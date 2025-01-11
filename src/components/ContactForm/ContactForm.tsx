@@ -30,7 +30,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose, name }) => {
                 <div className={styles.container_contact_form}>
                     <div className={styles.container_name}>
                         <p className={styles.container_text}>{t('labelName')}</p>
-                        <input placeholder={t('placeholderName')} type='text' className={styles.name} value={name}/>
+                        <input placeholder={t('placeholderName')} type='text' className={styles.name} defaultValue={name}/>
 
                     </div>
 
