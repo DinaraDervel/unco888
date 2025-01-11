@@ -31,7 +31,7 @@ const Contact_Component: React.FC = () => {
         <main className={styles.main}>
             <div className={styles.container}>
                 <h1 className={styles.title}>
-                    PLEASE FEEL FREE TO CONTACT US WITH ANY QUESTIONS
+                    Please feel free to contact us with any questions
                 </h1>
                 <p className={styles.subtitle}>
                     Write your request, a convenient way of communication and we will answer you

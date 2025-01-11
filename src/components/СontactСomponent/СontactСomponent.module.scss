@@ -2,14 +2,27 @@
 
 .main {
     background: url('../../../public/images/Contact/Form(1).png') center/cover no-repeat;
-    background-color: black;
+    background-color: var.$black;
     height: 749px;
     padding-left: 160px;
     padding-top: 218px;
+
+    @media screen and (max-width: 1440px) {
+        height: 740px;
+        padding-left: 100px;
+        padding-top: 285px;
+        background: url('../../../public/images/Contact/Form(1440).png') center/cover no-repeat;
+        background-color: var.$violet;
+    }
 }
 
 .container {
     max-width: 936px;
+
+    @media screen and (max-width: 1440px) {
+        max-width: 869px;
+        margin-left: -10px;
+    }
 }
 
 .title {
@@ -17,6 +30,15 @@
     color: rgba(210, 205, 216, 1);
     padding-bottom: 14px;
     letter-spacing: 3px;
+
+    @media screen and (min-width: 1920px) {
+        text-transform: uppercase; 
+    }
+
+    @media screen and (max-width: 1920px) {
+        font-size: 28px;
+        padding-bottom: 13px;
+    }
 }
 
 .subtitle {
@@ -24,11 +46,20 @@
     color: rgba(210, 205, 216, 1);
     font-size: 20px;
     padding-bottom: 60px;
+
+    @media screen and (max-width: 1440px) {
+        font-size: 18px;
+        padding-bottom: 30px;
+    }
 }
 
 .form {
     display: flex;
     gap: 51px;
+
+    @media screen and (max-width: 1440px) {
+        gap: 15px;
+    }
 }
 
 .input {
@@ -39,6 +70,10 @@
     font-family: Inter;
     font-size: 14px;
     color: rgba(210, 205, 216, 1);
+
+    @media screen and (max-width: 1440px) {
+        width: 516px;
+    }
 }
 
 .button {
@@ -48,4 +83,8 @@
     font-family: var.$font-jura;
     font-size: 25px;
     color: rgba(20, 7, 31, 1);
+
+    @media screen and (max-width: 1440px) {
+        width: 335px;
+    }
 }
