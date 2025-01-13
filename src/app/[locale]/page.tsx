@@ -9,6 +9,7 @@ import Feedback from '@/components/Feedback/Feedback';
 import Services from '@/components/Services/Services';
 import Footer from '@/components/Footer/Footer';
 import styles from './page.module.scss';
+import BuyAndSell from '@/components/BuyAndSell/BuyAndSell';
 
 export default async function Home() {
   return (
@@ -21,6 +22,7 @@ export default async function Home() {
       <CLevel />
       <Investors />
       <Feedback />
+      <BuyAndSell />
       <Services />
       <Footer />
     </div>
