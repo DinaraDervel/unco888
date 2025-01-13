@@ -34,6 +34,16 @@
     "subtitle": "Feedback",
     "button_text": "Leave a review"
   },
+  "buyandsell": {
+    "title": "you can buy and sell ",
+    "disclaimer": "As \"UNCO Eco-System\" develops with new collaborations, business results, etc., this may affect the price and supply of \"UNCO888\". Holders of \"UNCO888\" are free to sell and buy this NFT until the moment it is exchanged for company shares. Exchange of each NFT \"UNCO888\" could be only one time. For more details, read the option agreement.",
+    "button_text": "place offer",
+    "card": {
+      "quantity": "Quantity",
+      "price": "Price",
+      "button": "buy"
+    }
+  },
   "news": {
     "title": "NEWS"
   },
