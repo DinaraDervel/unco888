@@ -25,16 +25,16 @@ function BuyCard({ quantity, price }: BuyCardProps) {
       </div>
       <div className={styles.card__bottom}>
         <div className={styles.card__text}>
-          <div>{t('card.quantity')}:</div>
-          <div>{`${quantity}`}</div>
+          <p>{t('card.quantity')}:</p>
+          <p>{`${quantity}`}</p>
         </div>
         <div className={styles.card__price}>
           <div className={styles.card__text}>
-            <div>{t('card.price')}:</div>
-            <div className={styles.card__numbers}>
+            <p>{t('card.price')}:</p>
+            <p className={styles.card__numbers}>
               {`${price}`}
               <span> usdt</span>
-            </div>
+            </p>
           </div>
           <div className={styles.button}>
             <Button text={t('card.button')} link='' />

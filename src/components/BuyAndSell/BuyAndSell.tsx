@@ -50,7 +50,7 @@ function BuyAndSell() {
           UNCO<span>888</span>
         </span>
       </h2>
-      <div className={styles.disclaimer}>{t('disclaimer')}</div>
+      <p className={styles.disclaimer}>{t('disclaimer')}</p>
       <div className={styles.cards__wrapper}>
         <button className={styles.cards__button} onClick={handlePrev}></button>
         <div className={styles.cards__viewport}>
