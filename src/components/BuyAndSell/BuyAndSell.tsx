@@ -46,10 +46,11 @@ function BuyAndSell() {
     <div className={styles.container}>
       <h2 className={styles.title}>
         {t('title')}
-        <span>UNCO</span>
-        <span>888</span>
+        <span className={styles.subtitle}>
+          UNCO<span>888</span>
+        </span>
       </h2>
-      <p>{t('disclaimer')}</p>
+      <div className={styles.disclaimer}>{t('disclaimer')}</div>
       <div className={styles.cards__wrapper}>
         <button className={styles.cards__button} onClick={handlePrev}></button>
         <div className={styles.cards__viewport}>

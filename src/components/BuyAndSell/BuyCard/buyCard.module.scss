@@ -39,6 +39,10 @@
     display: flex;
     align-items: center;
     color: var.$gray;
+
+    span {
+      color: var.$white;
+    }
   }
 
   &__bottom {
@@ -46,11 +50,15 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
+    padding: 0;
     gap: 20px;
   }
 
-  p {
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
     padding: 0;
     font-family: var.$font-montserrat;
     font-size: 24px;
@@ -67,16 +75,15 @@
     align-items: flex-end;
     justify-content: space-between;
     gap: 19px;
+  }
 
-    p:last-of-type {
-      font-size: 22px;
-      font-weight: 500;
-      line-height: 30.8px;
-
-      span {
-        font-size: 20px;
-        line-height: 28px;
-      }
+  &__numbers {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 30.8px;
+    span {
+      font-size: 20px;
+      line-height: 28px;
     }
   }
 }

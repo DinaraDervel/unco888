@@ -19,20 +19,22 @@ function BuyCard({ quantity, price }: BuyCardProps) {
         <div className={styles.card__image}>
           <Image src='/images/BuyAndSell/logo.png' alt='logo' width={260} height={260} />
         </div>
-        <h3 className={styles.card__title}>UNCO888</h3>
+        <h3 className={styles.card__title}>
+          UNCO<span>888</span>
+        </h3>
       </div>
       <div className={styles.card__bottom}>
-        <div className={styles.card__quantity}>
-          <p>{t('card.quantity')}:</p>
-          <p>{`${quantity}`}</p>
+        <div className={styles.card__text}>
+          <div>{t('card.quantity')}:</div>
+          <div>{`${quantity}`}</div>
         </div>
         <div className={styles.card__price}>
-          <div>
-            <p>{t('card.price')}:</p>
-            <p>
+          <div className={styles.card__text}>
+            <div>{t('card.price')}:</div>
+            <div className={styles.card__numbers}>
               {`${price}`}
               <span> usdt</span>
-            </p>
+            </div>
           </div>
           <div className={styles.button}>
             <Button text={t('card.button')} link='' />
