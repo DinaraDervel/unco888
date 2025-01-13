@@ -64,7 +64,7 @@ function Header() {
           <li className={styles.link}>UNCO Eco-System</li>
         </ul>
         <div className={styles.news_button}>
-          <Button text={t('button')} link='' font='clamp(1.25rem, 1.042vw + 0.313rem, 1.563rem' />
+          <Button text={t('button')} link='' />
         </div>
       </div>
     </header>
