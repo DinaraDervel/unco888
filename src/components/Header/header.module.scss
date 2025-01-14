@@ -83,6 +83,16 @@
       gap: 10px;
       margin-right: 0;
     }
+    .dropdown {
+      padding-right: 10px;
+      width: clamp(5.625rem, 4.762vw + 3.339rem, 7.625rem);
+    }
+    .container {
+      .lang__button {
+        width: clamp(1.25rem, 1.178vw + 0.69rem, 1.75rem);
+        height: clamp(1.25rem, 1.178vw + 0.69rem, 1.75rem);
+      }
+    }
   }
 
   .news_button {
@@ -95,7 +105,7 @@
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 767px) {
   .logo {
     width: 68px;
     height: 63px;
