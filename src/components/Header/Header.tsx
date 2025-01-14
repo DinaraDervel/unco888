@@ -3,9 +3,10 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import styles from './header.module.scss';
-import LanguageButton from './LanguageButton';
-import LanguageMenu from './LanguageMenu';
-import LinkHeader from './LinkHeader';
+import LanguageButton from './HeaderComponents/LanguageButton';
+import LanguageMenu from './HeaderComponents/LanguageMenu';
+import LinkHeader from './HeaderComponents/LinkHeader';
+import ButtonHeader from './HeaderComponents/ButtonHeader';
 import { createRef, Ref, useRef, useState } from 'react';
 import { languagesList } from '@/constants/GetHeaderData';
 import Button from '../Button/Button';
@@ -26,7 +27,7 @@ function Header({ data }: Props) {
   const t = useTranslations('header');
   const [isOpenLanguage, setIsOpenLanguage] = useState(false);
   const [isClosing, setIsClosing] = useState(true);
-
+  const [isOpenBurger, setIsOpenBurger] = useState(false);
   const buttonRef = useRef<HTMLDivElement | null>(null);
   const languageMenuRef: Ref<HTMLUListElement> = createRef();
 
@@ -73,12 +74,16 @@ function Header({ data }: Props) {
             />
           </div>
         </div>
-        <LinkHeader links={data.links} />
-        <div className={styles.burger_menu}>
-          <button className={styles.burger_button}>
-            <Image src='/images/Header/BurgerButton.png' alt='burger' width={30} height={20} />
-          </button>
-        </div>
+        <LinkHeader links={data.links} style={'links_desktop'} />
+        <ButtonHeader style={'hamburger_mobile'} onClick={() => setIsOpenBurger((prev) => !prev)} />
+
+        <LinkHeader
+          links={data.links}
+          style={'links_mobile'}
+          isOpenBurger={isOpenBurger}
+          onClick={() => setIsOpenBurger((prev) => !prev)}
+        />
+
         <Link className={styles.news_button} href='#news'>
           <Button text={t('button')} link='' />
         </Link>
