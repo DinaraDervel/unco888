@@ -10,10 +10,14 @@ import Services from '@/components/Services/Services';
 import Footer from '@/components/Footer/Footer';
 import styles from './page.module.scss';
 
+import { GetHeaderData } from '@/constants/GetHeaderData';
+
 export default async function Home() {
+  const headerData = await GetHeaderData();
+
   return (
     <div className={styles.main}>
-      <Header />
+      <Header data={headerData} />
       <Banner1 />
       <Banner2 />
       <News />
