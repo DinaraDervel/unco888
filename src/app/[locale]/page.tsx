@@ -5,6 +5,7 @@ import Banner3 from '@/components/Banner3/Banner3';
 import Header from '@/components/Header/Header';
 import News from '@/components/News/News';
 import Investors from '@/components/Investors/Investors';
+import Contact_Component from '@/components/СontactСomponent/СontactСomponent';
 import Feedback from '@/components/Feedback/Feedback';
 import Services from '@/components/Services/Services';
 import Footer from '@/components/Footer/Footer';
@@ -23,6 +24,7 @@ export default async function Home() {
       <Investors />
       <Feedback />
       <BuyAndSell />
+      <Contact_Component />
       <Services />
       <Footer />
     </div>
