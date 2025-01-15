@@ -10,7 +10,6 @@ import ButtonHeader from './HeaderComponents/ButtonHeader';
 import { createRef, Ref, useRef, useState } from 'react';
 import { languagesList } from '@/constants/GetHeaderData';
 import Button from '../Button/Button';
-import Link from 'next/link';
 
 export type ArrProps = {
   href: string;
@@ -84,9 +83,9 @@ function Header({ data }: Props) {
           onClick={() => setIsOpenBurger((prev) => !prev)}
         />
 
-        <Link className={styles.news_button} href='#news'>
-          <Button text={t('button')} link='' />
-        </Link>
+        <div className={styles.news_button}>
+          <Button text={t('button')} link='#news' />
+        </div>
       </div>
     </header>
   );
