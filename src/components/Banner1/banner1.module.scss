@@ -184,9 +184,10 @@
   .card_title {
     font-size: clamp(1.375rem, 0.893vw + 0.946rem, 1.75rem);
     line-height: 39.2px;
+    padding-bottom: clamp(1.875rem, -1.19vw + 2.446rem, 1.375rem);
   }
   .card_text {
-    padding: 22px 0 clamp(1.875rem, 1.935vw + 0.946rem, 2.688rem);
+    padding: 0 0 clamp(1.875rem, 1.935vw + 0.946rem, 2.688rem);
     font-size: clamp(1.125rem, 0.298vw + 0.982rem, 1.25rem);
     font-weight: 400;
   }
@@ -195,5 +196,79 @@
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 767px) {
+  .banner::after {
+    background: url('/images/Banner1/background-tablet.png');
+    top: -121px;
+    height: 1055px;
+    background-position: top;
+    background-size: cover;
+  }
+
+  .container {
+    padding: 40px clamp(0.625rem, 29.341vw - 10.378rem, 3.688rem);
+  }
+  .title {
+    font-size: clamp(1.625rem, 1.596vw + 1.235rem, 2rem);
+    line-height: 38.4px;
+  }
+  .subtitle {
+    padding: 22px 0 44px;
+    font-size: clamp(1.125rem, 1.064vw + 0.865rem, 1.375rem);
+  }
+  .card_left,
+  .card_right {
+    padding: 24px;
+    width: clamp(17.5rem, 17.964vw + 10.763rem, 19.375rem);
+  }
+
+  .card_text {
+    font-size: clamp(0.875rem, 2.395vw - 0.023rem, 1.125rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .banner::after {
+    background: url('/images/Banner1/background-mobile.png');
+    top: -121px;
+    height: 1217px;
+    background-position: top;
+    background-size: cover;
+  }
+
+  .container {
+    padding: 71px 57px 63px 39px;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card_left,
+  .card_right {
+    padding: 24px;
+    width: 310px;
+    min-height: 318px;
+  }
+
+  .title {
+    text-align: center;
+  }
+  .subtitle {
+    text-align: center;
+  }
+  .card_title {
+    font-size: 18px;
+  }
+  .card_text {
+    font-size: 16px;
+  }
+  .card_link {
+    font-size: 16px;
+  }
+  .text {
+    font-size: 13px;
+  }
 }
