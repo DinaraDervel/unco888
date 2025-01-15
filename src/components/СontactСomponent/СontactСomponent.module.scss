@@ -15,7 +15,11 @@
         background-color: var.$violet;
     }
 
-    @media screen and (max-width: 760px) {
+    @media screen and (max-width: 1000px) {
+        padding-left: Clamp(50px, 4vw, 100px);
+    }
+
+    @media screen and (max-width: 767px) {
         height: 582px;
         padding: 0;
         display: flex;
@@ -35,9 +39,16 @@
         margin-left: -10px;
     }
 
-    @media screen and (max-width: 760px) {
+    @media screen and (max-width: 767px) {
         max-width: 715px;
         margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 745px) {
+        max-width: clamp(321px, 90vw, 700px); 
+        
     }
 
 }
@@ -58,9 +69,8 @@
         padding-bottom: 13px;
     }
 
-    @media screen and (max-width: 760px) {
-        font-size: 28px;
-        padding-bottom: 16px;
+    @media screen and (max-width: 767px) {
+        font-size: clamp(18px, 4vw, 28px);
     }
 
 }
@@ -76,8 +86,8 @@
         padding-bottom: 30px;
     }
 
-    @media screen and (max-width: 760px) {
-        font-size: 16px;
+    @media screen and (max-width: 767px) {
+        font-size: clamp(14px, 4vw, 16px);
         letter-spacing: 0.27px;
         padding-bottom: 26px;
     }
@@ -107,6 +117,10 @@
     @media screen and (max-width: 1440px) {
         width: 516px;
     }
+
+    @media screen and (max-width: 767px) {
+        width: 404px;
+    }
 }
 
 .button {
@@ -124,5 +138,10 @@
     @media screen and (max-width: 1440px) {
         width: 335px;
         font-size: 20px;
+    }
+
+    @media screen and (max-width: 767px) {
+        width: 236px;
+        font-size: Clamp(16px, 4vw, 25px);
     }
 }
