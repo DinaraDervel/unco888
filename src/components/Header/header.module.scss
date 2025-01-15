@@ -34,7 +34,8 @@
     justify-content: flex-end;
 
     .lang__button {
-      max-width: 28px;
+      width: 28px;
+      height: 28px;
       background-color: transparent;
       box-shadow: none;
       outline: none;
@@ -60,16 +61,6 @@
     padding: 20.5px 16px;
     font-size: clamp(1.25rem, 1.042vw + 0.313rem, 1.563rem);
   }
-}
-
-.burger_menu {
-  display: none;
-}
-
-.burger_button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
 }
 
 @media (max-width: 1440px) {
@@ -124,9 +115,5 @@
     & > a {
       display: none;
     }
-  }
-
-  .burger_menu {
-    display: flex;
   }
 }
