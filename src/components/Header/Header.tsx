@@ -3,17 +3,31 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import styles from './header.module.scss';
-import LanguageButton from './LanguageButton';
-import LanguageMenu from './LanguageMenu';
+import LanguageButton from './HeaderComponents/LanguageButton';
+import LanguageMenu from './HeaderComponents/LanguageMenu';
+import LinkHeader from './HeaderComponents/LinkHeader';
+import ButtonHeader from './HeaderComponents/ButtonHeader';
 import { createRef, Ref, useRef, useState } from 'react';
 import { languagesList } from '@/constants/GetHeaderData';
 import Button from '../Button/Button';
+import Link from 'next/link';
 
-function Header() {
+export type ArrProps = {
+  href: string;
+  text: string;
+};
+
+type Props = {
+  data: {
+    links: ArrProps[];
+  };
+};
+
+function Header({ data }: Props) {
   const t = useTranslations('header');
   const [isOpenLanguage, setIsOpenLanguage] = useState(false);
   const [isClosing, setIsClosing] = useState(true);
-
+  const [isOpenBurger, setIsOpenBurger] = useState(false);
   const buttonRef = useRef<HTMLDivElement | null>(null);
   const languageMenuRef: Ref<HTMLUListElement> = createRef();
 
@@ -27,7 +41,13 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      <Image src='/images/Header/logo-apple.png' alt='logo' width={106} height={106} />{' '}
+      <Image
+        className={styles.logo}
+        src='/images/Header/logo.png'
+        alt='logo'
+        width={106}
+        height={106}
+      />{' '}
       <div className={styles.wrapper}>
         <div className={styles.dropdown}>
           <div
@@ -54,18 +74,19 @@ function Header() {
             />
           </div>
         </div>
-        <ul className={styles.navigation}>
-          <li className={styles.link}>Buy/Sell</li>
-          <li className={styles.link}>UFF</li>
-          <li className={styles.link}>Pitch-deck</li>
-          <li className={styles.link}>News</li>
-          <li className={styles.link}>Q&A</li>
-          <li className={styles.link}>Roadmap</li>
-          <li className={styles.link}>UNCO Eco-System</li>
-        </ul>
-        <div className={styles.news_button}>
+        <LinkHeader links={data.links} style={'links_desktop'} />
+        <ButtonHeader style={'hamburger_mobile'} onClick={() => setIsOpenBurger((prev) => !prev)} />
+
+        <LinkHeader
+          links={data.links}
+          style={'links_mobile'}
+          isOpenBurger={isOpenBurger}
+          onClick={() => setIsOpenBurger((prev) => !prev)}
+        />
+
+        <Link className={styles.news_button} href='#news'>
           <Button text={t('button')} link='' />
-        </div>
+        </Link>
       </div>
     </header>
   );

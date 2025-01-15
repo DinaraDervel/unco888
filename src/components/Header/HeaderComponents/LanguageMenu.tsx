@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 import { cn } from '@/functions/cn';
 import { Locale, usePathname, useRouter } from '@/i18n/routing';
 
-import styles from './header.module.scss';
+import styles from './styles.module.scss';
 
 type MenuItem = { text: string; code: string };
 
