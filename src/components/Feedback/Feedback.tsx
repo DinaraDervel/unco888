@@ -1,17 +1,17 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import styles from './feedback.module.scss';
 import Button from '../Button/Button';
-import FeedbackCard from '../FeedbackCard/FeedbackCard';
+import FeedbackCard from './FeedbackCard/FeedbackCard';
 
 function Feedback() {
   const t = useTranslations('feedback');
   const sliderRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleCards = 4;
-  const cardWidth = 405 + 18;
+  const [visibleCards, setVisibleCards] = useState(4);
+  const [cardWidth, setCardWidth] = useState(423);
 
   const feedbacks = [
     {
@@ -46,6 +46,29 @@ function Feedback() {
     },
   ];
 
+  useEffect(() => {
+    const updateSliderSettings = () => {
+      const width = window.innerWidth;
+      if (width >= 1920) {
+        setVisibleCards(4);
+        setCardWidth(423);
+      } else if (width >= 1024) {
+        setVisibleCards(2);
+        setCardWidth(423);
+      } else if (width >= 760) {
+        setVisibleCards(2);
+        setCardWidth(330);
+      } else {
+        setVisibleCards(1);
+        setCardWidth(276);
+      }
+    };
+
+    updateSliderSettings();
+    window.addEventListener('resize', updateSliderSettings);
+    return () => window.removeEventListener('resize', updateSliderSettings);
+  }, []);
+
   const maxIndex = feedbacks.length - visibleCards;
 
   const handleNext = () => {
@@ -64,7 +87,11 @@ function Feedback() {
         <h3 className={styles.subtitle}>{t('subtitle')}</h3>
       </div>
       <div className={styles.cards__wrapper}>
-        <button className={styles.cards__button} onClick={handlePrev}></button>
+        <button
+          className={styles.cards__button}
+          onClick={handlePrev}
+          disabled={currentIndex === 0}
+        />
         <div className={styles.cards__viewport}>
           <div
             ref={sliderRef}
@@ -81,7 +108,23 @@ function Feedback() {
             ))}
           </div>
         </div>
-        <button className={styles.cards__button} onClick={handleNext}></button>
+        <button
+          className={styles.cards__button}
+          onClick={handleNext}
+          disabled={currentIndex >= maxIndex}
+        />
+        <div className={styles.cards__btns}>
+          <button
+            className={styles.cards__btn}
+            onClick={handlePrev}
+            disabled={currentIndex === 0}
+          />
+          <button
+            className={styles.cards__btn}
+            onClick={handleNext}
+            disabled={currentIndex >= maxIndex}
+          />
+        </div>
       </div>
       <div className={styles.button}>
         <Button text={t('button_text')} link='' />
