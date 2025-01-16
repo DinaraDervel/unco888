@@ -54,7 +54,7 @@ function BuyAndSell() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='buy'>
       <h2 className={styles.title}>
         {t('title')}
         <span className={styles.subtitle}>
