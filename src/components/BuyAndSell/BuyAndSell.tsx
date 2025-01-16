@@ -3,8 +3,9 @@
 import { useTranslations } from 'next-intl';
 import { useState, useRef } from 'react';
 import styles from './buyAndSell.module.scss';
-import Button from '../Button/Button';
 import BuyCard from './BuyCard/BuyCard';
+import ModalComponent from '../ModalСomponent/ModalСomponent';
+import SellForm from '../SellForm/SellForm';
 
 function BuyAndSell() {
   const t = useTranslations('buyandsell');
@@ -42,6 +43,16 @@ function BuyAndSell() {
     setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : prevIndex));
   };
 
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>
@@ -66,9 +77,14 @@ function BuyAndSell() {
         </div>
         <button className={styles.cards__button} onClick={handleNext}></button>
       </div>
-      <div className={styles.button}>
-        <Button text={t('button_text')} link='' />
-      </div>
+
+      <button className={styles.button} onClick={handleOpenModal}>
+        {t('button_text')}{' '}
+      </button>
+
+      <ModalComponent isOpen={isModalOpen} onRequestClose={handleCloseModal}>
+        <SellForm onClose={handleCloseModal} />
+      </ModalComponent>
     </div>
   );
 }
