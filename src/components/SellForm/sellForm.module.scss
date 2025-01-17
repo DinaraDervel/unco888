@@ -37,6 +37,7 @@
     font-weight: 400;
     line-height: 25.2px;
     text-align: left;
+    letter-spacing: 0.05em;
   }
 
   &__bottom {
@@ -165,9 +166,19 @@
     font-size: 16px;
   }
 }
-@media (max-width: 490px) {
+@media (max-width: 650px) {
   .container {
-    max-width: 70%;
+    &__bottom {
+      margin-top: 0;
+      flex-direction: column;
+    }
+  }
+  .text_label {
+    max-width: 255px;
+  }
+  .buttonContainer {
+    max-width: 100%;
+    height: 54px;
   }
 }
 
@@ -183,16 +194,5 @@
     &__input {
       padding: 19px 8px 19px 8px;
     }
-    &__bottom {
-      margin-top: 0;
-      flex-direction: column;
-    }
-  }
-  .text_label {
-    max-width: 255px;
-  }
-  .buttonContainer {
-    max-width: 100%;
-    height: 54px;
   }
 }

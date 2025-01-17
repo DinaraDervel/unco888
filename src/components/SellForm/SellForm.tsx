@@ -30,7 +30,7 @@ const SellForm: React.FC<SellFormProps> = ({ onClose }) => {
         <p className={styles.container__label}>{t('labelQuantity')}</p>
         <input
           placeholder={t('placeholderQuantity')}
-          type='text'
+          type='number'
           className={styles.container__input}
         />
       </div>
@@ -43,7 +43,7 @@ const SellForm: React.FC<SellFormProps> = ({ onClose }) => {
             opensea.io
           </Link>
         </p>
-        <input placeholder={t('placeholderLink')} type='text' className={styles.container__input} />
+        <input placeholder={t('placeholderLink')} type='url' className={styles.container__input} />
       </div>
 
       <div className={styles.container__wrapper}>
