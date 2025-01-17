@@ -84,7 +84,7 @@ function Feedback() {
         <button className={styles.cards__button} onClick={handleNext}></button>
       </div>
       <div className={styles.button}>
-        <Button text={t('button_text')} link='' />
+        <Button text={t('button_text')} link={''} />
       </div>
     </div>
   );
