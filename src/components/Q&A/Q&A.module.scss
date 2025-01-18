@@ -1,0 +1,108 @@
+@use '../../styles/_var' as var;
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: var.$font-montserrat;
+    position: relative;
+    max-width: 1920px;
+    height: 1113px;
+    background: var.$bg-primary-gradient;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 48px;
+        bottom: 48px;
+        left: 0;
+        width: 100%;
+        background: url('../../../public/images/Q&A/888-Q&A.png') center/cover no-repeat;
+    }
+}
+
+.title {
+    z-index: 1;
+    text-align: center;
+    font-weight: 400;
+    font-size: 55px;
+    color: var.$gray;
+    padding-top: 59px;
+}
+
+.container {
+    z-index: 1;
+    width: 1597px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 98px;
+}
+
+.block {
+    height: 226px;
+    padding: 40px 52px;
+    background-color: rgba(20, 7, 31, 1);
+    border-top: 2px solid;
+    border-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #EFD48E 48.76%, rgba(255, 255, 255, 0) 100%) 1;
+    transition: box-shadow 0.3s ease, height 0.3s ease;
+    will-change: box-shadow, height;
+
+    &.active {
+        height: 256px;
+        box-shadow: 0 0 60px rgba(245, 216, 144, 0.8);
+        border-top: none;
+    }
+}
+
+.text {
+    height: 122px;
+    display: flex;
+    gap: 32px;
+}
+
+.question {
+    width: 445px;
+    color: rgba(210, 205, 216, 1);
+    font-size: 24px;
+    font-weight: 400;
+    transition: font-weight 0.3s ease;
+
+    &.questionActive {
+        font-weight: 600 !important;
+    }
+}
+
+.explanation {
+    width: 915px;
+    color: var.$gray;
+    font-size: 24px;
+    font-weight: 600;
+    transition: font-weight 0.3s ease, white-space 0.3s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.explanationActive {
+        font-weight: 400 !important;
+        white-space: normal;
+    }
+}
+
+.button {
+    margin-top: 25px;
+    width: 82px;
+    height: 82px;
+    background-color: transparent;
+    border: 0;
+    background-image: url('../../../public/images/Q&A/Property 1=Component 3.png');
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    will-change: transform;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+    &.rotated {
+        transform: rotateX(180deg);
+    }
+}
