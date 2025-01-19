@@ -17,14 +17,20 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({isOpen, onClose}) => {
     const [photo, setPhoto] = useState<File | null>(null);
     const [message, setMessage] = useState<string>('');
     const [isAgreed, setIsAgreed] = useState<boolean>(false);
-    const [touched, setTouched] = useState<boolean>(false);
+    const [touchedFields, setTouchedFields] = useState({
+        name: false,
+        message: false
+    });
 
     const closeModal = () => {
         setName('');
         setPhoto(null);
         setMessage('');
         setIsAgreed(false);
-        setTouched(false);
+        setTouchedFields({
+            name: false,
+            message: false
+        });
         onClose();
     };
 
@@ -43,6 +49,13 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({isOpen, onClose}) => {
         closeModal();
     };
 
+    const handleBlur = (fieldName: 'name' | 'message') => {
+        setTouchedFields(prev => ({
+            ...prev,
+            [fieldName]: true
+        }));
+    };
+
     const isFormValid = name.trim() !== '' && message.trim() !== '' && isAgreed;
 
     return (
@@ -54,13 +67,13 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({isOpen, onClose}) => {
                         <div>
                             <label className={styles.label} htmlFor="name">{t("labelName")}</label>
                             <input
-                                className={`${styles.input} ${touched ? styles.error : ""}`}
+                                className={`${styles.input} ${touchedFields.name && name.trim() === "" ? styles.error : ""}`}
                                 type="text"
                                 id="name"
                                 value={name}
                                 placeholder={t("placeholderName")}
                                 onChange={(e) => setName(e.target.value)}
-                                onBlur={() => setTouched(true)}
+                                onBlur={() => handleBlur("name")}
                                 required
                             />
                         </div>
@@ -85,12 +98,12 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({isOpen, onClose}) => {
                     <div>
                         <label className={styles.label} htmlFor="message">{t("labelMessage")}</label>
                         <textarea
-                            className={`${styles.input} ${styles.message} ${touched ? styles.error : ""}`}
+                            className={`${styles.input} ${styles.message} ${touchedFields.message && message.trim() === "" ? styles.error : ""}`}
                             placeholder={t('placeholderMessage')}
                             id="message"
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
-                            onBlur={() => setTouched(true)}
+                            onBlur={() => handleBlur("message")}
                             required
                         />
                     </div>
