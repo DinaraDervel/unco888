@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "Michroma";
+  src: url("/fonts/Michroma-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Jura";
+  src: url("/fonts/Jura-Regular.ttf");
+}
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  background: linear-gradient(146.2deg, #131112 18.13%, #210644 69.95%);
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.title {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 66px;
+  text-align: center;
+  color: #d2cdd8;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-family: "Michroma", "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 60px;
+  text-align: center;
+  color: #d2cdd8;
+}
+.subtitle span {
+  color: #ffffff;
+}
+
+.disclaimer {
+  padding: 0 76.5px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33.6px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.button {
+  width: 376px;
+  height: 68px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px 128px;
+  border: 1px solid #f9d691;
+  background: linear-gradient(138.69deg, #8c421d -23.71%, #fbe67b 14.22%, #fcfbe7 62.23%, #f7d14e 101.96%, rgb(212, 160, 65) 113.31%);
+  cursor: pointer;
+  color: #06010c;
+  font-family: "Jura", Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  opacity: 0.5;
+  color: #8f839d;
+}
+.button:active {
+  border: 1px solid #f1bc87;
+  background: transparent;
+  background: linear-gradient(180deg, #f1bc87 23.96%, #ffe998 143.75%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cards {
+  display: flex;
+  gap: 69px;
+  max-width: 1727px;
+}
+.cards__viewport {
+  overflow: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.cards__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+  justify-content: center;
+}
+.cards__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  border: 1px solid #f1bc87;
+  background-color: transparent;
+  transform: rotate(-45deg);
+  position: relative;
+  cursor: pointer;
+}
+.cards__button:after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  transform: rotate(45deg);
+}
+.cards__button:first-of-type::after {
+  background: url("/images/Feedback/arrow-left.svg") center/contain no-repeat;
+}
+.cards__button:last-of-type:after {
+  background: url("/images/Feedback/arrow-right.svg") center/contain no-repeat;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    padding: 60px 20px;
+  }
+  .title {
+    margin-bottom: 0;
+    font-size: 48px;
+    line-height: 57.6px;
+  }
+  .subtitle {
+    font-size: 45px;
+    line-height: 54px;
+  }
+  .disclaimer {
+    padding: 0 67px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .button {
+    width: 788px;
+  }
+  .cards {
+    gap: 48px;
+    max-width: 1266px;
+  }
+}
+
+/*# sourceMappingURL=buyAndSell.module.css.map */
