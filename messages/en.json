@@ -24,7 +24,7 @@
       "text_2": "RWA Fintech: service for micro-investments in retail food.",
       "link": "More details"
     },
-    "text": " NFT “UNCO888” and this website and all information there are for marketing purposes only. This website does not constitute a public offer. When exchanging for company shares, KYC is a mandatory procedure. UNCO Corp. and the UNCO Board have the right to refuse anyone and at any time the opportunity to become the owner of NFT “UNCO888” without giving any reason. All details are specified in the contract, which is an integral part of the NFT. If you have any questions feel free to contact the support service. This website is under development, the texts are being refined and corrected. Under no circumstances can this website be considered as investment advice, decision-making information, etc."
+    "text": "NFT “UNCO888” and this website and all information there are for marketing purposes only. This website does not constitute a public offer. When exchanging for company shares, KYC is a mandatory procedure. UNCO Corp. and the UNCO Board have the right to refuse anyone and at any time the opportunity to become the owner of NFT “UNCO888” without giving any reason. All details are specified in the contract, which is an integral part of the NFT. If you have any questions feel free to contact the support service. This website is under development, the texts are being refined and corrected. Under no circumstances can this website be considered as investment advice, decision-making information, etc."
   },
   "banner2": {
     "title": "NFT UNCO",
@@ -45,40 +45,8 @@
     },
     "button_text": "Buy UNCO888"
   },
-  "feedback": {
-    "subtitle": "Feedback",
-    "button_text": "Leave a review"
-  },
-  "buyandsell": {
-    "title": "you can buy and sell ",
-    "disclaimer": "As \"UNCO Eco-System\" develops with new collaborations, business results, etc., this may affect the price and supply of \"UNCO888\". Holders of \"UNCO888\" are free to sell and buy this NFT until the moment it is exchanged for company shares. Exchange of each NFT \"UNCO888\" could be only one time. For more details, read the option agreement.",
-    "button_text": "place offer",
-    "card": {
-      "quantity": "Quantity",
-      "price": "Price",
-      "button": "buy"
-    }
-  },
-  "sellForm": {
-    "placeholderQuantity": "Enter quantity for sale ",
-    "placeholderLink": "Add your link",
-    "placeholderContactInfo": "Enter your contact information ",
-    "labelQuantity": "Quantity for sale",
-    "labelLink": "Your link to offer ",
-    "labelContactInfo": "Your contact information",
-    "agreeText": "I agree with the Privacy policy on this resource",
-    "btnText": "send"
-  },
   "news": {
     "title": "NEWS"
-  },
-  "contactForm": {
-    "placeholderName": "Enter your name",
-    "placeholderMessage": "Enter your message",
-    "labelName": "Your name",
-    "labelMessage": "Message text",
-    "agreeText": "I agree with the Privacy policy on this resource",
-    "btnText": "SEND"
   },
   "banner3": {
     "title": "UNCO Food Futures",
@@ -87,6 +55,15 @@
     "text3": "Is a solution for earnings from fresh food distribution optimization ",
     "text4": "Is a solution for savings in food retail",
     "button": "Buy UNCO888"
+  },
+  "faq": {
+    "title": "Q&A",
+    "question1": "What is your return policy?",
+    "answer1": "We offer a 30-day money-back guarantee. If you're not satisfied with your purchase, you can return it  within 30 days for a full refund within 30 days for a full refund",
+    "question2": "Can I cancel or change my order?",
+    "answer2": "Please contact us as soon as possible if you need to cancel or make changes to your order. We will do our best to accommodate your request, but please note that we may not be able to make changes once an order has shipped.",
+    "question3": "What is your return policy?",
+    "answer3": "We offer a 30-day money-back guarantee. If you're not satisfied with your purchase, you can return it within 30 days for a full refund within 30 days for a full refund"
   },
   "c-level": {
     "title": "FOR c-level",
@@ -119,6 +96,46 @@
       "button_2": "Download pitch"
     }
   },
+  "feedback": {
+    "subtitle": "Feedback",
+    "button_text": "Leave a review"
+  },
+  "buyandsell": {
+    "title": "you can buy and sell ",
+    "disclaimer": "As \"UNCO Eco-System\" develops with new collaborations, business results, etc., this may affect the price and supply of \"UNCO888\". Holders of \"UNCO888\" are free to sell and buy this NFT until the moment it is exchanged for company shares. Exchange of each NFT \"UNCO888\" could be only one time. For more details, read the option agreement.",
+    "button_text": "place offer",
+    "card": {
+      "quantity": "Quantity",
+      "price": "Price",
+      "button": "buy"
+    }
+  },
+  "sellForm": {
+    "placeholderQuantity": "Enter quantity for sale ",
+    "placeholderLink": "Add your link",
+    "placeholderContactInfo": "Enter your contact information ",
+    "labelQuantity": "Quantity for sale",
+    "labelLink": "Your link to offer ",
+    "labelContactInfo": "Your contact information",
+    "agreeText": "I agree with the Privacy policy on this resource",
+    "btnText": "send"
+  },
+
+  "contact": {
+    "title": "Please feel free to contact us with any questions",
+    "subtitle": "Write your request, a convenient way of communicationand we will answer you",
+    "placeholderName": "Enter your name",
+    "btnText": "Contact us"
+  },
+  "contactForm": {
+    "placeholderName": "Enter your name",
+    "placeholderMessage": "Enter your message",
+    "labelName": "Your name",
+    "labelMessage": "Message text",
+    "agreeText": "I agree with the Privacy policy on this resource",
+    "btnText": "SEND"
+  },
+
   "services": {
     "title": "Eco - System"
   },
