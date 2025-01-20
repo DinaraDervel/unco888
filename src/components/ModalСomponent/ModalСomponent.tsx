@@ -1,9 +1,7 @@
 "use client";
-import React, { ReactElement, useState, useEffect, useCallback } from "react";
+import React, { ReactElement, useState, useEffect } from "react";
 import Modal from "react-modal";
 import styles from "./ModalComponent.module.scss";
-
-
 interface ChildrenProps {
     onClose?: () => void;
 }
@@ -53,7 +51,6 @@ const ModalComponent: React.FC<ModalComponentProps> = ({
     const childrenWithProps = React.cloneElement(children, { onClose: handleClose });
 
     return (
-
         <Modal
             isOpen={isOpen}
             onRequestClose={handleClose}
@@ -61,14 +58,8 @@ const ModalComponent: React.FC<ModalComponentProps> = ({
             className={contentClassName}
             shouldCloseOnEsc={false}
             preventScroll={true}
-        // style={{
-        //     overlay: {
-        //         backgroundColor: 'transparent'
-        //     }
-        // }}
         >
             <div className={styles.modalContent}>
-                {/* {children} */}
                 {childrenWithProps}
             </div>
         </Modal>
