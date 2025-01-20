@@ -1,0 +1,329 @@
+@use "../../styles/var" as *;
+
+.container_main {
+    background: $bg-primary-gradient;
+    color: $gray;
+    padding: 100px 160.5px 40px 160.5px;
+}
+
+.container_wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+}
+
+.container_wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #efd48e 48.76%, rgba(255, 255, 255, 0) 100%);
+}
+
+.container_wrapper_content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 36px 0 69px 0;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    border-bottom: 2px solid transparent;
+}
+
+.container_wrapper_content::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #efd48e 48.76%, rgba(255, 255, 255, 0) 100%);
+}
+
+.container_year {
+    display: flex;
+    width: 301.85px;
+    height: 84.69px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-self: center;
+}
+
+.title {
+    font-family: $font-montserrat;
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 66px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 125px;
+}
+
+.text {
+    flex: 0.6;
+    font-family: $font-montserrat;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33.6px;
+    width: 450px;
+}
+
+.circle_of_year {
+    width: 22.13px;
+    height: 19.59px;
+}
+
+.line_of_year {
+    width: 81.65px;
+    height: 2px;
+    position: absolute;
+    transform: rotate(180deg);
+    margin-left: 22px;
+}
+
+.line_of_year::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #efd48e 48.76%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+}
+
+.photo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.name_year {
+    font-family: $font-montserrat;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 56px;
+    text-align: center;
+    width: 151px;
+    margin-right: 12px;
+}
+
+.container_wrapper_instagram {
+    width: 450px;
+    height: 268px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.icon_instagram {
+    position: relative;
+    bottom: 20px;
+    margin-right: 3px;
+}
+
+.flare {
+    height: 40px;
+    width: 40px;
+    background:
+        linear-gradient(to bottom right, rgba(255, 255, 255, 1) 3%, rgba(0, 0, 0, 0.712) 50%) bottom right / 50% 50%
+            no-repeat,
+        linear-gradient(to bottom left, rgba(255, 255, 255, 1) 3%, rgba(0, 0, 0, 0.712) 50%) bottom left / 50% 50%
+            no-repeat,
+        linear-gradient(to top left, rgba(255, 255, 255, 1) 3%, rgba(0, 0, 0, 0.712) 50%) top left / 50% 50% no-repeat,
+        linear-gradient(to top right, rgb(255, 255, 255, 1) 3%, rgba(0, 0, 0, 0.712) 50%) top right / 50% 50% no-repeat;
+    mix-blend-mode: color-dodge;
+    transform: matrix(-1, 0, 0, -1, 0, 0);
+}
+
+.flare_non_reverse {
+    margin-left: 80px;
+    margin-right: -20px;
+}
+
+.flare_reverse {
+    margin-right: 75px;
+    margin-left: -30px;
+}
+
+// reverse
+
+.container_wrapper_content_reverse {
+    flex-direction: row-reverse;
+}
+
+.container_wrapper_reverse {
+    height: 411px;
+}
+
+.container_year_reverse {
+    margin-left: -40px;
+    flex-direction: row-reverse;
+}
+
+.circle_of_year_reverse {
+    margin-right: 30px;
+}
+
+.line_of_year_reverse {
+    margin-right: 50px;
+}
+
+.container_wrapper_instagram_reverse {
+    flex-direction: row-reverse;
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .container_main {
+        padding: 122px 100px 122px 100px;
+    }
+
+    .container_wrapper_content {
+        padding: 72px 0 72px 0;
+    }
+
+    .container_year {
+        width: 229.62px;
+        height: 73.67px;
+    }
+
+    .title {
+        margin-bottom: 20px;
+        font-size: 48px;
+    }
+
+    .text {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .circle_of_year {
+        width: 19.25px;
+        height: 13.61px;
+    }
+
+    .line_of_year {
+        width: 56.69px;
+    }
+
+    .photo {
+        height: 100%;
+        width: 340px;
+    }
+
+    .name_year {
+        font-size: 28px;
+        line-height: 39.2px;
+        margin-right: 40px;
+    }
+
+    .container_wrapper_instagram {
+        width: 398px;
+        height: 268px;
+    }
+
+    .icon_instagram {
+        bottom: 40px;
+    }
+
+    .flare_non_reverse {
+        margin-right: 10px;
+    }
+
+    // reverse
+
+    .flare_reverse {
+        margin-right: 75px;
+        margin-left: -30px;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1439px) {
+    .container_main {
+        padding: 29px 60px 29px 60px;
+    }
+
+    .flare_wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: auto;
+    }
+
+    .container_wrapper_content.container_wrapper_content_reverse {
+        padding-left: 20px;
+    }
+
+    .flare_non_reverse,
+    .flare_reverse {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .container_wrapper_content::after {
+        display: none;
+    }
+
+    .container_wrapper_content {
+        padding: 55px 0 55px 0;
+    }
+
+    .title {
+        margin-bottom: 3%;
+        font-size: 32px;
+        line-height: 120%;
+    }
+
+    .text {
+        flex: auto;
+        font-size: 18px;
+        line-height: 25.2px;
+        max-width: 280px;
+        width: 100%;
+    }
+
+    .container_year {
+        display: block;
+        width: auto;
+        height: auto;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .name_year {
+        font-size: 18px;
+        font-weight: 600;
+        margin-right: 0;
+    }
+
+    .name_year_reverse {
+        margin-left: 10%;
+    }
+
+    .circle_of_year {
+        display: none;
+    }
+
+    .line_of_year {
+        display: none;
+    }
+
+    .icon_instagram {
+        margin-left: -10px;
+        margin-bottom: 12px;
+    }
+
+    .container_wrapper_instagram {
+        max-width: 240px;
+        height: 228px;
+        width: 100%;
+    }
+}
