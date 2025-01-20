@@ -20,6 +20,23 @@
         width: 100%;
         background: url('../../../public/images/Q&A/888-Q&A.png') center/cover no-repeat;
     }
+
+    @media screen and (max-width: 1440px) {
+        height: 1285px;
+        background: var.$bg-primary-gradient;
+        
+        // background: rgba(124, 45, 188, 0.15);
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 226px;
+            bottom: 184px;
+            left: 0;
+            width: 100%;
+            background-image: url('../../../public/images/Q&A/888-Q&A.png') center/cover no-repeat;
+        }
+    }
 }
 
 .title {
@@ -29,6 +46,10 @@
     font-size: 55px;
     color: var.$gray;
     padding-top: 59px;
+
+    @media screen and (max-width: 1440px) {
+        padding-top: 123px;
+    }
 }
 
 .container {
@@ -38,10 +59,18 @@
     flex-direction: column;
     gap: 30px;
     padding-top: 98px;
+
+    @media screen and (max-width: 1440px) {
+        padding-top: 125px;
+        gap: 60px;
+        width: 1174px;
+        // background: rgba(124, 45, 188, 0.15);
+    }
 }
 
 .block {
-    height: 226px;
+    min-height: 226px; // Меняем с фиксированной высоты на минимальную
+    height: auto; // Добавляем это для возможности расширения контента
     padding: 40px 52px;
     background-color: rgba(20, 7, 31, 1);
     border-top: 2px solid;
@@ -50,14 +79,21 @@
     will-change: box-shadow, height;
 
     &.active {
-        height: 256px;
+        height: auto; 
+        min-height: 256px;
         box-shadow: 0 0 60px rgba(245, 216, 144, 0.8);
         border-top: none;
     }
+
+    // @media screen and (max-width: 1440px) {
+    //     padding-top: 125px;
+    //     gap: 60px;
+    // }
 }
 
 .text {
-    height: 122px;
+    min-height: 122px; 
+    height: auto;
     display: flex;
     gap: 32px;
 }
@@ -79,13 +115,30 @@
     color: var.$gray;
     font-size: 24px;
     font-weight: 600;
-    transition: font-weight 0.3s ease, white-space 0.3s ease;
+    line-height: 1.6; // Добавляем для контроля высоты строк
+    transition: all 0.3s ease;
     overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
     text-overflow: ellipsis;
 
+    @media screen and (min-width: 1920px) {
+        -webkit-line-clamp: 3;
+    }
+
+    @media screen and (min-width: 761px) and (max-width: 1440px) {
+        -webkit-line-clamp: 4;
+    }
+
+    @media screen and (max-width: 760px) {
+        -webkit-line-clamp: 3;
+    }
+
     &.explanationActive {
-        font-weight: 400 !important;
-        white-space: normal;
+        display: block;
+        -webkit-line-clamp: unset;
+        height: auto;
+        overflow: visible;
     }
 }
 

@@ -8,23 +8,11 @@ const QandA: React.FC = () => {
     const [isButtonLocked, setIsButtonLocked] = useState(false);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-    const truncateText = (text: string, isActive: boolean, shouldTruncate: boolean) => {
-        if (!isActive && shouldTruncate) {
-            const orderIndex = text.indexOf('order ');
-            if (orderIndex !== -1) {
-                return text.substring(0, orderIndex + 5) + '...';
-            }
-        }
-        return text;
-    };
-
     const handleMouseLeave = () => {
-        // Очистка предыдущего таймера
         if (timeoutRef.current) {
             clearTimeout(timeoutRef.current);
         }
         
-        // Установка нового таймера для сброса состояния
         timeoutRef.current = setTimeout(() => {
             setActiveBlock(null);
             setIsButtonLocked(false);
@@ -32,7 +20,6 @@ const QandA: React.FC = () => {
     };
 
     const handleMouseEnter = () => {
-        // Очистка таймера при возврате курсора в блок
         if (timeoutRef.current) {
             clearTimeout(timeoutRef.current);
         }
@@ -61,8 +48,8 @@ const QandA: React.FC = () => {
             truncate: true
         },
         {
-            question: "How do I track my order?",
-            explanation: "Once your order has been shipped, you will receive a confirmation email with tracking details. You can use this information to track your order's delivery status.",
+            question: "What is your return policy?",
+            explanation: "We offer a 30-day money-back guarantee. If you're not satisfied with your purchase, you can return it within 30 days for a full refund within 30 days for a full refund",
             truncate: false
         }
     ];
@@ -81,7 +68,7 @@ const QandA: React.FC = () => {
                                 {item.question}
                             </div>
                             <div className={`${styles.explanation} ${activeBlock === index ? styles.explanationActive : ''}`}>
-                                {truncateText(item.explanation, activeBlock === index, item.truncate)}
+                                {item.explanation}
                             </div>
                             <button
                                 className={`${styles.button} ${activeBlock === index ? styles.rotated : ''}`}
