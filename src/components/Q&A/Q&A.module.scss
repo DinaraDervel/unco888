@@ -39,7 +39,7 @@
                 content: '';
                 position: absolute;
                 top: 226.91px;
-                bottom: 184px;
+                bottom: 167px;
                 // left: 0;
                 // width: 100%;
                 // background-color: url('../../../public/images/Q&A/Ellipse\ 33.png');
@@ -113,6 +113,7 @@
     border-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #EFD48E 48.76%, rgba(255, 255, 255, 0) 100%) 1;
     transition: box-shadow 0.3s ease, height 0.3s ease;
     will-change: box-shadow, height;
+    border-radius: 12px;
 
     // @media screen and (max-width: 1600px) {
     //     width: 1280px;
