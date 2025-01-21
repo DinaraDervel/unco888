@@ -16,7 +16,7 @@ const QandA: React.FC = () => {
         timeoutRef.current = setTimeout(() => {
             setActiveBlock(null);
             setIsButtonLocked(false);
-        }, 50);
+        }, 30);
     };
 
     const handleMouseEnter = () => {
