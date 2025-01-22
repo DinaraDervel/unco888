@@ -9,6 +9,7 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Investors from "@/components/Investors/Investors";
 import News from "@/components/News/News";
+import RoadMap from "@/components/RoadMap/RoadMap";
 import Services from "@/components/Services/Services";
 import styles from "./page.module.scss";
 import { GetHeaderData } from "@/constants/GetHeaderData";
@@ -27,9 +28,10 @@ export default async function Home() {
       <Investors />
       <Feedback />
       <BuyAndSell />
+      <RoadMap />
       <Contact_Component />
-      <Services />
-      <Footer /> 
+      <Services />  
+      <Footer />
     </div>
   );
 }
