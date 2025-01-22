@@ -64,19 +64,23 @@ const QandA: React.FC = () => {
                         className={`${styles.block} ${activeBlock === index ? styles.active : ''}`}
                     >
                         <div className={styles.text}>
-                            <div className={`${styles.question} ${activeBlock === index ? styles.questionActive : ''}`}>
-                                {item.question}
+                            <div className={styles.textsmini}>
+                                <div className={`${styles.question} ${activeBlock === index ? styles.questionActive : ''}`}>
+                                    {item.question}
+                                </div>
+                                <div className={`${styles.explanation} ${activeBlock === index ? styles.explanationActive : ''}`}>
+                                    {item.explanation}
+                                </div>
                             </div>
-                            <div className={`${styles.explanation} ${activeBlock === index ? styles.explanationActive : ''}`}>
-                                {item.explanation}
-                            </div>
-                            <button
-                                className={`${styles.button} ${activeBlock === index ? styles.rotated : ''}`}
-                                onClick={(e) => handleClick(e, index)}
-                                onMouseEnter={handleMouseEnter}
-                                onMouseLeave={handleMouseLeave}
-                            />
                         </div>
+                        {/* <div className={styles.forbutton}> */}
+                            <button
+                                    className={`${styles.button} ${activeBlock === index ? styles.rotated : ''}`}
+                                    onClick={(e) => handleClick(e, index)}
+                                    onMouseEnter={handleMouseEnter}
+                                    onMouseLeave={handleMouseLeave}
+                                />
+                        {/* </div> */}
                     </div>
                 ))}
             </div>
