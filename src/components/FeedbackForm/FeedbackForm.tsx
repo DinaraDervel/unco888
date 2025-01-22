@@ -74,12 +74,17 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({isOpen, onClose}) => {
                                 placeholder={t("placeholderName")}
                                 onChange={(e) => setName(e.target.value)}
                                 onBlur={() => handleBlur("name")}
+                                maxLength={50}
                                 required
                             />
                         </div>
                         <div className={`${styles.input} ${styles.photo}`}>
-                            <label className={styles.photo_text} htmlFor="photo">
-                                {t("placeholderPhoto")}
+                            <label className={styles.photo_label} htmlFor="photo">
+                                <div className={styles.photo_icon}>
+                                    <img src="/images/Feedback/add-a-photo-outline.svg"
+                                         alt=""/>
+                                </div>
+                                <p className={styles.photo_text}>{t("placeholderPhoto")}</p>
                             </label>
                             <input
                                 className={styles.hidden}
@@ -104,6 +109,7 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({isOpen, onClose}) => {
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
                             onBlur={() => handleBlur("message")}
+                            maxLength={312}
                             required
                         />
                     </div>

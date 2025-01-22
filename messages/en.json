@@ -82,7 +82,7 @@
   },
   "feedbackForm": {
     "placeholderName": "Enter your name",
-    "placeholderPhoto": "Add your photo",
+    "placeholderPhoto": "Upload your photo",
     "selectedPhoto": "Selected photo",
     "placeholderMessage": "Enter your message",
     "labelName": "Your name",

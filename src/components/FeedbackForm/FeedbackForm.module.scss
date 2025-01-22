@@ -134,16 +134,51 @@
 }
 
 .photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 282px;
+  background-color: transparent;
+  border: 1px dashed transparent;
+  background-image:
+          linear-gradient(to right, #d2cdd8 50%, transparent 50%),
+          linear-gradient(to right, #d2cdd8 50%, transparent 50%),
+          linear-gradient(to bottom, #d2cdd8 50%, transparent 50%),
+          linear-gradient(to bottom, #d2cdd8 50%, transparent 50%);
+  background-position:
+          top,
+          bottom,
+          right,
+          left;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size:
+          13px 1px,
+          13px 1px,
+          1px 13px,
+          1px 13px;
+  box-sizing: border-box;
+}
+
+.photo_label {
+  cursor: pointer;
+}
+
+.photo_icon {
+  text-align: center;
 }
 
 .photo_text {
-  margin-top: 20px;
+  margin-top: 4px;
+  text-align: center;
   font-family: $font-montserrat;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 140%;
-  color: #8f839d;
-  cursor: pointer;
+  color: #d2cdd8;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .hidden {
