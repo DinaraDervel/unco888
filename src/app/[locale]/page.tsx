@@ -9,6 +9,7 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Investors from "@/components/Investors/Investors";
 import News from "@/components/News/News";
+import QandA from "@/components/Q&A/Q&A";
 import RoadMap from "@/components/RoadMap/RoadMap";
 import Services from "@/components/Services/Services";
 import styles from "./page.module.scss";
@@ -24,6 +25,7 @@ export default async function Home() {
       <Banner2 />
       <News />
       <Banner3 />
+      <QandA />
       <CLevel />
       <Investors />
       <Feedback />
