@@ -11,8 +11,8 @@ import Services from '@/components/Services/Services';
 import Footer from '@/components/Footer/Footer';
 import styles from './page.module.scss';
 import BuyAndSell from '@/components/BuyAndSell/BuyAndSell';
-
 import { GetHeaderData } from '@/constants/GetHeaderData';
+import QandA from '@/components/Q&A/Q&A';
 
 export default async function Home() {
   const headerData = await GetHeaderData();
@@ -24,6 +24,7 @@ export default async function Home() {
       <Banner2 />
       <News />
       <Banner3 />
+      <QandA />
       <CLevel />
       <Investors />
       <Feedback />
