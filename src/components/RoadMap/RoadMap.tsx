@@ -32,7 +32,7 @@ const RoadMap = () => {
 
   return (
     <div className={styles.container_main}>
-      <h2 className={styles.title}>OUR STORY</h2>
+      <h2 className={styles.title}>{t('title')}</h2>
       {RoadMapData.map((item, index) =>
         imageSize === 'img390' ? (
           <RoadMapMobile item={item} imageSize={imageSize} key={index} />
