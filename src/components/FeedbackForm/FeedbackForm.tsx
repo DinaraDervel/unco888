@@ -11,7 +11,7 @@ type FeedbackFormProps = {
 };
 
 const FeedbackForm: React.FC<FeedbackFormProps> = ({isOpen, onClose}) => {
-    const t = useTranslations("feedbackForm");
+    const t = useTranslations('feedbackForm');
 
     const [name, setName] = useState<string>('');
     const [photo, setPhoto] = useState<File | null>(null);
