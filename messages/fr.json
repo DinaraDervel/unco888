@@ -120,6 +120,7 @@
     }
   },
   "textRoadMap": {
+    "title": "OUR STORY",
     "text_1": "Andrey Yusupov a initié la création et dirigé une coopérative de consommateurs avec ses voisins pour acheter conjointement des produits auprès des agriculteurs. Les rôles étaient répartis entre les membres de la coopérative : l'un récupère les courses aujourd'hui, un autre demain.",
     "text_2": "Notre expérience réussie s'est rapidement répandue dans toute la ville, et de nombreuses personnes ont demandé de l'aide pour ouvrir leurs propres coopératives. Pour simplifier les commandes, la comptabilité et la gestion des documents, nous avons organisé le développement de notre première plateforme informatique. Des coopératives de consommateurs ont été lancées dans les entreprises.",
     "text_3": "Notre premier bureau a été ouvert. Nos solutions informatiques deviennent plus complexes : des solutions pour l'automatisation du cross-docking, la première solution de livraison du premier au dernier kilomètre ont vu le jour, une solution pour les terminaux de commande dans les bureaux et les entreprises a été lancée, des matériaux d'emballage et promotionnels ont été développés.",
@@ -162,7 +163,6 @@
       "link_9": "Datenschutz",
       "link_10": "Rückgaberecht",
       "link_11": "AGB"
-
     },
     "text": {
       "text_1": "Tous droits réservés. Toute partie de cette présentation est sujette à modification par le propriétaire à tout moment sans préavis. Cette présentation ou une partie de celle-ci ne constitue pas une proposition commerciale ou une partie d'un contrat. Les éléments sont approximatifs et sujets à négociation. Toute copie et utilisation à des fins commerciales nécessite le consentement écrit du titulaire des droits d'auteur.",

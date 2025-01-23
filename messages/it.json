@@ -1,4 +1,3 @@
-
 {
   "header": {
     "links": {
@@ -121,6 +120,7 @@
     }
   },
   "textRoadMap": {
+    "title": "OUR STORY",
     "text_1": "Andrey Yusupov ha avviato la creazione e ha guidato una cooperativa di consumatori con i vicini per acquistare insieme prodotti dagli agricoltori. I ruoli sono stati distribuiti tra i membri della cooperativa: uno ritira i prodotti oggi, un altro domani.",
     "text_2": "La nostra esperienza di successo si è rapidamente diffusa in tutta la città, e molte persone hanno chiesto aiuto per aprire le proprie cooperative. Per semplificare gli ordini, la contabilità e la gestione dei documenti, abbiamo organizzato lo sviluppo della nostra prima piattaforma IT. Cooperative di consumatori sono state lanciate nelle aziende.",
     "text_3": "Il nostro primo ufficio è stato aperto. Le nostre soluzioni IT diventano più complesse: sono emerse soluzioni per l'automazione del cross-docking, la prima soluzione per la consegna dell'ultimo miglio, è stata lanciata una soluzione per terminali di ordine in uffici e aziende, sono stati sviluppati materiali di imballaggio e promozionali.",

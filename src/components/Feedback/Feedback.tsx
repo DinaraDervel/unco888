@@ -1,10 +1,11 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import styles from './feedback.module.scss';
-import Button from '../Button/Button';
+import Button3 from "@/components/Button3/Button3";
 import FeedbackCard from '../FeedbackCard/FeedbackCard';
+import FeedbackForm from "@/components/FeedbackForm/FeedbackForm";
 
 function Feedback() {
   const t = useTranslations('feedback');
@@ -56,6 +57,15 @@ function Feedback() {
     setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : prevIndex));
   };
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className={styles.container}>
       <div>
@@ -83,9 +93,13 @@ function Feedback() {
         </div>
         <button className={styles.cards__button} onClick={handleNext}></button>
       </div>
-      <div className={styles.button}>
-        <Button text={t('button_text')} link='' />
-      </div>
+      <Button3
+          className={`${styles.button} ${styles.review}`}
+          type="button"
+          onClick={openModal}
+          text={t('button_text')}
+      />
+      <FeedbackForm isOpen={isModalOpen} onClose={closeModal}/>
     </div>
   );
 }

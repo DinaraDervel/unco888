@@ -124,6 +124,7 @@
     }
   },
   "textRoadMap": {
+    "title": "OUR STORY",
     "text_1": "Andrey Yusupov initiierte und leitete eine Konsumgenossenschaft mit Nachbarn, um gemeinsam Produkte von Bauern zu kaufen. Die Rollen wurden unter den Mitgliedern der Genossenschaft verteilt: Einer holt heute die Lebensmittel, ein anderer morgen",
     "text_2": "Unsere erfolgreichen Erfahrungen verbreiteten sich schnell in der ganzen Stadt, und viele Menschen baten um Hilfe bei der Eröffnung ihrer eigenen Genossenschaften. Um das Bestellwesen, die Buchhaltung und die Dokumentenverwaltung zu vereinfachen, haben wir die Entwicklung unserer ersten IT-Plattform organisiert. Verbrauchergenossenschaften wurden in Unternehmen gegründet.",
     "text_3": "Unser erstes Büro wurde eröffnet. Unsere IT-Lösungen werden immer komplexer: Lösungen für die Automatisierung von Cross-Docking, First- und Last-Mile-Delivery-Lösungen sind entstanden, eine Lösung für Bestellterminals in Büros und Unternehmen wurde eingeführt, Verpackungs- und Werbematerialien wurden entwickelt.",
@@ -135,6 +136,7 @@
     "text_9": "Das \"white label\" wurde in Serbien eingeführt, die Plattform https://unco.market - die erste Lösung im Rahmen des \"UNCO Global\"-Konzepts - wurde gestartet.",
     "text_10": "https://foodnft.orgLanding Seiten wurden gestartet https://foodfutures.net https://foodfutures.club https://unco.market https://foodnft.org https://unco.bio https://unco.trade Entwickelt und zur Veröffentlichung vorgeschlagen \"UNCO Food Futures for Food Retail\" und \"UNCO Food Futures for HoReCa\""
   },
+
   "contact": {
     "title": "Bitte zögern Sie nicht, uns bei Fragen zu kontaktieren",
     "subtitle": "Schreiben Sie Ihre Anfrage, eine bequeme Art der Kommunikation und wir werden Ihnen antworten",
