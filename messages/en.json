@@ -76,7 +76,17 @@
     "placeholderName": "Enter your name",
     "placeholderMessage": "Enter your message",
     "labelName": "Your name",
-    "labelMessage": "Message text",
+    "labelMessage": "Feedback",
+    "agreeText": "I agree with the Privacy policy on this resource",
+    "btnText": "SEND"
+  },
+  "feedbackForm": {
+    "placeholderName": "Enter your name",
+    "placeholderPhoto": "Upload your photo",
+    "selectedPhoto": "Selected photo",
+    "placeholderMessage": "Enter your message",
+    "labelName": "Your name",
+    "labelMessage": "Feedback",
     "agreeText": "I agree with the Privacy policy on this resource",
     "btnText": "SEND"
   },
