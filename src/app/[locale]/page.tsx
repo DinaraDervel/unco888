@@ -1,18 +1,19 @@
-import Banner1 from '@/components/Banner1/Banner1';
-import Banner2 from '@/components/Banner2/Banner2';
-import CLevel from '@/components/C-Level/CLevel';
-import Banner3 from '@/components/Banner3/Banner3';
-import Header from '@/components/Header/Header';
-import News from '@/components/News/News';
-import Investors from '@/components/Investors/Investors';
-import Contact_Component from '@/components/СontactСomponent/СontactСomponent';
-import Feedback from '@/components/Feedback/Feedback';
-import Services from '@/components/Services/Services';
-import Footer from '@/components/Footer/Footer';
-import styles from './page.module.scss';
-import BuyAndSell from '@/components/BuyAndSell/BuyAndSell';
-import { GetHeaderData } from '@/constants/GetHeaderData';
-import QandA from '@/components/Q&A/Q&A';
+import Banner1 from "@/components/Banner1/Banner1";
+import Banner2 from "@/components/Banner2/Banner2";
+import Banner3 from "@/components/Banner3/Banner3";
+import BuyAndSell from "@/components/BuyAndSell/BuyAndSell";
+import CLevel from "@/components/C-Level/CLevel";
+import Contact_Component from "@/components/СontactСomponent/СontactСomponent";
+import Feedback from "@/components/Feedback/Feedback";
+import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header/Header";
+import Investors from "@/components/Investors/Investors";
+import News from "@/components/News/News";
+import QandA from "@/components/Q&A/Q&A";
+import RoadMap from "@/components/RoadMap/RoadMap";
+import Services from "@/components/Services/Services";
+import styles from "./page.module.scss";
+import { GetHeaderData } from "@/constants/GetHeaderData";
 
 export default async function Home() {
   const headerData = await GetHeaderData();
@@ -29,8 +30,9 @@ export default async function Home() {
       <Investors />
       <Feedback />
       <BuyAndSell />
+      <RoadMap />
       <Contact_Component />
-      <Services />
+      <Services />  
       <Footer />
     </div>
   );
