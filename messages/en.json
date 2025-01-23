@@ -124,6 +124,17 @@
     }
   },
 
+  "sellForm": {
+    "placeholderQuantity": "Enter quantity for sale ",
+    "placeholderLink": "Add your link",
+    "placeholderContactInfo": "Enter your contact information ",
+    "labelQuantity": "Quantity for sale",
+    "labelLink": "Your link to offer ",
+    "labelContactInfo": "Your contact information",
+    "agreeText": "I agree with the Privacy policy on this resource",
+    "btnText": "send"
+  },
+
   "textRoadMap": {
     "title": "OUR STORY",
     "text_1": "Andrey Yusupov initiated the creation and headed a consumer cooperative with neighbors to jointly purchase products from farmers. The roles were distributed among the members of the cooperative: One takes the groceries today, another tomorrow",
@@ -136,17 +147,6 @@
     "text_8": "Launched in Italy \"white label\", the development of a conceptually new eco-friendly and Worldwide available business solution and IT solution has begun",
     "text_9": "The \"white label\" was launched in Serbia, the platform was launched https://unco.market - the first solution within the framework of the \"UNCO Global\" concept",
     "text_10": "https://foodnft.orgLanding pages have been launched https://foodfutures.net https://foodfutures.club https://unco.market https://foodnft.org https://unco.bio https://unco.trade Developed and proposed for publication \"UNCO Food Futures for Food Retail\" and \"UNCO Food Futures for HoReCa\""
-  },
-
-  "sellForm": {
-    "placeholderQuantity": "Enter quantity for sale ",
-    "placeholderLink": "Add your link",
-    "placeholderContactInfo": "Enter your contact information ",
-    "labelQuantity": "Quantity for sale",
-    "labelLink": "Your link to offer ",
-    "labelContactInfo": "Your contact information",
-    "agreeText": "I agree with the Privacy policy on this resource",
-    "btnText": "send"
   },
 
   "contact": {

@@ -121,6 +121,17 @@
       "button": "купить"
     }
   },
+  "sellForm": {
+    "placeholderQuantity": "Enter quantity for sale ",
+    "placeholderLink": "Add your link",
+    "placeholderContactInfo": "Enter your contact information ",
+    "labelQuantity": "Quantity for sale",
+    "labelLink": "Your link to offer ",
+    "labelContactInfo": "Your contact information",
+    "agreeText": "I agree with the Privacy policy on this resource",
+    "btnText": "send"
+  },
+
   "textRoadMap": {
     "title": "OUR STORY",
     "text_1": "Андрей Юсупов инициировал создание и возглавил потребительский кооператив с соседями для совместной покупки продуктов у фермеров. Роли распределялись между членами кооператива: один забирает продукты сегодня, другой завтра.",

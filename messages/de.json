@@ -125,6 +125,17 @@
       "button": "kaufen"
     }
   },
+  "sellForm": {
+    "placeholderQuantity": "Enter quantity for sale ",
+    "placeholderLink": "Add your link",
+    "placeholderContactInfo": "Enter your contact information ",
+    "labelQuantity": "Quantity for sale",
+    "labelLink": "Your link to offer ",
+    "labelContactInfo": "Your contact information",
+    "agreeText": "I agree with the Privacy policy on this resource",
+    "btnText": "send"
+  },
+
   "textRoadMap": {
     "title": "OUR STORY",
     "text_1": "Andrey Yusupov initiierte und leitete eine Konsumgenossenschaft mit Nachbarn, um gemeinsam Produkte von Bauern zu kaufen. Die Rollen wurden unter den Mitgliedern der Genossenschaft verteilt: Einer holt heute die Lebensmittel, ein anderer morgen",

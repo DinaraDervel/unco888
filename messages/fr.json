@@ -121,6 +121,17 @@
       "button": "acheter"
     }
   },
+  "sellForm": {
+    "placeholderQuantity": "Enter quantity for sale ",
+    "placeholderLink": "Add your link",
+    "placeholderContactInfo": "Enter your contact information ",
+    "labelQuantity": "Quantity for sale",
+    "labelLink": "Your link to offer ",
+    "labelContactInfo": "Your contact information",
+    "agreeText": "I agree with the Privacy policy on this resource",
+    "btnText": "send"
+  },
+
   "textRoadMap": {
     "title": "OUR STORY",
     "text_1": "Andrey Yusupov a initié la création et dirigé une coopérative de consommateurs avec ses voisins pour acheter conjointement des produits auprès des agriculteurs. Les rôles étaient répartis entre les membres de la coopérative : l'un récupère les courses aujourd'hui, un autre demain.",
