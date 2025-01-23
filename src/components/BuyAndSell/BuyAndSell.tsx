@@ -78,9 +78,11 @@ function BuyAndSell() {
         <button className={styles.cards__button} onClick={handleNext}></button>
       </div>
 
-      <button className={styles.button} onClick={handleOpenModal}>
-        {t('button_text')}{' '}
-      </button>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button} onClick={handleOpenModal}>
+          {t('button_text')}{' '}
+        </button>
+      </div>
 
       <ModalComponent isOpen={isModalOpen} onRequestClose={handleCloseModal}>
         <SellForm onClose={handleCloseModal} />

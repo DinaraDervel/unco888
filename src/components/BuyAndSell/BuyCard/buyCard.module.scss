@@ -92,3 +92,24 @@
   width: 154px;
   height: 38px;
 }
+
+@media (max-width: 1440px) {
+  .card {
+    &__title {
+      font-size: 28px;
+      line-height: 39.2px;
+      letter-spacing: 0.1em;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    &__numbers {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+    }
+  }
+}
