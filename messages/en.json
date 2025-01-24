@@ -107,7 +107,6 @@
   "feedbackForm": {
     "placeholderName": "Enter your name",
     "labelPhoto": "Upload your photo",
-    "selectedPhoto": "Selected photo",
     "placeholderMessage": "Enter your message",
     "labelName": "Your name",
     "labelMessage": "Feedback",
