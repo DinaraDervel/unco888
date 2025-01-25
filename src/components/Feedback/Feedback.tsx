@@ -1,20 +1,23 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import styles from './feedback.module.scss';
-import Button3 from "@/components/Button3/Button3";
-import FeedbackCard from '../FeedbackCard/FeedbackCard';
-import FeedbackForm from "@/components/FeedbackForm/FeedbackForm";
+import Button3 from '@/components/Button3/Button3';
+import FeedbackCard from './FeedbackCard/FeedbackCard';
+import FeedbackForm from '@/components/FeedbackForm/FeedbackForm';
 
-function Feedback() {
+interface FeedbackItem {
+  name: string;
+  age: string;
+  text: string;
+}
+
+const Feedback: React.FC = () => {
   const t = useTranslations('feedback');
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleCards = 4;
-  const cardWidth = 405 + 18;
+  const sliderRef = useRef<HTMLDivElement | null>(null);
 
-  const feedbacks = [
+  const feedbackData: FeedbackItem[] = [
     {
       name: 'Name1',
       age: 'age',
@@ -47,14 +50,15 @@ function Feedback() {
     },
   ];
 
-  const maxIndex = feedbacks.length - visibleCards;
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex < maxIndex ? prevIndex + 1 : prevIndex));
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : prevIndex));
+  const handleScroll = (direction: 'left' | 'right') => {
+    const slider = sliderRef.current;
+    if (slider) {
+      const scrollAmount = slider.offsetWidth / 2;
+      slider.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth',
+      });
+    }
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -74,14 +78,14 @@ function Feedback() {
         <h3 className={styles.subtitle}>{t('subtitle')}</h3>
       </div>
       <div className={styles.cards__wrapper}>
-        <button className={styles.cards__button} onClick={handlePrev}></button>
-        <div className={styles.cards__viewport}>
-          <div
-            ref={sliderRef}
-            className={styles.cards}
-            style={{ transform: `translateX(-${currentIndex * cardWidth}px)` }}
-          >
-            {feedbacks.map((feedback, index) => (
+        <button
+          className={styles.cards__button}
+          onClick={() => handleScroll('left')}
+          aria-label='Previous'
+        />
+        <div className={styles.cards__viewport} ref={sliderRef}>
+          <div className={styles.cards}>
+            {feedbackData.map((feedback, index) => (
               <FeedbackCard
                 key={index}
                 name={feedback.name}
@@ -91,17 +95,33 @@ function Feedback() {
             ))}
           </div>
         </div>
-        <button className={styles.cards__button} onClick={handleNext}></button>
+        <button
+          className={styles.cards__button}
+          onClick={() => handleScroll('right')}
+          aria-label='Next'
+        />
+        <div className={styles.cards__btns}>
+          <button
+            className={styles.cards__btn}
+            onClick={() => handleScroll('left')}
+            aria-label='Previous'
+          />
+          <button
+            className={styles.cards__btn}
+            onClick={() => handleScroll('right')}
+            aria-label='Next'
+          />
+        </div>
       </div>
       <Button3
-          className={`${styles.button} ${styles.review}`}
-          type="button"
-          onClick={openModal}
-          text={t('button_text')}
+        className={`${styles.button} ${styles.review}`}
+        type='button'
+        onClick={openModal}
+        text={t('button_text')}
       />
-      <FeedbackForm isOpen={isModalOpen} onClose={closeModal}/>
+      <FeedbackForm isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
-}
+};
 
 export default Feedback;
