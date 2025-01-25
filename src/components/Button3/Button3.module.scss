@@ -10,6 +10,7 @@
   cursor: pointer;
   color: $black;
   font-family: $font-jura;
+  font-size: 25px;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -34,5 +35,17 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+}
+
+@media (max-width: 1440px) {
+  .button {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 390px) {
+  .button {
+    font-size: 16px;
   }
 }
