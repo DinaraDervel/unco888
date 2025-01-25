@@ -95,9 +95,6 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({ isOpen, onClose }) => {
                 onChange={handlePhotoChange}
               />
               {photo && (
-                // <p className={styles.photo_text}>
-                //   {t('selectedPhoto')}: {photo.name}
-                // </p>
                 <p className={styles.photo_text}>{photo.name}</p>
               )}
             </div>
