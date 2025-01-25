@@ -49,16 +49,6 @@
     "title": "NEWS"
   },
 
-  "feedbackForm": {
-    "placeholderName": "Enter your name",
-    "placeholderPhoto": "Upload your photo",
-    "selectedPhoto": "Selected photo",
-    "placeholderMessage": "Enter your message",
-    "labelName": "Your name",
-    "labelMessage": "Feedback",
-    "agreeText": "I agree with the Privacy policy on this resource",
-    "btnText": "SEND"
-  },
   "banner3": {
     "title": "UNCO Food Futures",
     "text1": "Food at up to twice cheaper",
@@ -112,6 +102,16 @@
   "feedback": {
     "subtitle": "Feedback",
     "button_text": "Leave a review"
+  },
+
+  "feedbackForm": {
+    "placeholderName": "Enter your name",
+    "labelPhoto": "Upload your photo",
+    "placeholderMessage": "Enter your message",
+    "labelName": "Your name",
+    "labelMessage": "Feedback",
+    "agreeText": "I agree with the Privacy policy on this resource",
+    "btnText": "SEND"
   },
   "buyandsell": {
     "title": "you can buy and sell ",
