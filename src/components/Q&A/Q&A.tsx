@@ -1,43 +1,24 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import styles from './Q&A.module.scss';
 import QandAData from '../../constants/getQ&AData';
 import { useTranslations } from 'next-intl';
 
 const QandA: React.FC = () => {
     const t = useTranslations('faq');
-
     const [activeBlock, setActiveBlock] = useState<number | null>(null);
-    const [isButtonLocked, setIsButtonLocked] = useState(false);
-    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-    const handleMouseLeave = () => {
-        if (timeoutRef.current) {
-            clearTimeout(timeoutRef.current);
-        }
-
-        timeoutRef.current = setTimeout(() => {
-            setActiveBlock(null);
-            setIsButtonLocked(false);
-        }, 30);
-    };
-
-    const handleMouseEnter = () => {
-        if (timeoutRef.current) {
-            clearTimeout(timeoutRef.current);
-        }
-    };
-
+    
     const handleClick = (e: React.MouseEvent, index: number) => {
         e.preventDefault();
 
-        if (isButtonLocked) {
-            return;
+        if (activeBlock === index) {
+            setActiveBlock(null);
         }
 
+        else {
         setActiveBlock(index);
-        setIsButtonLocked(true);
+        }
     };
 
     return (
@@ -66,8 +47,6 @@ const QandA: React.FC = () => {
                         <button
                             className={`${styles.button} ${activeBlock === index ? styles.rotated : ''}`}
                             onClick={(e) => handleClick(e, index)}
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}
                         />
                     </div>
                 ))}
