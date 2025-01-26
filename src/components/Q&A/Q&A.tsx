@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import styles from './Q&A.module.scss';
+import QandAData from '../../constants/getQ&AData';
 import { useTranslations } from 'next-intl';
 
 const QandA: React.FC = () => {
@@ -39,48 +40,27 @@ const QandA: React.FC = () => {
         setIsButtonLocked(true);
     };
 
-    const questions = [
-        {
-            question: 'What is your return policy?',
-            explanation:
-                "We offer a 30-day money-back. If you're not satisfied with your purchase, you can return it within 30 days for a full refund within 30 days for a full refund",
-            truncate: false,
-        },
-        {
-            question: 'Can I cancel or change my order?',
-            explanation:
-                'Please contact us as soon as possible if you need to cancel or make changes to your order. We will do our best to accommodate your request, but please note that we may not be able to make changes once an order has shipped.',
-            truncate: true,
-        },
-        {
-            question: 'What is your return policy?',
-            explanation:
-                "We offer a 30-day money-back guarantee. If you're not satisfied with your purchase, you can return it within 30 days for a full refund within 30 days for a full refund",
-            truncate: false,
-        },
-    ];
-
     return (
         <main className={styles.main}>
             <h1 className={styles.title}>{t('title')}</h1>
             <div className={styles.container}>
-                {questions.map((item, index) => (
+                {QandAData.map((item, index) => (
                     <div
                         key={index}
                         className={`${styles.block} ${activeBlock === index ? styles.active : ''}`}
                     >
                         <div className={styles.text}>
                             <div className={styles.textsmini}>
-                                <div
+                                <p
                                     className={`${styles.question} ${activeBlock === index ? styles.questionActive : ''}`}
                                 >
-                                    {item.question}
-                                </div>
-                                <div
+                                    {t(item.question)}
+                                </p>
+                                <p
                                     className={`${styles.explanation} ${activeBlock === index ? styles.explanationActive : ''}`}
                                 >
-                                    {item.explanation}
-                                </div>
+                                    {t(item.explanation)}
+                                </p>
                             </div>
                         </div>
                         <button
