@@ -64,12 +64,12 @@ function Footer() {
               <ul className={styles.nav}>
                 <div className={styles.col}>
                   <li>
-                    <Link href='' className={styles.link}>
+                    <Link href='#buy' className={styles.link}>
                       {t('links.link_1')}
                     </Link>
                   </li>
                   <li>
-                    <Link href='' className={styles.link}>
+                    <Link href='#uff' className={styles.link}>
                       {t('links.link_2')}
                     </Link>
                   </li>
@@ -96,7 +96,7 @@ function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href='' className={styles.link}>
+                    <Link href='#services' className={styles.link}>
                       {t('links.link_7')}
                     </Link>
                   </li>
@@ -104,7 +104,7 @@ function Footer() {
                 <div className={styles.col}>
                   <li>
                     <Link
-                      href='https://www.unco.club/include/impressum.php'
+                      href='https://topmarkt.unco.market/files/Impressum.pdf'
                       className={styles.link}
                     >
                       {t('links.link_8')}
@@ -112,19 +112,22 @@ function Footer() {
                   </li>
                   <li>
                     <Link
-                      href='https://www.unco.club/include/licenses_detail.php'
+                      href='https://topmarkt.unco.market/files/Datenschutz.pdf'
                       className={styles.link}
                     >
                       {t('links.link_9')}
                     </Link>
                   </li>
                   <li>
-                    <Link href='https://www.unco.club/company/rckgaberecht' className={styles.link}>
+                    <Link
+                      href='https://topmarkt.unco.market/files/Ru%CC%88ckgaberecht.pdf'
+                      className={styles.link}
+                    >
                       {t('links.link_10')}
                     </Link>
                   </li>
                   <li>
-                    <Link href='https://www.unco.club/include/abg.php' className={styles.link}>
+                    <Link href='https://topmarkt.unco.market/files/ABG.pdf' className={styles.link}>
                       {t('links.link_11')}
                     </Link>
                   </li>

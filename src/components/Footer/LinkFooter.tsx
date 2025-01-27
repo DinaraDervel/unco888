@@ -16,10 +16,13 @@ export default function LinkFooter() {
       { text: t('links.link_5'), href: '#faq' },
       { text: t('links.link_6'), href: '#roadmap' },
       { text: t('links.link_7'), href: '#services' },
-      { text: t('links.link_8'), href: 'https://www.unco.club/include/impressum.php' },
-      { text: t('links.link_9'), href: 'https://www.unco.club/include/licenses_detail.php' },
-      { text: t('links.link_10'), href: 'https://www.unco.club/company/rckgaberecht' },
-      { text: t('links.link_11'), href: 'https://www.unco.club/include/abg.php' },
+      { text: t('links.link_8'), href: 'https://topmarkt.unco.market/files/Impressum.pdf' },
+      { text: t('links.link_9'), href: 'https://topmarkt.unco.market/files/Datenschutz.pdf' },
+      {
+        text: t('links.link_10'),
+        href: 'https://topmarkt.unco.market/files/Ru%CC%88ckgaberecht.pdf',
+      },
+      { text: t('links.link_11'), href: 'https://topmarkt.unco.market/files/ABG.pdf' },
     ],
   };
 
