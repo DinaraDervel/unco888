@@ -62,6 +62,7 @@
       letter-spacing: 0.1em;
       text-align: left;
       color: var.$gray;
+      overflow-wrap: anywhere; //for German words
     }
   }
 
