@@ -6,13 +6,15 @@ import styles from "./roadMap.module.scss";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { RoadMapData, RoadMapKeys } from "@/constants/RoadMapData";
+import { useWindowSize } from "@/hooks/useWindowSize";
 
 const RoadMap = () => {
   const t = useTranslations('textRoadMap');
   const [imageSize, setImageSize] = useState<RoadMapKeys>('img1440');
 
+  const { width } = useWindowSize();
+
   const updateImageSize = () => {
-    const width = window.innerWidth;
     if (width < 390) {
       setImageSize('img390');
     } else if (width < 760) {
@@ -23,12 +25,10 @@ const RoadMap = () => {
   };
 
   useEffect(() => {
-    updateImageSize();
-    window.addEventListener('resize', updateImageSize);
-    return () => {
-      window.removeEventListener('resize', updateImageSize);
-    };
-  }, []);
+    if (width) {
+      updateImageSize();
+    }
+  }, [width]);
 
   return (
     <div className={styles.container_main}>

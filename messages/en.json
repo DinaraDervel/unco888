@@ -48,7 +48,6 @@
   "news": {
     "title": "NEWS"
   },
-
   "banner3": {
     "title": "UNCO Food Futures",
     "text1": "Food at up to twice cheaper",
@@ -103,7 +102,6 @@
     "subtitle": "Feedback",
     "button_text": "Leave a review"
   },
-
   "feedbackForm": {
     "placeholderName": "Enter your name",
     "labelPhoto": "Upload your photo",
@@ -123,7 +121,6 @@
       "button": "buy"
     }
   },
-
   "sellForm": {
     "placeholderQuantity": "Enter quantity for sale ",
     "placeholderLink": "Add your link",
@@ -134,7 +131,6 @@
     "agreeText": "I agree with the Privacy policy on this resource",
     "btnText": "send"
   },
-
   "textRoadMap": {
     "title": "OUR STORY",
     "text_1": "Andrey Yusupov initiated the creation and headed a consumer cooperative with neighbors to jointly purchase products from farmers. The roles were distributed among the members of the cooperative: One takes the groceries today, another tomorrow",
@@ -148,27 +144,27 @@
     "text_9": "The \"white label\" was launched in Serbia, the platform was launched https://unco.market - the first solution within the framework of the \"UNCO Global\" concept",
     "text_10": "https://foodnft.orgLanding pages have been launched https://foodfutures.net https://foodfutures.club https://unco.market https://foodnft.org https://unco.bio https://unco.trade Developed and proposed for publication \"UNCO Food Futures for Food Retail\" and \"UNCO Food Futures for HoReCa\""
   },
-
   "contact": {
     "title": "Please feel free to contact us with any questions",
     "subtitle": "Write your request, a convenient way of communicationand we will answer you",
     "placeholderName": "Enter your name",
-    "btnText": "Contact us"
+    "email": "E-mail",
+    "message": "Message text",
+    "btnText": "Contact us",
+    "send": "SEND",
+    "agreeText": "I agree with the Privacy policy on this resource"
   },
-
   "contactForm": {
-    "placeholderName": "Enter your name",
+    "placeholderName": "Enter your Email",
     "placeholderMessage": "Enter your message",
     "labelName": "Your name",
     "labelMessage": "Feedback",
     "agreeText": "I agree with the Privacy policy on this resource",
     "btnText": "SEND"
   },
-
   "services": {
     "title": "Eco - System"
   },
-
   "footer": {
     "title": "Contact us:",
     "links": {
@@ -189,7 +185,6 @@
       "text_2": "*All figures, designations, abbreviations and data in this web pages are solely for the purpose of explaining the pattern of operation, are not based on actual facts and events and may not be used for any other purpose (including but not limited to: investment decisions, buying, education, predictions) other than a general understanding of the business model. Trading services are provided by third-party companies under the relevant agreements and licenses of the respective countries where the sales and other transactions take place. Past performance is not a reliable indicator of future results. Your returns may increase or decrease as a result of currency fluctuations. Your capital is at risk. View Trading Disclosures  on the websites of the respective trading platforms."
     }
   },
-
   "not found": {
     "text": "Page not found",
     "button": "Go to main page"
