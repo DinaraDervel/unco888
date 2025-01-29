@@ -15,7 +15,7 @@
 .title {
   padding-bottom: 20px;
   text-align: center;
-  font-family: var.$font-michroma;
+  font-family: var.$font-montserrat;
   font-size: clamp(3rem, 1.458vw + 1.688rem, 3.438rem);
   font-weight: 400;
   line-height: 120%;
@@ -71,18 +71,18 @@
   grid-gap: 22px;
 
   .card {
-    padding: 67px 5px 0;
+    padding: 74px 5px 0;
     background-color: var.$violet;
     &:first-child{
       border-radius: 12px;
-      padding: 67px 5px 0px 15px;
+      padding: 74px 5px 0px 15px;
     }
     &:nth-child(2) {
       border-radius: 12px;
     }
     &:nth-child(3) {
       border-radius: 12px 12px 12px 128px;
-      padding: 67px 5px 0px 15px;
+      padding: 74px 5px 0px 15px;
     }
 
     &:nth-child(4) {
