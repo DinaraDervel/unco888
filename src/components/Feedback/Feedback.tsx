@@ -1,17 +1,26 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import styles from './feedback.module.scss';
 import Button3 from '@/components/Button3/Button3';
 import FeedbackCard from './FeedbackCard/FeedbackCard';
 import FeedbackForm from '@/components/FeedbackForm/FeedbackForm';
+import FeedbackPopup from './FeedbackPopup/FeedbackPopup';
 
 interface FeedbackItem {
   name: string;
   age: string;
   text: string;
 }
+
+const toggleBodyScroll = (disable: boolean) => {
+  if (disable) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+};
 
 const Feedback: React.FC = () => {
   const t = useTranslations('feedback');
@@ -21,7 +30,7 @@ const Feedback: React.FC = () => {
     {
       name: 'Name1',
       age: 'age',
-      text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.',
+      text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. . Nnibh ornare accumsan. Nnibh ornare accumsan.',
     },
     {
       name: 'Name2',
@@ -61,6 +70,16 @@ const Feedback: React.FC = () => {
     }
   };
 
+  const [selectedFeedback, setSelectedFeedback] = useState<FeedbackItem | null>(null);
+
+  const openPopup = (feedback: FeedbackItem) => {
+    setSelectedFeedback(feedback);
+  };
+
+  const closePopup = () => {
+    setSelectedFeedback(null);
+  };
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => {
     setIsModalOpen(true);
@@ -69,6 +88,11 @@ const Feedback: React.FC = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
+  useEffect(() => {
+    toggleBodyScroll(!!selectedFeedback);
+    return () => toggleBodyScroll(false);
+  }, [selectedFeedback]);
 
   return (
     <div className={styles.container}>
@@ -91,6 +115,7 @@ const Feedback: React.FC = () => {
                 name={feedback.name}
                 age={feedback.age}
                 text={feedback.text}
+                onClick={() => openPopup(feedback)}
               />
             ))}
           </div>
@@ -120,6 +145,7 @@ const Feedback: React.FC = () => {
         text={t('button_text')}
       />
       <FeedbackForm isOpen={isModalOpen} onClose={closeModal} />
+      {selectedFeedback && <FeedbackPopup feedback={selectedFeedback} onClose={closePopup} />}
     </div>
   );
 };
