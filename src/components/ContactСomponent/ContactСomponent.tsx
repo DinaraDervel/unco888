@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import styles from './СontactСomponent.module.scss';
+import styles from './ContactСomponent.module.scss';
 import ModalComponent from '../ModalСomponent/ModalСomponent';
 import ContactForm from '../ContactForm/ContactForm';
 import { useTranslations } from 'next-intl';
