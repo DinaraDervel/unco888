@@ -43,7 +43,7 @@
     position: relative;
     display: flex;
     width: clamp(24.5rem, 24.167vw + 2.75rem, 31.75rem);
-    padding: 20px 48px;
+    padding: 110px 48px;
     flex-direction: column;
     justify-content: center;
     gap: 18px;
@@ -167,7 +167,8 @@
         font-weight: 400;
     }
     .button {
-        width: 590px;
+        width: 100%;
+        max-width: 590px;
     }
 }
 
@@ -196,8 +197,5 @@
     }
     .caption {
         font-size: 16px;
-    }
-    .button {
-        width: 100%;
     }
 }
