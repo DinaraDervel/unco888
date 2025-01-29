@@ -1,9 +1,10 @@
 "use client";
 import Button from "../Button/Button";
 import styles from "./contactForm.module.scss";
-import { name } from "eslint-plugin-prettier/recommended";
 import { useTranslations } from "next-intl";
 import { ChangeEvent, useState } from "react";
+
+// import { name } from "eslint-plugin-prettier/recommended";
 
 type ContactFormProps = {
   onClose: () => void;

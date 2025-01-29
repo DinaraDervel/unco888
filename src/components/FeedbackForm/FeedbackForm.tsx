@@ -56,6 +56,10 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({ isOpen, onClose }) => {
     }));
   };
 
+  const handleCancel = () => {
+    setPhoto(null);
+  }
+
   const isFormValid = name.trim() !== '' && message.trim() !== '' && isAgreed;
 
   return (
@@ -85,7 +89,7 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({ isOpen, onClose }) => {
                 <div className={styles.photo_icon}>
                   <img src='/images/Feedback/add-a-photo-outline.svg' alt='' />
                 </div>
-                <p className={styles.photo_text}>{t('labelPhoto')}</p>
+                {photo ? <></> :  <p className={styles.photo_text}>{t('labelPhoto')}</p> }
               </label>
               <input
                 className={styles.hidden}
@@ -95,10 +99,12 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({ isOpen, onClose }) => {
                 onChange={handlePhotoChange}
               />
               {photo && (
-                // <p className={styles.photo_text}>
-                //   {t('selectedPhoto')}: {photo.name}
-                // </p>
-                <p className={styles.photo_text}>{photo.name}</p>
+                <div className={styles.photo_details}>
+                  <div className={styles.photo_name_container}>
+                    <p className={styles.photo_text}>{photo.name}</p>
+                  </div>
+                  <button type="button" className={styles.cancel} onClick={handleCancel} />
+                </div>
               )}
             </div>
           </div>

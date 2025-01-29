@@ -3,7 +3,7 @@ import Banner2 from "@/components/Banner2/Banner2";
 import Banner3 from "@/components/Banner3/Banner3";
 import BuyAndSell from "@/components/BuyAndSell/BuyAndSell";
 import CLevel from "@/components/C-Level/CLevel";
-import Contact_Component from "@/components/СontactСomponent/СontactСomponent";
+import Contact_Component from "@/components/ContactСomponent/ContactСomponent";
 import Feedback from "@/components/Feedback/Feedback";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
