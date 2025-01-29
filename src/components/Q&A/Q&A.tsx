@@ -20,7 +20,7 @@ const QandA: React.FC = () => {
   };
 
   return (
-    <main className={styles.main} id='faq'>
+    <section className={styles.main} id='faq'>
       <h1 className={styles.title}>{t('title')}</h1>
       <div className={styles.container}>
         {QandAData.map((item, index) => (
@@ -49,7 +49,7 @@ const QandA: React.FC = () => {
           </div>
         ))}
       </div>
-    </main>
+    </section>
   );
 };
 
