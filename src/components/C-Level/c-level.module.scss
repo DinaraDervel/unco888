@@ -1,7 +1,7 @@
 @use '../../styles/_var' as var;
 
 .container {
-  position: relative;
+  // position: relative;
   max-width: 1920px;
   background: var.$bg-primary-gradient;
   margin: 0 auto;
@@ -98,12 +98,16 @@
   line-height: 140%;
   
 }
-
+.star{
+  position: relative;
+}
 .flare {
   position: absolute;
+  bottom: -58px;
+    left: -61px;
   height: 140px;
   width: clamp(7.75rem, 3.333vw + 4.75rem, 8.75rem);
-  bottom: 208px;
+  // bottom: 208px;
   background:
     linear-gradient(to bottom right, #fff 0%, #000 50%) bottom right / 50% 50% no-repeat,
     linear-gradient(to bottom left, #fff 0%, #000 50%) bottom left / 50% 50% no-repeat,
@@ -169,9 +173,45 @@
   .flare {
     width: clamp(6.563rem, 5.152rem + 2.97vw, 7.75rem);
     height: clamp(6.25rem, 4.914rem + 2.81vw, 7.375rem);
-    bottom: 190px;
+    bottom: -58px;
+    left: -61px;
   }
 }
+@media (max-width: 1410px) {
+.cards{
+  grid-template-columns: clamp(31rem, 2.718rem + 41.1vw, 38.938rem) clamp(31rem, 2.718rem + 41.1vw, 38.938rem);
+}
+.card_right{
+grid-template-columns:clamp(15.188rem, -0.846rem + 23.3vw, 19.688rem) clamp(15.188rem, -0.846rem + 23.3vw, 19.688rem);
+}
+
+.card {
+ 
+  &:first-child{
+    padding: 67px 5px 0px 15px;
+  }
+  &:nth-child(2) {
+    padding: 74px 5px 0px 15px;
+  }
+  &:nth-child(3) {
+   
+    padding: 67px 5px 0px 15px;
+  }
+
+  &:nth-child(4) {
+    padding: 74px 5px 0px 15px;
+  }
+}
+}
+
+@media (max-width: 1250px) {
+  .card {
+    &:nth-child(2) {
+      padding: 74px 3px 0px 5px;
+    } 
+}
+}
+
 @media (max-width: 1200px) {
   .card_left {
     padding: 60px;
@@ -180,16 +220,16 @@
     text-align: left;
     z-index: 99;
   }
-  .flare {
-    top: 800px;
-    z-index: 2;
-  }
+  // .flare {
+  //   top: 800px;
+  //   z-index: 2;
+  // }
   .card_right {
     z-index: 100;
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1130px) {
   .cards {
     display: flex;
     flex-direction: column;
@@ -199,6 +239,7 @@
     height: 620px;
   }
   .card_right {
+    grid-template-columns: 1fr 1fr;
     height: 620px;
   }
   .buttons {
@@ -218,6 +259,36 @@
   .subtitle {
     font-size: clamp(1.75rem, 0.632rem + 2.35vw, 2.25rem);
   }
+
+  .card {
+ 
+    &:first-child{
+      padding: 67px 5px 0px 15px;
+    }
+    &:nth-child(2) {
+      padding: 74px 20px 0px 40px;
+    }
+    &:nth-child(3) {
+     
+      padding: 67px 5px 0px 15px;
+    }
+  
+    &:nth-child(4) {
+      padding: 74px 20px 0px 40px;
+    }
+  }
+.star{
+  position: relative;
+  display: inline-block;
+  // height: 107px;
+  // margin: 0 auto;
+}
+.flare{
+  position: absolute;
+  bottom:585px;
+  left: -56px;
+}
+
 }
 @media (max-width: 760px) {
   .container {
