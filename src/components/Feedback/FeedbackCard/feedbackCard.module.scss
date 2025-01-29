@@ -12,6 +12,7 @@
     border-radius: 12px;
     background: var.$gray;
     font-family: var.$font-montserrat;
+    cursor: pointer;
     &::before {
         content: '';
         position: absolute;
