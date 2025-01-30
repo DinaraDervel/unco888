@@ -2,7 +2,7 @@ export const servicesItems = [
   {
     src: '/images/Services/customers.png',
     name: 'customers',
-    link: 'https://topmarkt.unco.market/',
+    link: ' https://unco.club/',
     button_title: 'UFF',
     button_text: 'for retail customers',
     width: 465,
@@ -42,7 +42,7 @@ export const servicesItems = [
     name: 'e-commerce',
     link: 'https://foodfutures.club/',
     button_title: 'UFF',
-    button_text: 'for E-commerce',
+    button_text: 'for Retail and E-commerce',
     width: 465,
     height: 310,
   },
@@ -80,7 +80,7 @@ export const servicesItems = [
   {
     src: '/images/Services/bloggers.jpg',
     name: 'bloggers',
-    link: 'https://unco.bloggers',
+    link: 'https://unco.exchange',
     button_title: 'UNCO',
     button_text: 'for bloggers',
     width: 465,
