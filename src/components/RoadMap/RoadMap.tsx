@@ -1,11 +1,11 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import RoadMapMobile from "./RoadMapMobile";
-import styles from "./roadMap.module.scss";
-import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
-import { RoadMapData, RoadMapKeys } from "@/constants/RoadMapData";
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import RoadMapMobile from './RoadMapMobile';
+import styles from './roadMap.module.scss';
+import { useTranslations } from 'next-intl';
+import { useEffect, useState } from 'react';
+import { RoadMapData, RoadMapKeys } from '@/constants/RoadMapData';
 
 const RoadMap = () => {
   const t = useTranslations('textRoadMap');
@@ -31,7 +31,7 @@ const RoadMap = () => {
   }, []);
 
   return (
-    <div className={styles.container_main}>
+    <div className={styles.container_main} id='roadmap'>
       <h2 className={styles.title}>{t('title')}</h2>
       {RoadMapData.map((item, index) =>
         imageSize === 'img390' ? (
