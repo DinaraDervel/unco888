@@ -116,7 +116,6 @@
   font-weight: 400;
   font-size: clamp(1.75rem, 2.5vw - 0.5rem, 2.5rem);
   line-height: 140%;
-  line-height: 140%;
 }
 
 .flare {
@@ -146,6 +145,7 @@
     padding: 19px 16px;
   }
 }
+
 @media (max-width: 1440px) {
   .container {
     padding: 60px clamp(1.25rem, -1.824rem + 6.47vw, 4rem)
@@ -256,7 +256,6 @@
     .card {
       padding: 26px clamp(1rem, 14.054vw - 1.741rem, 3.6rem) 26px
         clamp(1rem, 8.649vw + 0.157rem, 1.8rem);
-      //display: flex;
 
       .card_text {
         font-size: clamp(1rem, 0.605rem + 1.62vw, 1.375rem);
@@ -265,28 +264,8 @@
         letter-spacing: 0.1em;
       }
     }
-    // .card:nth-child(1) {
-    //   padding: clamp(0.938rem, -5.848rem + 27.84vw, 7.375rem)
-    //     clamp(1.625rem, -0.615rem + 9.19vw, 3.75rem) clamp(0.938rem, -5.848rem + 27.84vw, 7.375rem)
-    //     clamp(1.25rem, -1.385rem + 10.81vw, 3.75rem);
-    // }
-
-    // .card:nth-child(2) {
-    //   padding: clamp(0.938rem, -5.848rem + 27.84vw, 7.375rem)
-    //     clamp(1.875rem, -0.101rem + 8.11vw, 3.75rem) clamp(0.938rem, -5.848rem + 27.84vw, 7.375rem)
-    //     clamp(1.25rem, -1.385rem + 10.81vw, 3.75rem);
-    // }
-    // .card:nth-child(3) {
-    //   padding: clamp(0.313rem, -7.132rem + 30.54vw, 7.375rem)
-    //     clamp(0.938rem, -2.027rem + 12.16vw, 3.75rem) clamp(0.313rem, -7.132rem + 30.54vw, 7.375rem)
-    //     clamp(1.875rem, -0.101rem + 8.11vw, 3.75rem);
-    // }
-    // .card:nth-child(4) {
-    //   padding: clamp(0.938rem, -5.848rem + 27.84vw, 7.375rem)
-    //     clamp(0.938rem, -2.027rem + 12.16vw, 3.75rem) clamp(0.938rem, -5.848rem + 27.84vw, 7.375rem)
-    //     clamp(1.25rem, -1.385rem + 10.81vw, 3.75rem);
-    // }
   }
+
   .card_left {
     height: clamp(20.563rem, 1.392rem + 78.65vw, 38.75rem);
     padding: clamp(1.25rem, -1.385rem + 10.81vw, 3.75rem);
