@@ -153,12 +153,11 @@
   "contact": {
     "title": "Bitte zögern Sie nicht, uns bei Fragen zu kontaktieren",
     "subtitle": "Schreiben Sie Ihre Anfrage, eine bequeme Art der Kommunikation und wir werden Ihnen antworten",
-    "placeholderName": "Geben Sie Ihren Namen ein",
+    "placeholderEmail": "E-Mail eingeben",
     "btnText": "Kontakt"
   },
 
   "contactForm": {
-    "placeholderName": "Geben Sie Ihren Namen ein",
     "placeholderMessage": "Ihre Nachricht eingeben",
     "labelName": "Ihr Name",
     "labelMessage": "Text der Nachricht",

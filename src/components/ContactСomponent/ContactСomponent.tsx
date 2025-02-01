@@ -3,12 +3,20 @@ import Button from "../Button/Button";
 import ContactForm from "../ContactForm/ContactForm";
 import ModalComponent from "../ModalСomponent/ModalСomponent";
 import React, { useMemo, useState } from "react";
-import styles from "./СontactСomponent.module.scss";
+import styles from "./ContactСomponent.module.scss";
 import { useTranslations } from "next-intl";
 import { useWindowSize } from "@/hooks/useWindowSize";
 
+interface Translations {
+  contact: (key: string) => string;
+  contactForm: (key: string) => string;
+}
+
 const Contact_Component: React.FC = () => {
-  const t = useTranslations('contact');
+  const t: Translations = {
+    contact: useTranslations('contact'),
+    contactForm: useTranslations('contactForm'),
+  };
 
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [name, setName] = useState('');
@@ -43,22 +51,27 @@ const Contact_Component: React.FC = () => {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <h1 className={styles.title}>{t('title')}</h1>
-        <p className={styles.subtitle}>{t('subtitle')}</p>
+        <h1 className={styles.title}>{t.contact('title')}</h1>
+        <p className={styles.subtitle}>{t.contact('subtitle')}</p>
         <form className={isMobile ? styles.formMobile : styles.form} onSubmit={handleSubmit}>
           <input
             type='text'
             className={styles.input}
-            placeholder={t(isMobile ? 'email' : 'placeholderName')}
+            placeholder={t.contact('placeholderEmail')}
             required
             onChange={handleChange}
             value={name}
           />
           {isMobile && (
             <>
-              <textarea rows={5} className={styles.textarea} placeholder={t('message')} required />
+              <textarea
+                rows={5}
+                className={styles.textarea}
+                placeholder={t.contactForm('labelMessage')}
+                required
+              />
 
-              <Button className={styles.buttonMobile} text={t('send')} link='' />
+              <Button className={styles.buttonMobile} text={t.contact('btnText')} link='' />
 
               <label className={styles.container_agree} htmlFor='agree'>
                 <input
@@ -69,14 +82,14 @@ const Contact_Component: React.FC = () => {
                   type='checkbox'
                   required
                 />
-                <span className={styles.text_agree}>{t('agreeText')}</span>
+                <span className={styles.text_agree}>{t.contactForm('agreeText')}</span>
               </label>
             </>
           )}
 
           {!isMobile && (
             <button onClick={handleOpenModal} className={styles.button}>
-              {t('btnText')}
+              {t.contactForm('btnText')}
             </button>
           )}
         </form>

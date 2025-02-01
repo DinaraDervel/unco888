@@ -147,18 +147,13 @@
   "contact": {
     "title": "Please feel free to contact us with any questions",
     "subtitle": "Write your request, a convenient way of communicationand we will answer you",
-    "placeholderName": "Enter your name",
-    "email": "E-mail",
-    "message": "Message text",
-    "btnText": "Contact us",
-    "send": "SEND",
-    "agreeText": "I agree with the Privacy policy on this resource"
+    "placeholderEmail": "Enter email",
+    "btnText": "Contact us"
   },
   "contactForm": {
-    "placeholderName": "Enter your Email",
     "placeholderMessage": "Enter your message",
     "labelName": "Your name",
-    "labelMessage": "Feedback",
+    "labelMessage": "Message text",
     "agreeText": "I agree with the Privacy policy on this resource",
     "btnText": "SEND"
   },

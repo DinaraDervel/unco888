@@ -11,8 +11,17 @@ type ContactFormProps = {
   name?: string;
 };
 
+interface Translations {
+  contact: (key: string) => string;
+  contactForm: (key: string) => string;
+}
+
 const ContactForm: React.FC<ContactFormProps> = ({ onClose, name }) => {
-  const t = useTranslations('contactForm');
+    const t: Translations = {
+      contact: useTranslations('contact'),
+      contactForm: useTranslations('contactForm'),
+    };
+
   const [isAgreed, setIsAgreed] = useState<boolean>(false);
 
   const handleCloseClick = (e: React.MouseEvent) => {
@@ -30,9 +39,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose, name }) => {
         <button className={styles.close} onClick={handleCloseClick} />
         <div className={styles.container_contact_form}>
           <div className={styles.container_name}>
-            <p className={styles.container_text}>{t('labelName')}</p>
+            <p className={styles.container_text}>{t.contactForm('labelName')}</p>
             <input
-              placeholder={t('placeholderName')}
+              placeholder={t.contact('placeholderEmail')}
               type='text'
               className={styles.name}
               defaultValue={name}
@@ -40,11 +49,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose, name }) => {
           </div>
 
           <div className={styles.container_message}>
-            <p className={styles.container_text}>{t('labelMessage')}</p>
-            <textarea placeholder={t('placeholderMessage')} className={styles.message} />
+            <p className={styles.container_text}>{t.contactForm('labelMessage')}</p>
+            <textarea placeholder={t.contactForm('placeholderMessage')} className={styles.message} />
           </div>
           <div className={styles.btn}>
-            <Button text={t('btnText')} link='' />
+            <Button text={t.contact('btnText')} link='' />
           </div>
 
           <div className={styles.container_agree}>
@@ -56,7 +65,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose, name }) => {
               type='checkbox'
             />
             <label className={styles.text_label} htmlFor='agree'>
-              {t('agreeText')}
+              {t.contactForm('agreeText')}
             </label>
           </div>
         </div>

@@ -148,11 +148,10 @@
   "contact": {
     "title": "Пожалуйста, не стесняйтесь обращаться к нам с любыми вопросами",
     "subtitle": "Напишите ваш запрос, удобный способ связи, и мы вам ответим",
-    "placeholderName": "Введите ваше имя",
+    "placeholderEmail": "Введите email",
     "btnText": "Свяжитесь с нами"
   },
   "contactForm": {
-    "placeholderName": "Введите ваше имя",
     "placeholderMessage": "Введите ваше сообщение",
     "labelName": "Ваше имя",
     "labelMessage": "Текст сообщения",

@@ -148,11 +148,10 @@
   "contact": {
     "title": "No dude en ponerse en contacto con nosotros para cualquier consulta",
     "subtitle": "Escriba su solicitud, una forma conveniente de comunicación y le responderemos",
-    "placeholderName": "Ingrese su nombre",
+    "placeholderEmail": "Introducir correo electrónico",
     "btnText": "Contáctenos"
   },
   "contactForm": {
-    "placeholderName": "Ingrese su nombre",
     "placeholderMessage": "Ingrese su mensaje",
     "labelName": "Su nombre",
     "labelMessage": "Texto del mensaje",
