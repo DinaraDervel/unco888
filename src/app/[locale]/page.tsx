@@ -13,10 +13,12 @@ import QandA from "@/components/Q&A/Q&A";
 import RoadMap from "@/components/RoadMap/RoadMap";
 import Services from "@/components/Services/Services";
 import styles from "./page.module.scss";
+import { GetFooterData } from "@/constants/GetFooterData";
 import { GetHeaderData } from "@/constants/GetHeaderData";
 
 export default async function Home() {
   const headerData = await GetHeaderData();
+  const footerData = await GetFooterData();
 
   return (
     <div className={styles.main}>
@@ -33,7 +35,7 @@ export default async function Home() {
       <RoadMap />
       <Contact_Component />
       <Services />
-      <Footer />
+      <Footer data={footerData} />
     </div>
   );
 }
