@@ -6,7 +6,7 @@
       "link_3": "Stellplatz-Deck",
       "link_4": "Nachrichten",
       "link_5": "F&A",
-      "link_6": "Straßenkarte",
+      "link_6": "Unsere Geschichte",
       "link_7": "UNCO-Ökosystem"
     },
     "button": "UNSERE NEUIGKEITEN"
@@ -160,7 +160,7 @@
 
   "contactForm": {
     "placeholderMessage": "Ihre Nachricht eingeben",
-    "labelName": "Ihr Name",
+    "labelName": "Ihre E-Mail",
     "labelMessage": "Text der Nachricht",
     "agreeText": "Ich bin mit den Datenschutzbestimmungen für diese Ressource einverstanden",
     "btnText": "SENDEN"
@@ -178,7 +178,7 @@
       "link_3": "Stellplatz-Deck",
       "link_4": "Nachrichten",
       "link_5": "FRAGEN UND ANTWORTEN",
-      "link_6": "Straßenkarte",
+      "link_6": "Unsere Geschichte",
       "link_7": "UNCO-Ökosystem",
       "link_8": "Impressum",
       "link_9": "Datenschutz",
