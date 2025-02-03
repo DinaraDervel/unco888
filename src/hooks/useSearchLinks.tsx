@@ -15,7 +15,7 @@ const useSearchLinks = (text: string): JSX.Element => {
             <Link className={styles.linksUnco} key={index} href={part} passHref>
               {links.length > 1 ? (
                 <ul>
-                  <li> <span className={styles.snow_for_links}>*</span> {part}</li>
+                  <li className={styles.container_for_links}> <span className={styles.snow_for_links}>*</span> {part}</li>
                 </ul>
               ) : (
                 <span>{part}</span>

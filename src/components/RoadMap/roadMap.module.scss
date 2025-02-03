@@ -75,9 +75,19 @@
 }
 
 
+
+
+.container_for_links{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2%;
+}
+
 .snow_for_links {
     color: $gray;
+    padding-top: 1%;
 }
+
 
 .linksUnco {
     text-decoration: none;
@@ -182,6 +192,8 @@
 .container_wrapper_instagram_reverse {
     flex-direction: row-reverse;
 }
+
+
 
 @media (max-width: 1440px) {
     .container_main {
@@ -299,3 +311,4 @@
         width: 13vw;
     }
 }
+
