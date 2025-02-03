@@ -36,6 +36,15 @@ const SellForm: React.FC<SellFormProps> = ({ onClose }) => {
       </div>
 
       <div className={styles.container__wrapper}>
+        <p className={styles.container__label}>{t('labelPrice')}</p>
+        <input
+          placeholder={t('placeholderPrice')}
+          type='number'
+          className={styles.container__input}
+        />
+      </div>
+
+      <div className={styles.container__wrapper}>
         <p className={styles.container__label}>
           {t('labelLink')}
           <Link href={'https://opensea.io/'} className={styles.link} target='_blank'>
