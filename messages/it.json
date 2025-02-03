@@ -6,7 +6,7 @@
       "link_3": "Presentazione",
       "link_4": "Notizie",
       "link_5": "Domande e Risposte",
-      "link_6": "Tabella di Marcia",
+      "link_6": "La nostra storia",
       "link_7": "Eco-Sistema UNCO"
     },
     "button": "LE NOSTRE NOTIZIE"
@@ -149,12 +149,12 @@
   "contact": {
     "title": "Non esitare a contattarci per qualsiasi domanda",
     "subtitle": "Scrivi la tua richiesta, un modo conveniente per comunicare e ti risponderemo",
-    "placeholderEmail":"Inserire l'e-mail",
+    "placeholderEmail": "Inserire l'e-mail",
     "btnText": "Contattaci"
   },
   "contactForm": {
     "placeholderMessage": "Inserisci il tuo messaggio",
-    "labelName": "Il tuo nome",
+    "labelName": "Il tuo indirizzo e-mail",
     "labelMessage": "Testo del messaggio",
     "agreeText": "Accetto la politica sulla privacy di questa risorsa",
     "btnText": "INVIA"
@@ -170,7 +170,7 @@
       "link_3": "Presentazione",
       "link_4": "Notizie",
       "link_5": "Domande e Risposte",
-      "link_6": "Tabella di Marcia",
+      "link_6": "La nostra storia",
       "link_7": "Eco-Sistema UNCO",
       "link_8": "Impressum",
       "link_9": "Datenschutz",
