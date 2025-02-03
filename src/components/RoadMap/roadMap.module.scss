@@ -74,6 +74,21 @@
     line-height: 33.6px;
 }
 
+
+.snow_for_links {
+    color: $gray;
+}
+
+.linksUnco {
+    text-decoration: none;
+    color: rgb(167, 221, 224);
+}
+
+.linksUnco:hover {
+    text-decoration: underline rgb(167, 221, 224);
+}
+
+
 .circle_of_year {
     max-width: 18px;
 }
