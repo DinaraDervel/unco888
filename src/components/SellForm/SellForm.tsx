@@ -43,6 +43,21 @@ const SellForm: React.FC<SellFormProps> = ({ onClose }) => {
     handleCloseClick();
   };
 
+  const handleNumberChange = (
+    e: ChangeEvent<HTMLInputElement>,
+    setter: React.Dispatch<React.SetStateAction<string>>,
+    fieldName: 'quantity' | 'price'
+  ) => {
+    const value = e.target.value;
+    if (value === '' || /^-?\d*\.?\d*$/.test(value)) {
+      setter(value);
+      setTouchedFields(prev => ({
+        ...prev,
+        [fieldName]: true
+      }));
+    }
+  };
+
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setIsAgreed(event.target.checked);
   };
@@ -54,7 +69,14 @@ const SellForm: React.FC<SellFormProps> = ({ onClose }) => {
     }));
   };
 
-  const isFormValid = quantity.trim() !== '' && price.trim() !== '' && link.trim() !== '' && contact.trim() !== '' && isAgreed;
+  const isFormValid =
+    quantity !== '' &&
+    Number(quantity) > 0 &&
+    price !== '' &&
+    Number(price) > 0 &&
+    link.trim() !== '' &&
+    contact.trim() !== '' &&
+    isAgreed;
 
   return (
     <form className={styles.container}>
@@ -66,9 +88,11 @@ const SellForm: React.FC<SellFormProps> = ({ onClose }) => {
           type='number'
           id='quantity'
           value={quantity}
-          onChange={(e) => setQuantity(e.target.value)}
+          onChange={(e) => handleNumberChange(e, setQuantity, 'quantity')}
           onBlur={() => handleBlur('quantity')}
-          className={`${styles.container__input} ${touchedFields.quantity && quantity.trim() === '' ? styles.error : ''}`}
+          className={`${styles.container__input}
+          ${touchedFields.quantity && (!quantity || Number(quantity) < 0) ? styles.error : ''}`}
+          min='0'
           required
         />
       </div>
@@ -78,21 +102,28 @@ const SellForm: React.FC<SellFormProps> = ({ onClose }) => {
         <input
           placeholder={t('placeholderPrice')}
           type='number'
-          className={styles.container__input}
+          id='price'
+          value={price}
+          onChange={(e) => handleNumberChange(e, setPrice, 'price')}
+          onBlur={() => handleBlur('price')}
+          className={`${styles.container__input}
+          ${touchedFields.price && (!price || Number(price) < 0) ? styles.error : ''}`}
+          min='0'
+          required
         />
       </div>
 
       <div className={styles.container__wrapper}>
         <p className={styles.container__label}>
           {t('labelLink')}
-          <Link href={'https://opensea.io/'} className={styles.link} target='_blank'>
+          <Link href={'https://opensea.io/'} className={styles.link} target="_blank">
             {' '}
             opensea.io
           </Link>
         </p>
         <input
           placeholder={t('placeholderLink')}
-          type='url'
+          type="url"
           id='link'
           value={link}
           onChange={(e) => setLink(e.target.value)}
