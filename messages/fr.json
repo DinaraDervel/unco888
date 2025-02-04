@@ -6,7 +6,7 @@
       "link_3": "Pitch-deck",
       "link_4": "Actualités",
       "link_5": "Questions & Réponses",
-      "link_6": "Feuille de route",
+      "link_6": "Notre histoire",
       "link_7": "Éco-Système UNCO"
     },
     "button": "NOS ACTUALITÉS"
@@ -123,9 +123,11 @@
   },
   "sellForm": {
     "placeholderQuantity": "Enter quantity for sale ",
+    "placeholderPrice": "Enter price for sale ",
     "placeholderLink": "Add your link",
     "placeholderContactInfo": "Enter your contact information ",
     "labelQuantity": "Quantity for sale",
+    "labelPrice": "Price for sale",
     "labelLink": "Your link to offer ",
     "labelContactInfo": "Your contact information",
     "agreeText": "I agree with the Privacy policy on this resource",
@@ -147,12 +149,12 @@
   "contact": {
     "title": "N'hésitez pas à nous contacter pour toute question",
     "subtitle": "Écrivez votre demande, un moyen de communication pratique et nous vous répondrons",
-    "placeholderEmail":"Saisir l'adresse électronique",
+    "placeholderEmail": "Saisir l'adresse électronique",
     "btnText": "Contactez-nous"
   },
   "contactForm": {
     "placeholderMessage": "Entrez votre message",
-    "labelName": "Votre nom",
+    "labelName": "Votre e-mail",
     "labelMessage": "Texte du message",
     "agreeText": "J'accepte la politique de confidentialité de cette ressource",
     "btnText": "ENVOYER"
@@ -168,7 +170,7 @@
       "link_3": "Pitch-deck",
       "link_4": "Actualités",
       "link_5": "Questions & Réponses",
-      "link_6": "Feuille de route",
+      "link_6": "Notre histoire",
       "link_7": "Éco-Système UNCO",
       "link_8": "Impressum",
       "link_9": "Datenschutz",

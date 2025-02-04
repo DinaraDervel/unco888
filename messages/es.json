@@ -6,7 +6,7 @@
       "link_3": "Presentación",
       "link_4": "Noticias",
       "link_5": "Preguntas y Respuestas",
-      "link_6": "Hoja de Ruta",
+      "link_6": "Nuestra historia",
       "link_7": "Eco-Sistema UNCO"
     },
     "button": "NUESTRAS NOTICIAS"
@@ -123,9 +123,11 @@
   },
   "sellForm": {
     "placeholderQuantity": "Enter quantity for sale ",
+    "placeholderPrice": "Enter price for sale ",
     "placeholderLink": "Add your link",
     "placeholderContactInfo": "Enter your contact information ",
     "labelQuantity": "Quantity for sale",
+    "labelPrice": "Price for sale",
     "labelLink": "Your link to offer ",
     "labelContactInfo": "Your contact information",
     "agreeText": "I agree with the Privacy policy on this resource",
@@ -152,7 +154,7 @@
   },
   "contactForm": {
     "placeholderMessage": "Ingrese su mensaje",
-    "labelName": "Su nombre",
+    "labelName": "Su correo electrónico",
     "labelMessage": "Texto del mensaje",
     "agreeText": "Estoy de acuerdo con la política de privacidad de este recurso",
     "btnText": "ENVIAR"
@@ -168,7 +170,7 @@
       "link_3": "Presentación",
       "link_4": "Noticias",
       "link_5": "Preguntas y Respuestas",
-      "link_6": "Hoja de Ruta",
+      "link_6": "Nuestra historia",
       "link_7": "Eco-Sistema UNCO",
       "link_8": "Impressum",
       "link_9": "Datenschutz",

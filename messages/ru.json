@@ -6,7 +6,7 @@
       "link_3": "Презентация",
       "link_4": "Новости",
       "link_5": "Вопросы и Ответы",
-      "link_6": "Дорожная Карта",
+      "link_6": "Наша история",
       "link_7": "Эко-Система UNCO"
     },
     "button": "НАШИ НОВОСТИ"
@@ -123,9 +123,11 @@
   },
   "sellForm": {
     "placeholderQuantity": "Enter quantity for sale ",
+    "placeholderPrice": "Enter price for sale ",
     "placeholderLink": "Add your link",
     "placeholderContactInfo": "Enter your contact information ",
     "labelQuantity": "Quantity for sale",
+    "labelPrice": "Price for sale",
     "labelLink": "Your link to offer ",
     "labelContactInfo": "Your contact information",
     "agreeText": "I agree with the Privacy policy on this resource",
@@ -152,7 +154,7 @@
   },
   "contactForm": {
     "placeholderMessage": "Введите ваше сообщение",
-    "labelName": "Ваше имя",
+    "labelName": "Ваш e-mail",
     "labelMessage": "Текст сообщения",
     "agreeText": "Я согласен с политикой конфиденциальности этого ресурса",
     "btnText": "ОТПРАВИТЬ"
@@ -168,7 +170,7 @@
       "link_3": "Презентация",
       "link_4": "Новости",
       "link_5": "Вопросы и Ответы",
-      "link_6": "Дорожная Карта",
+      "link_6": "Наша история",
       "link_7": "Эко-Система UNCO",
       "link_8": "Impressum",
       "link_9": "Datenschutz",

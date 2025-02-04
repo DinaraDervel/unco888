@@ -6,7 +6,7 @@
       "link_3": "Pitch-deck",
       "link_4": "News",
       "link_5": "Q&A",
-      "link_6": "Roadmap",
+      "link_6": "Our Story",
       "link_7": "UNCO Eco-System"
     },
     "button": "OUR NEWS"
@@ -123,15 +123,17 @@
   },
   "sellForm": {
     "placeholderQuantity": "Enter quantity for sale ",
+    "placeholderPrice": "Enter price for sale ",
     "placeholderLink": "Add your link",
     "placeholderContactInfo": "Enter your contact information ",
     "labelQuantity": "Quantity for sale",
+    "labelPrice": "Price for sale",
     "labelLink": "Your link to offer ",
     "labelContactInfo": "Your contact information",
     "agreeText": "I agree with the Privacy policy on this resource",
     "btnText": "send"
   },
-  "textRoadMap": {
+  "textOur Story": {
     "title": "OUR STORY",
     "text_1": "Our successful experience quickly spread throughout the city, and many people asked for help in starting their own cooperatives. To simplify ordering, accounting, and document management, we organized the development of our first IT platform. Such cooperatives began to organize themselves in offices and factories where neighbors worked.",
     "text_2": "The first office of our cooperative was opened. We are starting to actively invest in the development of IT: solutions for automating cross-docking, first- and last-mile delivery solutions appear, we've developed ordering terminals for offices and factories.",
@@ -151,7 +153,7 @@
   },
   "contactForm": {
     "placeholderMessage": "Enter your message",
-    "labelName": "Your name",
+    "labelName": "Your email",
     "labelMessage": "Message text",
     "agreeText": "I agree with the Privacy policy on this resource",
     "btnText": "SEND"
@@ -167,7 +169,7 @@
       "link_3": "Pitch-deck",
       "link_4": "News",
       "link_5": "Q&A",
-      "link_6": "Roadmap",
+      "link_6": "Our Story",
       "link_7": "UNCO Eco-System",
       "link_8": "Impressum",
       "link_9": "Datenschutz",
