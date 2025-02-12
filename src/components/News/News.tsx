@@ -1,8 +1,9 @@
 'use client';
 
-import { useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import NewsCard from '../NewsCard/NewsCard';
+import NewsPopup from './NewsPopup/NewsPopup';
 import styles from './news.module.scss';
 
 interface NewsItem {
@@ -37,6 +38,14 @@ const News: React.FC = () => {
     },
   ];
 
+  const toggleBodyScroll = (disable: boolean) => {
+    if (disable) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  };
+
   const handleScroll = (direction: 'left' | 'right') => {
     const slider = sliderRef.current;
     if (slider) {
@@ -48,6 +57,21 @@ const News: React.FC = () => {
     }
   };
 
+  const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
+
+  const openPopup = (news: NewsItem) => {
+    setSelectedNews(news);
+  };
+
+  const closePopup = () => {
+    setSelectedNews(null);
+  };
+
+  useEffect(() => {
+    toggleBodyScroll(!!selectedNews);
+    return () => toggleBodyScroll(false);
+  }, [selectedNews]);
+
   return (
     <div className={styles.container} id='news'>
       <h2 className={styles.title}>
@@ -56,7 +80,12 @@ const News: React.FC = () => {
       <div className={styles.slider}>
         <div className={styles.cards} ref={sliderRef}>
           {newsData.map((news, index) => (
-            <NewsCard key={index} text={news.text} caption={news.caption} />
+            <NewsCard
+              key={index}
+              text={news.text}
+              caption={news.caption}
+              onClick={() => openPopup(news)}
+            />
           ))}
         </div>
         <div className={styles.buttons}>
@@ -72,6 +101,7 @@ const News: React.FC = () => {
           />
         </div>
       </div>
+      {selectedNews && <NewsPopup news={selectedNews} onClose={closePopup} />}
     </div>
   );
 };

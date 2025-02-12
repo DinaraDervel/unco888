@@ -6,12 +6,13 @@ import styles from './newsCard.module.scss';
 interface NewsCardProps {
   text: string;
   caption: string;
+  onClick: () => void;
 }
 
-function NewsCard({ text, caption }: NewsCardProps) {
+function NewsCard({ text, caption, onClick }: NewsCardProps) {
   const socials = GetSocialData();
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={onClick}>
       <div className={styles.card__badges}>
         <div className={styles.card__badge}>SPACE</div>
         <div className={styles.card__badge}>SPACE</div>

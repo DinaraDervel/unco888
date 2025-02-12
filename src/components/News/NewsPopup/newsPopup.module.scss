@@ -1,0 +1,184 @@
+@use '../../../styles/_var' as var;
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    &__content {
+        flex: 0 0 auto;
+        width: 484px;
+        scroll-snap-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 9px 24px;
+        border-radius: 12px;
+        background-color: var.$gray;
+        font-family: var.$font-montserrat;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 12px;
+            border: 2px solid transparent;
+            background: linear-gradient(60deg, #8C421D -8.85%, #FBE67B 21.95%, #FCFBE7 59.42%, #F7D14E 93.85%, #D4A041 100%);
+            mask:
+            linear-gradient(#000 0 0) padding-box,
+            linear-gradient(#000 0 0);
+            mask-composite: exclude;
+        }
+    }
+    &__close {
+        background: url('/icons/close.svg') center / cover no-repeat;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        border: none;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
+        &__badges {
+            display: flex;
+            gap: 12px;
+        }
+        &__badge {
+            padding: 4px 11px;
+            color: var.$gray;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 140%;
+            border-radius: 5px;
+            &:first-child {
+                background: var.$dark-purple;
+            }
+            &:nth-child(2) {
+                background: var.$violet;
+            }
+            &:last-child {
+                color: var.$dark-blue;
+                background: var.$white;
+            }
+        }
+        &__image {
+            border-radius: 12px;
+            background: url(/images/News/space.svg) center / cover no-repeat;
+            height: 209px;
+            width: 100%;
+        }
+        &__text {
+            color: var.$dark-blue;
+            font-size: clamp(1rem, 0.417vw + 0.625rem, 1.125rem);
+            font-weight: 400;
+            line-height: 140%;
+        }
+        &__caption {
+            color: var.$purple;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 140%;
+        }
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        &__link {
+            color: var.$purple; 
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 32px;
+            transition: all 0.4s ease;
+            &:hover,
+            &:active {
+                color: var.$violet;
+                text-decoration: underline;
+            }
+        }
+}
+
+.socials__wrapper {
+    display: flex;
+    gap: 8px;
+}
+
+.socials__link {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.socials__icon_1 {
+    background-image: url(/images/News/facebook.svg);
+}
+
+.socials__icon_2 {
+    background-image: url(/images/News/instagram.svg);
+}
+
+.socials__icon_3 {
+    background-image: url(/images/News/telegram.svg);
+}
+
+.socials__icon_4 {
+    background-image: url(/images/News/linkedin.svg);
+}
+
+.socials__icon_5 {
+    background-image: url(/images/News/twitter.svg);
+}
+
+.socials__icon_6 {
+    background-image: url(/images/News/youtube.svg);
+}
+
+
+@media (max-width: 1440px) {
+    .popup {
+        &__content {
+            width: 381px;
+            padding: 50px 22px 17px 18px;
+        }
+        &__text {
+            font-size: 16px;
+            margin-bottom: 26px;
+        }
+        &__bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .popup {
+        &__content {
+            width: 254px;
+            gap: 14px;
+            padding: 18px 24px 23px 21px 23px;
+        }
+        &__image {
+            height: 207px;
+        }
+        &__text {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+        &__bottom {
+            align-items: center;
+            gap: 11px;
+        }
+    }
+}
