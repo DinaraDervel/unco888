@@ -6,7 +6,6 @@ import NewsCard from '../NewsCard/NewsCard';
 import styles from './news.module.scss';
 
 interface NewsItem {
-  title: string;
   text: string;
   caption: string;
 }
@@ -17,27 +16,22 @@ const News: React.FC = () => {
 
   const newsData: NewsItem[] = [
     {
-      title: 'Velitsodales egetonec.1',
       text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.',
       caption: 'LOUIS NELSON / JULY 10, 2022',
     },
     {
-      title: 'Velitsodales egetonec.2',
       text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.',
       caption: 'LOUIS NELSON / JULY 10, 2022',
     },
     {
-      title: 'Velitsodales egetonec.3',
       text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.',
       caption: 'LOUIS NELSON / JULY 10, 2022',
     },
     {
-      title: 'Velitsodales egetonec.4',
       text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.',
       caption: 'LOUIS NELSON / JULY 10, 2022',
     },
     {
-      title: 'Velitsodales egetonec.5',
       text: 'Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan. Nnibh ornare accumsan.',
       caption: 'LOUIS NELSON / JULY 10, 2022',
     },
@@ -62,7 +56,7 @@ const News: React.FC = () => {
       <div className={styles.slider}>
         <div className={styles.cards} ref={sliderRef}>
           {newsData.map((news, index) => (
-            <NewsCard key={index} title={news.title} text={news.text} caption={news.caption} />
+            <NewsCard key={index} text={news.text} caption={news.caption} />
           ))}
         </div>
         <div className={styles.buttons}>

@@ -4,12 +4,11 @@ import { GetSocialData } from '@/constants/GetSocialsData';
 import styles from './newsCard.module.scss';
 
 interface NewsCardProps {
-  title: string;
   text: string;
   caption: string;
 }
 
-function NewsCard({ title, text, caption }: NewsCardProps) {
+function NewsCard({ text, caption }: NewsCardProps) {
   const socials = GetSocialData();
   return (
     <div className={styles.card}>
@@ -18,11 +17,13 @@ function NewsCard({ title, text, caption }: NewsCardProps) {
         <div className={styles.card__badge}>SPACE</div>
         <div className={styles.card__badge}>SPACE</div>
       </div>
-      <h3 className={styles.card__title}>{title}</h3>
+      <p className={styles.card__caption}>{caption}</p>
       <div className={styles.card__image}></div>
       <p className={styles.card__text}>{text}</p>
       <div className={styles.card__bottom}>
-        <p className={styles.card__caption}>{caption}</p>
+        <a className={styles.card__link} href='#'>
+          READ MORE
+        </a>
         <div className={styles.socials__wrapper}>
           {socials.map((item, i) => (
             <Link
