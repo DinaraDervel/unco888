@@ -17,11 +17,11 @@ export type NewsRecords = {
 };
 
 // Same as in the google sheet
-const [id, tag1, tag2, tag3, title, img,	text,	link_ds,	link_tk,	link_fb,	link_ig,	link_tg,	link_lk,	link_tw,	link_yt] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+const [id, tag1, tag2, tag3, title, img,	text,	link_ds,	link_tk,	link_fb,	link_ig,	link_tg,	link_lk,	link_tw,	link_yt, visible] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
 export const transformNews = (data: string[][]): NewsRecords[] =>
   data
-// .filter((line) => line[visible] === 'TRUE')
+  .filter((line) => line[visible] === 'TRUE')
   .map((line) => ({
     id: line[id],
     tag1: line[tag1],
