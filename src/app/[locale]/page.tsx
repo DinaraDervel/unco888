@@ -16,14 +16,9 @@ import styles from './page.module.scss';
 import { GetFooterData } from '@/constants/GetFooterData';
 import { GetHeaderData } from '@/constants/GetHeaderData';
 
-import { getSheetData } from '@/server-actions/google-sheets';
-
 export default async function Home() {
   const headerData = await GetHeaderData();
   const footerData = await GetFooterData();
-
-  const sheetData = await getSheetData();
-  console.log('data: ', sheetData);
 
   return (
     <div className={styles.main}>

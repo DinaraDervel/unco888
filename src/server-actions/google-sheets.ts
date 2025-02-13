@@ -7,26 +7,30 @@ type GoogleSheetParams = {
   sheets: sheets_v4.Sheets | null;
 };
 
-export const getSheetData = async (): Promise<GoogleSheetParams> => {
-  const auth = new google.auth.GoogleAuth({
-    credentials: {
-      client_email: process.env.GOOGLE_CLIENT_EMAIL,
-      private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
-    },
-    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-  });
-
-  const sheets = google.sheets({ version: 'v4', auth });
-  const range = 'QA!B2:C4';
+export const initGoogleAPI = async (range?: string): Promise<GoogleSheetParams> => {
+  const params: GoogleSheetParams = {
+    spreadsheetId: process.env.GOOGLE_SHEET_ID ?? '',
+    range: range ?? '',
+    auth: null,
+    sheets: null,
+  };
 
   try {
-    const response = await sheets.spreadsheets.values.get({
-      spreadsheetId: process.env.GOOGLE_SHEET_ID,
-      range,
+    const auth = new google.auth.GoogleAuth({
+      credentials: {
+        client_email: process.env.GOOGLE_CLIENT_EMAIL,
+        private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+      },
+      scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
-    return response.data.values;
+    params.auth = auth;
+    params.sheets = google.sheets({ version: 'v4', auth });
   } catch (error) {
-    console.error('Error fetching sheets data', error);
-    return [];
+    if (error instanceof Error) {
+      console.log(error.message);
+    } else {
+      console.log('Unknown error');
+    }
   }
+  return params;
 };
