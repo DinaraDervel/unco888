@@ -1,5 +1,5 @@
 'use client';
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import ModalComponent from '@/components/ModalСomponent/ModalСomponent';
 import Button3 from '@/components/Button3/Button3';
@@ -43,9 +43,36 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({ isOpen, onClose }) => {
     setIsAgreed(event.target.checked);
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    console.log({ name, photo, message });
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const submitData = new FormData();
+      submitData.append('name', name);
+      submitData.append('message', message);
+      if (photo) {
+        submitData.append('photo', photo);
+      }
+
+      const response = await fetch('/api/submit', {
+        method: 'POST',
+        body: submitData,
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log('Success:', data);
+
+      setName('');
+      setMessage('');
+      setPhoto(null);
+
+    } catch (error) {
+      console.error('Error:', error);
+    }
     closeModal();
   };
 
