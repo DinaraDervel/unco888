@@ -35,6 +35,10 @@
         border-radius: 18px;
         border: 1px solid var.$gold;
         background: var.$bg-primary-gradient;
+
+        img {
+            width: 100%;
+        }
     }
     &__title {
         color: var.$dark-purple;

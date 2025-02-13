@@ -1,6 +1,7 @@
 'use client';
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { sendFeedback } from '@/app/[locale]/actions';
 import ModalComponent from '@/components/ModalСomponent/ModalСomponent';
 import Button3 from '@/components/Button3/Button3';
 import styles from '@/components/FeedbackForm/FeedbackForm.module.scss';
@@ -47,33 +48,27 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({ isOpen, onClose }) => {
     e.preventDefault();
 
     try {
-      const submitData = new FormData();
-      submitData.append('name', name);
-      submitData.append('message', message);
-      if (photo) {
-        submitData.append('photo', photo);
+      const response = await sendFeedback(
+        name,
+        message,
+        photo,
+        'FALSE'
+      );
+
+      if (response.status !== 200) {
+        throw new Error(response.error || 'Failed to send feedback');
       }
 
-      const response = await fetch('/api/submit', {
-        method: 'POST',
-        body: submitData,
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      console.log('Success:', data);
+      console.log('Success:', response);
 
       setName('');
       setMessage('');
       setPhoto(null);
+      closeModal();
 
     } catch (error) {
       console.error('Error:', error);
     }
-    closeModal();
   };
 
   const handleBlur = (fieldName: 'name' | 'message') => {
