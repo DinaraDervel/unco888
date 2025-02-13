@@ -1,4 +1,4 @@
-@use '../../styles/_var' as var;
+@use '../../../styles/_var' as var;
 
 .card {
     flex: 0 0 auto;
@@ -6,15 +6,21 @@
     scroll-snap-align: center;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    justify-content: space-between;
     padding: 9px 24px;
     border-radius: 12px;
     background-color: rgba(255, 255, 255, 0.6);
     font-family: var.$font-montserrat;
     cursor: pointer;
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
     &__badges {
         display: flex;
         gap: 12px;
+        flex-wrap: wrap;
     }
     &__badge {
         padding: 4px 11px;
@@ -36,9 +42,9 @@
     }
     &__image {
         border-radius: 12px;
-        background: url(/images/News/space.svg) center / cover no-repeat;
         height: 209px;
         width: 100%;
+        object-fit: cover;
     }
     &__text {
         color: var.$dark-blue;
@@ -82,32 +88,35 @@
     height: 24px;
     cursor: pointer;
     background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
 }
 
-.socials__icon_1 {
+  .socials__icon_facebook {
     background-image: url(/images/News/facebook.svg);
-}
-
-.socials__icon_2 {
+  }
+  
+  .socials__icon_instagram {
     background-image: url(/images/News/instagram.svg);
-}
-
-.socials__icon_3 {
+  }
+  
+  .socials__icon_telegram {
     background-image: url(/images/News/telegram.svg);
-}
-
-.socials__icon_4 {
+  }
+  
+  .socials__icon_linkedin {
     background-image: url(/images/News/linkedin.svg);
-}
-
-.socials__icon_5 {
+  }
+  
+  .socials__icon_twitter {
     background-image: url(/images/News/twitter.svg);
-}
-
-.socials__icon_6 {
+  }
+  
+  .socials__icon_youtube {
     background-image: url(/images/News/youtube.svg);
-}
+  }
 
+  
 @media (max-width: 1440px) {
     .card {
         width: 381px;
@@ -129,7 +138,7 @@
     .card {
         width: 254px;
         gap: 14px;
-        padding: 18px 24px 23px 21px 23px;
+        padding: 18px 24px 21px 23px;
         &__image {
             height: 207px;
         }
