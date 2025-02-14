@@ -51,6 +51,11 @@
         font-size: clamp(1rem, 0.417vw + 0.625rem, 1.125rem);
         font-weight: 400;
         line-height: 140%;
+        display: -webkit-box;
+        line-clamp: 5;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
     &__caption {
         color: var.$purple;
