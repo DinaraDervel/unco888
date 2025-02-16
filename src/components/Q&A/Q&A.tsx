@@ -1,13 +1,18 @@
 'use client';
-
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Q&A.module.scss';
-import QandAData from '../../constants/getQ&AData';
 import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
+import { getQaData, TransformedObject } from '@/app/[locale]/actions';
 
 const QandA: React.FC = () => {
   const t = useTranslations('faq');
   const [activeBlock, setActiveBlock] = useState<number | null>(null);
+
+  const [response, setResponse] = useState<TransformedObject[] | null>([]);
+  const { locale } = useParams();
+
+  console.log(locale);
 
   const handleClick = (e: React.MouseEvent, index: number) => {
     e.preventDefault();
@@ -19,11 +24,25 @@ const QandA: React.FC = () => {
     }
   };
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await getQaData();
+
+        setResponse(response?.data || []);
+      } catch (error) {
+        console.error('Fetch error:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <section className={styles.main} id='faq'>
       <h1 className={styles.title}>{t('title')}</h1>
       <div className={styles.container}>
-        {QandAData.map((item, index) => (
+        {response?.map((item, index) => (
           <div
             key={index}
             className={`${styles.block} ${activeBlock === index ? styles.active : ''}`}
@@ -33,12 +52,12 @@ const QandA: React.FC = () => {
                 <p
                   className={`${styles.question} ${activeBlock === index ? styles.questionActive : ''}`}
                 >
-                  {t(item.question)}
+                  {item.question}
                 </p>
                 <p
                   className={`${styles.explanation} ${activeBlock === index ? styles.explanationActive : ''}`}
                 >
-                  {t(item.explanation)}
+                  {item.answer}
                 </p>
               </div>
             </div>
