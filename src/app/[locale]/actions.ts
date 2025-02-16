@@ -1,6 +1,7 @@
 'use server';
 
 import { initGoogleAPI } from '@/server-actions/google-sheets';
+import { v4 as uuidv4 } from 'uuid';
 
 type DataRow = string[];
 type Data = DataRow[];
@@ -11,6 +12,7 @@ export interface TransformedObject {
 
 const GOOGLE_SHEET_SELLOFFERS_RANGE = process.env.GOOGLE_SHEET_SELLOFFERS_RANGE;
 const GOOGLE_SHEET_QA_RANGE = process.env.GOOGLE_SHEET_QA_RANGE;
+const GOOGLE_SHEET_CONTACT_US_RANGE = process.env.GOOGLE_SHEET_CONTACT_US_RANGE;
 
 const transformData = (data: Data): TransformedObject[] => {
   const headers: string[] = data[0];
@@ -97,4 +99,32 @@ export const getQaData = async () => {
   }
 
   return { data: null, status: 500 };
+};
+
+export const sendContactFormData = async (
+name: string,
+message: string,
+) => {
+  const { sheets, spreadsheetId } = await initGoogleAPI(GOOGLE_SHEET_CONTACT_US_RANGE);
+
+  try {
+    if (!sheets) throw new Error('Server error');
+    const response = await sheets.spreadsheets.values.append({
+      spreadsheetId,
+      range: GOOGLE_SHEET_CONTACT_US_RANGE,
+      valueInputOption: 'USER_ENTERED',
+      requestBody: {
+        values: [[`${uuidv4()}`, name, message]],
+      },
+    });
+    return { data: response.data, status: response.status, error: '' };
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error);
+      return { status: 500, error: error.message };
+    } else {
+      console.log('Unknown error');
+    }
+  }
+  return { status: 500, error: '' };
 };
