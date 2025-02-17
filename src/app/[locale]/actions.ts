@@ -81,14 +81,14 @@ export const sendFeedback = async (
   visible: 'FALSE' = 'FALSE'
 ) => {
   const { sheets, spreadsheetId } = await initGoogleAPI();
-  const submissionId = `SUBM_${Date.now()}_${uuidv4()}`;
+  const submissionId = `SUBM_${uuidv4()}`;
 
   try {
     if (!sheets) throw new Error('Server error');
 
     let photoUrl = '';
     if (photo) {
-      photoUrl = 'https://i.ebayimg.com/images/g/5qgAAOSwoBtW3zvq/s-l1600.webp'; // it's a cute kitty for now
+      photoUrl = 'https://drive.google.com/file/d/1MqXTCax5b8yasTsLdD0zYNoXo9k7mANK/view?usp=drive_link';
     }
 
     const sheetsRes = await sheets.spreadsheets.values.append({
