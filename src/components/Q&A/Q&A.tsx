@@ -4,9 +4,12 @@ import styles from './Q&A.module.scss';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { getQaData, TransformedObject } from '@/app/[locale]/actions';
+import useSearchLinks from '@/hooks/useSearchLinks';
 
 const QandA: React.FC = () => {
   const t = useTranslations('faq');
+  const getSearchLinks = useSearchLinks;
+
   const [activeBlock, setActiveBlock] = useState<number | null>(null);
 
   const [response, setResponse] = useState<TransformedObject[] | null>([]);
@@ -57,7 +60,7 @@ const QandA: React.FC = () => {
                 <p
                   className={`${styles.explanation} ${activeBlock === index ? styles.explanationActive : ''}`}
                 >
-                  {item.answer}
+                  {getSearchLinks(item.answer, false)}
                 </p>
               </div>
             </div>

@@ -58,7 +58,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onClose, name }) => {
     }));
   };
 
-  const isFormValid = (name || '').trim() !== '' && message.trim() !== '' && isAgreed; 
+  const isFormValid = message.trim() !== '' && isAgreed;
 
   return (
     <form className={styles.main_container_contact_form} onSubmit={handleSubmit}>
