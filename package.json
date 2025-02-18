@@ -21,7 +21,8 @@
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.54.1",
     "react-modal": "^3.16.3",
-    "sass": "^1.83.0"
+    "sass": "^1.83.0",
+    "uuid": "^11.0.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
