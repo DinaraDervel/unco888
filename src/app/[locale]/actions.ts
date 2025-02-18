@@ -1,12 +1,37 @@
 'use server';
 
 import { initGoogleAPI } from '@/server-actions/google-sheets';
-import { Readable } from 'stream';
 import { v4 as uuidv4 } from 'uuid';
+import { Readable } from 'stream';
 
+
+type DataRow = string[];
+type Data = DataRow[];
+
+export interface TransformedObject {
+  [key: string]: string;
+}
 
 const GOOGLE_SHEET_SELLOFFERS_RANGE = process.env.GOOGLE_SHEET_SELLOFFERS_RANGE;
-const GOOGLE_SHEET_FEEDBACK_RANGE  = process.env.GOOGLE_SHEET_FEEDBACK_RANGE;
+const GOOGLE_SHEET_QA_RANGE = process.env.GOOGLE_SHEET_QA_RANGE;
+const GOOGLE_SHEET_CONTACT_US_RANGE = process.env.GOOGLE_SHEET_CONTACT_US_RANGE;
+const GOOGLE_SHEET_FEEDBACK_RANGE = process.env.GOOGLE_SHEET_FEEDBACK_RANGE;
+
+const transformData = (data: Data): TransformedObject[] => {
+  const headers: string[] = data[0];
+  const result: TransformedObject[] = [];
+
+  for (let i = 1; i < data.length; i++) {
+    const obj: TransformedObject = {};
+    for (let j = 0; j < headers.length; j++) {
+      obj[headers[j]] = data[i][j];
+    }
+    result.push(obj);
+  }
+
+  return result;
+};
+
 
 export const loadSellOffers = async () => {
   const { sheets, spreadsheetId, range } = await initGoogleAPI(GOOGLE_SHEET_SELLOFFERS_RANGE);
@@ -74,6 +99,31 @@ export const loadFeedback = async () => {
   }
   return { data: null, status: 500 };
 };
+
+
+export const getQaData = async () => {
+  const { sheets, spreadsheetId, range } = await initGoogleAPI(GOOGLE_SHEET_QA_RANGE);
+
+  if (sheets) {
+    try {
+      const getRows = await sheets.spreadsheets.values.get({
+        spreadsheetId,
+        range,
+      });
+      const rows: string[][] = getRows.data.values || [];
+
+      return {
+        data: transformData(rows),
+        status: getRows.status,
+      };
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  return { data: null, status: 500 };
+};
+
 
 async function bufferToStream(buffer: Buffer) {
   const stream = new Readable();
@@ -146,4 +196,32 @@ export const sendFeedback = async (
     console.log('Unknown error');
     return { status: 500, error: 'Unknown error occurred' };
   }
+};
+
+export const sendContactFormData = async (
+  name: string,
+  message: string,
+) => {
+  const { sheets, spreadsheetId } = await initGoogleAPI(GOOGLE_SHEET_CONTACT_US_RANGE);
+
+  try {
+    if (!sheets) throw new Error('Server error');
+    const response = await sheets.spreadsheets.values.append({
+      spreadsheetId,
+      range: GOOGLE_SHEET_CONTACT_US_RANGE,
+      valueInputOption: 'USER_ENTERED',
+      requestBody: {
+        values: [[`${uuidv4()}`, name, message]],
+      },
+    });
+    return { data: response.data, status: response.status, error: '' };
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error);
+      return { status: 500, error: error.message };
+    } else {
+      console.log('Unknown error');
+    }
+  }
+  return { status: 500, error: '' };
 };
