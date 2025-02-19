@@ -4,7 +4,6 @@ import { initGoogleAPI } from '@/server-actions/google-sheets';
 import { v4 as uuidv4 } from 'uuid';
 import { Readable } from 'stream';
 
-
 type DataRow = string[];
 type Data = DataRow[];
 
@@ -31,7 +30,6 @@ const transformData = (data: Data): TransformedObject[] => {
 
   return result;
 };
-
 
 export const loadSellOffers = async () => {
   const { sheets, spreadsheetId, range } = await initGoogleAPI(GOOGLE_SHEET_SELLOFFERS_RANGE);
@@ -67,7 +65,7 @@ export const sendSellOffer = async (
       range: GOOGLE_SHEET_SELLOFFERS_RANGE,
       valueInputOption: 'USER_ENTERED',
       requestBody: {
-        values: [[Date.now(), quantity, price, link, contact, visible]],
+        values: [[`${uuidv4()}`, quantity, price, link, contact, visible]],
       },
     });
     return { status: sheetsRes.status, error: '' };
@@ -100,7 +98,6 @@ export const loadFeedback = async () => {
   return { data: null, status: 500 };
 };
 
-
 export const getQaData = async () => {
   const { sheets, spreadsheetId, range } = await initGoogleAPI(GOOGLE_SHEET_QA_RANGE);
 
@@ -123,7 +120,6 @@ export const getQaData = async () => {
 
   return { data: null, status: 500 };
 };
-
 
 async function bufferToStream(buffer: Buffer) {
   const stream = new Readable();
@@ -198,10 +194,7 @@ export const sendFeedback = async (
   }
 };
 
-export const sendContactFormData = async (
-  name: string,
-  message: string,
-) => {
+export const sendContactFormData = async (name: string, message: string) => {
   const { sheets, spreadsheetId } = await initGoogleAPI(GOOGLE_SHEET_CONTACT_US_RANGE);
 
   try {
