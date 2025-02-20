@@ -69,7 +69,12 @@ function BuyAndSell() {
 
         <div ref={sliderRef} className={styles.cards}>
           {sellOffers.map((buyCard, index) => (
-            <BuyCard key={index} quantity={buyCard.quantity} price={buyCard.price} />
+            <BuyCard
+              key={index}
+              quantity={buyCard.quantity}
+              price={buyCard.price}
+              link={buyCard.link}
+            />
           ))}
         </div>
 
