@@ -76,9 +76,6 @@ const NewsCardPopup: React.FC<NewsCardPopupProps> = ({ news, onClose }) => {
         />
         <p className={styles.popup__text}>{news.text}</p>
         <div className={styles.popup__bottom}>
-          <a className={styles.popup__link} href='#'>
-            READ MORE
-          </a>
           <div className={styles.socials__wrapper}>
             {socialLinks.map(({ key, url }) => (
               <Link
