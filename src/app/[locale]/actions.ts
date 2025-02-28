@@ -15,6 +15,7 @@ const GOOGLE_SHEET_SELLOFFERS_RANGE = process.env.GOOGLE_SHEET_SELLOFFERS_RANGE;
 const GOOGLE_SHEET_QA_RANGE = process.env.GOOGLE_SHEET_QA_RANGE;
 const GOOGLE_SHEET_CONTACT_US_RANGE = process.env.GOOGLE_SHEET_CONTACT_US_RANGE;
 const GOOGLE_SHEET_FEEDBACK_RANGE = process.env.GOOGLE_SHEET_FEEDBACK_RANGE;
+const GOOGLE_SHEET_NEWS_RANGE = process.env.GOOGLE_SHEET_NEWS_RANGE;
 
 const transformData = (data: Data): TransformedObject[] => {
   const headers: string[] = data[0];
@@ -78,6 +79,25 @@ export const sendSellOffer = async (
     }
   }
   return { status: 500, error: '' };
+};
+
+
+
+export const loadNews = async () => {
+  const { sheets, spreadsheetId, range } = await initGoogleAPI(GOOGLE_SHEET_NEWS_RANGE);
+  if (sheets) {
+    try {
+      const getRows = await sheets.spreadsheets.values.get({
+        spreadsheetId,
+        range,
+      });
+      console.log(getRows);
+      return { data: getRows.data.values as string[][], status: getRows.status };
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  return { data: null, status: 500 };
 };
 
 export const loadFeedback = async () => {

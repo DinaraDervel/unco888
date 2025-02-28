@@ -10,9 +10,19 @@ export interface RoadMapItem {
 }
 
 export const RoadMapData: RoadMapItem[] = [
+
     {
         id: 1,
         text: 'text_1',
+        year: '2015',
+        img1440: '/images/RoadMap/1440/photo1.png',
+        img760: '/images/RoadMap/760/1.png',
+        img390: '/images/RoadMap/390/1.png',
+        style: '',
+    },
+    {
+        id: 2,
+        text: 'text_2',
         year: '2016',
         img1440: '/images/RoadMap/1440/photo2.png',
         img760: '/images/RoadMap/760/2.png',
@@ -20,8 +30,8 @@ export const RoadMapData: RoadMapItem[] = [
         style: 'reverse',
     },
     {
-        id: 2,
-        text: 'text_2',
+        id: 3,
+        text: 'text_3',
         year: '2017',
         img1440: '/images/RoadMap/1440/photo3.png',
         img760: '/images/RoadMap/760/3.png',
@@ -29,8 +39,8 @@ export const RoadMapData: RoadMapItem[] = [
         style: '',
     },
     {
-        id: 3,
-        text: 'text_3',
+        id: 4,
+        text: 'text_4',
         year: '2018',
         img1440: '/images/RoadMap/1440/photo4.png',
         img760: '/images/RoadMap/760/4.png',
@@ -38,8 +48,8 @@ export const RoadMapData: RoadMapItem[] = [
         style: 'reverse',
     },
     {
-        id: 4,
-        text: 'text_4',
+        id: 5,
+        text: 'text_5',
         year: '2019',
         img1440: '/images/RoadMap/1440/photo5.png',
         img760: '/images/RoadMap/760/5.png',
@@ -48,8 +58,8 @@ export const RoadMapData: RoadMapItem[] = [
         
     },
     {
-        id: 5,
-        text: 'text_5',
+        id: 6,
+        text: 'text_6',
         year: '2019',
         img1440: '/images/RoadMap/1440/photo6.png',
         img760: '/images/RoadMap/760/6.png',
@@ -57,8 +67,8 @@ export const RoadMapData: RoadMapItem[] = [
         style: 'reverse',
     },
     {
-        id: 6,
-        text: 'text_6',
+        id: 7,
+        text: 'text_7',
         year: '2020',
         img1440: '/images/RoadMap/1440/photo7.png',
         img760: '/images/RoadMap/760/7.png',
@@ -66,8 +76,8 @@ export const RoadMapData: RoadMapItem[] = [
         style: '',
     },
     {
-        id: 7,
-        text: 'text_7',
+        id: 8,
+        text: 'text_8',
         year: '2022',
         img1440: '/images/RoadMap/1440/photo8.png',
         img760: '/images/RoadMap/760/8.png',
@@ -75,8 +85,8 @@ export const RoadMapData: RoadMapItem[] = [
         style: 'reverse',
     },
     {
-        id: 8,
-        text: 'text_8',
+        id: 9,
+        text: 'text_9',
         year: '2023',
         img1440: '/images/RoadMap/1440/photo9.png',
         img760: '/images/RoadMap/760/9.png',
@@ -84,8 +94,8 @@ export const RoadMapData: RoadMapItem[] = [
         style: '',
     },
     {
-        id: 9,
-        text: 'text_9',
+        id: 10,
+        text: 'text_10',
         year: '2024',
         img1440: '/images/RoadMap/1440/photo10.png',
         img760: '/images/RoadMap/760/10.png',
