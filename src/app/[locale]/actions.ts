@@ -128,6 +128,24 @@ async function bufferToStream(buffer: Buffer) {
   return stream;
 }
 
+declare global {
+  interface Window {
+    grecaptcha: any;
+  }
+}
+
+const executeRecaptcha = async (): Promise<string> => {
+  try {
+    const token = await window.grecaptcha.execute('YOUR_SITE_KEY', {
+      action: 'submit',
+    });
+    return token;
+  } catch (error) {
+    console.error('reCAPTCHA execution failed:', error);
+    throw error;
+  }
+};
+
 export const sendFeedback = async (
   name: string,
   message: string,
@@ -145,7 +163,7 @@ export const sendFeedback = async (
     if (photo) {
       const photoBuffer = Buffer.from(await photo.arrayBuffer());
       const photoStream = await bufferToStream(photoBuffer);
-
+      const recaptchaToken = await executeRecaptcha();
       const driveResponse = await drive?.files.create({
         requestBody: {
           name: `${submissionId}_${photo.name}`,
