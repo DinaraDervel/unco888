@@ -85,6 +85,20 @@ export const sendSellOffer = async (
 
 export const loadNews = async () => {
   const { sheets, spreadsheetId, range } = await initGoogleAPI(GOOGLE_SHEET_NEWS_RANGE);
+  if (sheets) {
+    try {
+      const getRows = await sheets.spreadsheets.values.get({
+        spreadsheetId,
+        range,
+      });
+      console.log(getRows);
+      return { data: getRows.data.values as string[][], status: getRows.status };
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  return { data: null, status: 500 };
+};
 
 export const loadFeedback = async () => {
   const { sheets, spreadsheetId, range } = await initGoogleAPI(GOOGLE_SHEET_FEEDBACK_RANGE);
