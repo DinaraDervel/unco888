@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { cn } from '@/functions/cn';
 import Image from 'next/image';
 import styles from './newsPopup.module.scss';
+import useSearchLinks from '@/hooks/useSearchLinks';
 
 interface NewsCardPopupProps {
   news: {
@@ -40,6 +41,8 @@ const transformGoogleDriveLink = (url: string) => {
 };
 
 const NewsCardPopup: React.FC<NewsCardPopupProps> = ({ news, onClose }) => {
+  const getSearchLinks = useSearchLinks;
+
   const handleBackgroundClick = (event: React.MouseEvent<HTMLDivElement>) => {
     if (event.target === event.currentTarget) {
       onClose();
@@ -74,7 +77,7 @@ const NewsCardPopup: React.FC<NewsCardPopupProps> = ({ news, onClose }) => {
           width={436}
           height={209}
         />
-        <p className={styles.popup__text}>{news.text}</p>
+        <p className={styles.popup__text}>{getSearchLinks(news.text, false, styles.links)}</p>
         <div className={styles.popup__bottom}>
           <div className={styles.socials__wrapper}>
             {socialLinks.map(({ key, url }) => (

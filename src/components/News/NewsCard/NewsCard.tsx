@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { cn } from '@/functions/cn';
 import styles from './newsCard.module.scss';
+import useSearchLinks from '@/hooks/useSearchLinks';
 
 interface NewsCardProps {
   tag1: string;
@@ -54,6 +55,8 @@ function NewsCard({
     return match ? `https://drive.google.com/uc?export=view&id=${match[1]}` : url;
   };
 
+  const getSearchLinks = useSearchLinks;
+
   const socialLinks = [
     { key: 'link_ds', url: link_ds },
     { key: 'link_tk', url: link_tk },
@@ -81,12 +84,13 @@ function NewsCard({
           width={436}
           height={209}
         />
-        <p className={styles.card__text}>{text}</p>
+        <p className={styles.card__text}>{getSearchLinks(text, false, styles.links)}</p>
       </div>
       <div className={styles.card__bottom}>
         <a className={styles.card__link} href='#'>
           READ MORE
         </a>
+
         {socialLinks.length > 0 && (
           <div className={styles.socials__wrapper}>
             {socialLinks.map(({ key, url }) => (
