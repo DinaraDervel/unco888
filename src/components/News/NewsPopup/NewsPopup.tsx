@@ -3,6 +3,7 @@ import { cn } from '@/functions/cn';
 import Image from 'next/image';
 import styles from './newsPopup.module.scss';
 import useSearchLinks from '@/hooks/useSearchLinks';
+import { formatTextWithPoints } from '@/functions/formatLinksStylesNews';
 
 interface NewsCardPopupProps {
   news: {
@@ -38,14 +39,6 @@ const socialIcons = {
 const transformGoogleDriveLink = (url: string) => {
   const match = url.match(/\/d\/(.*?)\//);
   return match ? `https://drive.google.com/uc?export=view&id=${match[1]}` : url;
-};
-
-const formatTextWithPoints = (text: string) => {
-  const textWithNewLines = text.replace(/(\d+\))/g, '\n$1');
-  const textWithoutExtraNewLines = textWithNewLines.replace(/\n+/g, '\n');
-  const lines = textWithoutExtraNewLines.split('\n');
-  const trimmedLines = lines.map((line) => line.trim()).filter((line) => line.length > 0);
-  return trimmedLines.join('\n');
 };
 
 const NewsCardPopup: React.FC<NewsCardPopupProps> = ({ news, onClose }) => {

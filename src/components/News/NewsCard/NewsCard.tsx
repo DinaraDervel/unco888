@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { cn } from '@/functions/cn';
 import styles from './newsCard.module.scss';
 import useSearchLinks from '@/hooks/useSearchLinks';
+import { formatTextWithPoints } from '@/functions/formatLinksStylesNews';
 
 interface NewsCardProps {
   tag1: string;
@@ -33,7 +34,12 @@ const socialIcons = {
   link_yt: 'youtube',
 };
 
-function NewsCard({
+const transformGoogleDriveLink = (url: string) => {
+  const match = url.match(/\/d\/(.*?)\//);
+  return match ? `https://drive.google.com/uc?export=view&id=${match[1]}` : url;
+};
+
+const NewsCard: React.FC<NewsCardProps> = ({
   tag1,
   tag2,
   tag3,
@@ -49,12 +55,7 @@ function NewsCard({
   link_tw,
   link_yt,
   onClick,
-}: NewsCardProps) {
-  const transformGoogleDriveLink = (url: string) => {
-    const match = url.match(/\/d\/(.*?)\//);
-    return match ? `https://drive.google.com/uc?export=view&id=${match[1]}` : url;
-  };
-
+}) => {
   const getSearchLinks = useSearchLinks;
 
   const socialLinks = [
@@ -67,6 +68,8 @@ function NewsCard({
     { key: 'link_tw', url: link_tw },
     { key: 'link_yt', url: link_yt },
   ].filter((item) => item.url);
+
+  const formattedText = formatTextWithPoints(text);
 
   return (
     <div className={styles.card} onClick={onClick}>
@@ -84,13 +87,14 @@ function NewsCard({
           width={436}
           height={209}
         />
-        <p className={styles.card__text}>{getSearchLinks(text, false, styles.links)}</p>
+        <p className={styles.card__text} style={{ whiteSpace: 'pre-wrap' }}>
+          {getSearchLinks(formattedText, false, styles.links)}
+        </p>
       </div>
       <div className={styles.card__bottom}>
         <a className={styles.card__link} href='#'>
           READ MORE
         </a>
-
         {socialLinks.length > 0 && (
           <div className={styles.socials__wrapper}>
             {socialLinks.map(({ key, url }) => (
@@ -109,6 +113,6 @@ function NewsCard({
       </div>
     </div>
   );
-}
+};
 
 export default NewsCard;
