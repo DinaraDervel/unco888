@@ -2,11 +2,8 @@ import Link from 'next/link';
 import React, { JSX } from 'react';
 import styles from '../components/RoadMap/roadMap.module.scss';
 
-const useSearchLinks = (
-  text: string,
-  isShowList: boolean = true,
-  linksColor: string = styles.linksUnco
-): JSX.Element => {
+
+const useSearchLinks = (text: string, isShowList?: boolean, linksColor?: string): JSX.Element => {
   const urlRegex = /(https?:\/\/[^\s]+)/g;
   const parts = text.split(urlRegex);
   const links = text.match(urlRegex) || [];

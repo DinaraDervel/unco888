@@ -40,6 +40,14 @@ const transformGoogleDriveLink = (url: string) => {
   return match ? `https://drive.google.com/uc?export=view&id=${match[1]}` : url;
 };
 
+const formatTextWithPoints = (text: string) => {
+  const textWithNewLines = text.replace(/(\d+\))/g, '\n$1');
+  const textWithoutExtraNewLines = textWithNewLines.replace(/\n+/g, '\n');
+  const lines = textWithoutExtraNewLines.split('\n');
+  const trimmedLines = lines.map((line) => line.trim()).filter((line) => line.length > 0);
+  return trimmedLines.join('\n');
+};
+
 const NewsCardPopup: React.FC<NewsCardPopupProps> = ({ news, onClose }) => {
   const getSearchLinks = useSearchLinks;
 
@@ -60,6 +68,8 @@ const NewsCardPopup: React.FC<NewsCardPopupProps> = ({ news, onClose }) => {
     { key: 'link_yt', url: news.link_yt },
   ].filter((item) => item.url);
 
+  const formattedText = formatTextWithPoints(news.text);
+
   return (
     <div className={styles.popup} onClick={handleBackgroundClick}>
       <div className={styles.popup__content}>
@@ -77,7 +87,9 @@ const NewsCardPopup: React.FC<NewsCardPopupProps> = ({ news, onClose }) => {
           width={436}
           height={209}
         />
-        <p className={styles.popup__text}>{getSearchLinks(news.text, false, styles.links)}</p>
+        <div className={styles.popup__text} style={{ whiteSpace: 'pre-wrap' }}>
+          {getSearchLinks(formattedText, false, styles.links)}
+        </div>
         <div className={styles.popup__bottom}>
           <div className={styles.socials__wrapper}>
             {socialLinks.map(({ key, url }) => (
