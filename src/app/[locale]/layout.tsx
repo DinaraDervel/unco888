@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
-import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: "Unco-888",
@@ -29,7 +28,6 @@ export default async function RootLayout({ children }: Props) {
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
-        <Script id="recaptcha" src={`https://www.google.com/recaptcha/api.js?render=6LfgOuoqAAAAALGHji-pcPGy98lgL09sltP810X8`} />
       </body>
     </html>
   );

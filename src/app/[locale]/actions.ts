@@ -148,29 +148,12 @@ async function bufferToStream(buffer: Buffer) {
   return stream;
 }
 
-declare global {
-  interface Window {
-    grecaptcha: any;
-  }
-}
-
-const executeRecaptcha = async (): Promise<string> => {
-  try {
-    const token = await window.grecaptcha.execute('6LfgOuoqAAAAALGHji-pcPGy98lgL09sltP810X8', {
-      action: 'submit',
-    });
-    return token;
-  } catch (error) {
-    console.error('reCAPTCHA execution failed:', error);
-    throw error;
-  }
-};
-
 export const sendFeedback = async (
   name: string,
   message: string,
   photo: File | null,
-  visible: 'FALSE' = 'FALSE'
+  visible: 'FALSE' = 'FALSE',
+  recaptchaToken: string
 ) => {
   const { sheets, spreadsheetId } = await initGoogleAPI();
   const { drive } = await initGoogleAPI();
@@ -179,11 +162,28 @@ export const sendFeedback = async (
   try {
     if (!sheets) throw new Error('Server error');
 
+    const verifyUrl = 'https://www.google.com/recaptcha/api/siteverify';
+    const recaptchaResponse = await fetch(verifyUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams({
+        secret: process.env.RECAPTCHA_SECRET_KEY || '',
+        response: recaptchaToken,
+      }),
+    });
+
+    const recaptchaData = await recaptchaResponse.json();
+
+    if (!recaptchaData.success) {
+      return { status: 400, error: 'reCAPTCHA verification failed' };
+    }
+
     let photoUrl = '';
     if (photo) {
       const photoBuffer = Buffer.from(await photo.arrayBuffer());
       const photoStream = await bufferToStream(photoBuffer);
-      const recaptchaToken = await executeRecaptcha();
       const driveResponse = await drive?.files.create({
         requestBody: {
           name: `${submissionId}_${photo.name}`,
