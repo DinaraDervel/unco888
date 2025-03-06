@@ -146,6 +146,7 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({ isOpen, onClose }) => {
             />
           </div>
         </div>
+        <div className="g-recaptcha" data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_TOKEN} />
         <footer className={styles.footer}>
           <label className={styles.container_agree} htmlFor='agree'>
             <input

@@ -29,7 +29,7 @@ export default async function RootLayout({ children }: Props) {
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
-        <Script id="recaptcha" src={`https://www.google.com/recaptcha/api.js?render=YOUR_SITE_KEY`} />
+        <Script id="recaptcha" src={`https://www.google.com/recaptcha/api.js?render=6LfgOuoqAAAAALGHji-pcPGy98lgL09sltP810X8`} />
       </body>
     </html>
   );

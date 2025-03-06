@@ -156,7 +156,7 @@ declare global {
 
 const executeRecaptcha = async (): Promise<string> => {
   try {
-    const token = await window.grecaptcha.execute('YOUR_SITE_KEY', {
+    const token = await window.grecaptcha.execute('6LfgOuoqAAAAALGHji-pcPGy98lgL09sltP810X8', {
       action: 'submit',
     });
     return token;
