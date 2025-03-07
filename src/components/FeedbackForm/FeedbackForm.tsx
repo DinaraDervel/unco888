@@ -7,6 +7,7 @@ import Button3 from '@/components/Button3/Button3';
 import styles from '@/components/FeedbackForm/FeedbackForm.module.scss';
 import { useRecaptcha } from '@/hooks/useRecaptcha';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { useMediaQuery } from 'react-responsive';
 
 type FeedbackFormProps = {
   isOpen: boolean;
@@ -28,6 +29,7 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({ isOpen, onClose }) => {
     message: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 760px)' })
 
   const closeModal = () => {
     setName('');
@@ -164,13 +166,15 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
         <div className={styles.recaptcha_container}>
-          <ReCAPTCHA
-            ref={recaptchaRef}
-            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_TOKEN!}
-            theme='dark'
-            onChange={(token) => setRecaptchaToken(token || '')}
-          />
-          {isLoading && <div className={styles.loading}>Loading reCAPTCHA...</div>}
+          {isLoading ?
+            (<div className={styles.loading}>Loading reCAPTCHA...</div>)
+          : (<ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_TOKEN!}
+              theme='dark'
+              size={isTabletOrMobile? 'compact' : 'normal'}
+              onChange={(token) => setRecaptchaToken(token || '')}
+            />)}
         </div>
         <footer className={styles.footer}>
           <label className={styles.container_agree} htmlFor='agree'>
