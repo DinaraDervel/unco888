@@ -24,7 +24,6 @@ const pluginConfig: CookieConsentConfig = {
     console.log('onConsent fired', cookie);
 
     // Обновляем Google Consent Mode в зависимости от выбранных категорий
-
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     window.gtag &&
       window.gtag('consent', 'update', {
