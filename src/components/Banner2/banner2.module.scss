@@ -1,0 +1,201 @@
+@use '../../styles/_var' as var;
+
+.container {
+    max-width: 1920px;
+    background: var.$bg-primary-gradient;
+    margin: 0 auto;
+    padding: 70px 159px 130px 159px;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.icon {
+    position: absolute;
+    right: 9%;
+    top: -30%;
+}
+
+.title {
+    position: relative;
+    width: max-content;
+    margin: 0 auto;
+    padding: 10px 0;
+    color: var.$gray;
+    text-align: center;
+    font-family: var.$font-michroma;
+    font-size: clamp(2.813rem, 1.042vw + 1.875rem, 3.125rem);
+    font-weight: 400;
+    line-height: 120%;
+    text-transform: uppercase;
+    span {
+        color: var.$white;
+    }
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    width: clamp(24.5rem, 24.167vw + 2.75rem, 31.75rem);
+    padding: 110px 48px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+    font-family: var.$font-montserrat;
+    ul {
+        padding-left: 20px;
+    }
+    li {
+        list-style: disc;
+    }
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 150px 12px;
+    border: 2px solid transparent;
+    background: linear-gradient(
+      262deg,
+      #f1bc87 -5.14%,
+      #aeaeae 26.16%,
+      #2a0d30 51.85%,
+      #2a0d30 76.69%,
+      #ffe998 111.43%
+    );
+    mask:
+      linear-gradient(#000 0 0) padding-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+
+.subtitle {
+    color: var.$white;
+    font-size: clamp(1.25rem, 0.833vw + 0.5rem, 1.5rem);
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.text {
+    color: var.$gray;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.caption {
+    color: var.$gray;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.button {
+    width: 380px;
+    height: 68px;
+    margin: 0 auto;
+}
+
+
+
+@media (max-width: 1440px) {
+    .container {
+        padding: 125px 99px 115px 99px;
+    }
+    .icon {
+        right: 8%;
+        top: -40%;
+    }
+    .title {
+        font-size: clamp(1.75rem, 2.5vw + 0.563rem, 2.813rem);
+    }
+    .card {
+        padding: 75px 40px;
+        justify-content: start;
+    }
+    .subtitle {
+        font-size: clamp(1.125rem, 0.294vw + 0.985rem, 1.25rem);
+    }
+    .text {
+        font-size: clamp(1.125rem, 0.294vw + 0.985rem, 1.25rem);
+        font-weight: 400;
+    }
+    .button {
+        height: 54px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .cards {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+        padding: 30px 20px 40px 40px;
+    }
+    .card::before {
+        border-radius: 12px 100px;
+    }
+}
+
+@media (max-width: 760px) {
+    .container {
+        padding: 120px 20px 90px 20px;
+        gap: 48px;
+    }
+    .icon {
+        position: absolute;
+        right: 5%;
+        top: -70%;
+    }
+    .title {
+        padding: 6px 0;
+        font-size: clamp(1.375rem, 1.622vw + 0.98rem, 1.75rem);
+    }
+    .subtitle {
+        font-size: clamp(1rem, 0.541vw + 0.868rem, 1.125rem);
+    }
+    .text {
+        font-size: clamp(1rem, 0.541vw + 0.868rem, 1.125rem);
+        font-weight: 400;
+    }
+    .button {
+        width: 100%;
+        max-width: 590px;
+    }
+}
+
+@media (max-width: 525px) {
+    .container {
+        padding: 40px 36px;
+        gap: 48px;
+    }
+    .icon {
+        position: absolute;
+        right: 10%;
+        top: -15%;
+    }
+    .title {
+        padding: 0;
+        max-width: 200px;
+    }
+    .cards {
+        gap: 20px;
+    }
+    .card {
+        padding: 48px 20px;
+    }
+    .card::before {
+        border-radius: 100px 12px;
+    }
+    .caption {
+        font-size: 16px;
+    }
+}

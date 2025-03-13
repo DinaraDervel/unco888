@@ -1,0 +1,189 @@
+{
+  "header": {
+    "links": {
+      "link_1": "Buy/Sell",
+      "link_2": "UFF",
+      "link_3": "Pitch-deck",
+      "link_4": "News",
+      "link_5": "Q&A",
+      "link_6": "Our Story",
+      "link_7": "UNCO Eco-System"
+    },
+    "button": "OUR NEWS"
+  },
+  "banner1": {
+    "subtitle": "Bearer option contract for stock of “UNCO Corp.” with NFT avatar",
+    "card_1": {
+      "subtitle": "C-Level",
+      "text": "SPECIAL OFFER for “c-level” in Finance or Food Retail / production / distribution. Profitable innovation, a seat on the Board and income with “UNCO Food Futures” products",
+      "link": "More details"
+    },
+    "card_2": {
+      "subtitle": "Pre - seed",
+      "text": "PreSeed. 4X+ in the next round*.",
+      "text_2": "RWA Fintech: service for micro-investments in retail food.",
+      "link": "More details"
+    },
+    "text": "NFT “UNCO888” and this website and all information there are for marketing purposes only. This website does not constitute a public offer. When exchanging for company shares, KYC is a mandatory procedure. UNCO Corp. and the UNCO Board have the right to refuse anyone and at any time the opportunity to become the owner of NFT “UNCO888” without giving any reason. All details are specified in the contract, which is an integral part of the NFT. If you have any questions feel free to contact the support service. This website is under development, the texts are being refined and corrected. Under no circumstances can this website be considered as investment advice, decision-making information, etc."
+  },
+  "banner2": {
+    "title": "NFT UNCO",
+    "card_1": {
+      "subtitle": "Active Role in Business",
+      "text": "Each NFT “UNCO888” is 1 vote in the UNCO Board for the current owner: for influencing strategy and business decisions with direct connection to management."
+    },
+    "card_2": {
+      "subtitle": "NFT ”UNCO888” grows with the  Company!",
+      "text_1": "It is combining short-term returns with long-term value.",
+      "text_2": "Up to 4x+* in the next round* or in P2P",
+      "text_3": "Always available for P2P"
+    },
+    "card_3": {
+      "subtitle": "“UNCO888” is a bearer option contract",
+      "text_1": "Can be exchanged once for shares in the company*",
+      "text_2": "Important: When exchanging for comp any shares, KYC is a mandatory process.*"
+    },
+    "button_text": "Buy UNCO888"
+  },
+  "news": {
+    "title": "NEWS"
+  },
+  "banner3": {
+    "title": "UNCO Food Futures",
+    "text1": "Food at up to twice cheaper",
+    "text2": "Not a paper but always a real food",
+    "text3": "Is a solution for earnings from fresh food distribution optimization ",
+    "text4": "Is a solution for savings in food retail",
+    "button": "Buy UNCO888"
+  },
+  "faq": {
+    "title": "Q&A",
+    "question1": "What is your return policy?",
+    "answer1": "We offer a 30-day money-back guarantee. If you're not satisfied with your purchase, you can return it  within 30 days for a full refund within 30 days for a full refund",
+    "question2": "Can I cancel or change my order?",
+    "answer2": "Please contact us as soon as possible if you need to cancel or make changes to your order. We will do our best to accommodate your request, but please note that we may not be able to make changes once an order has shipped.",
+    "question3": "What is your return policy?",
+    "answer3": "We offer a 30-day money-back guarantee. If you're not satisfied with your purchase, you can return it within 30 days for a full refund within 30 days for a full refund"
+  },
+  "c-level": {
+    "title": "FOR c-level",
+    "subtitle": "Innovation in access to real assets",
+    "cards": {
+      "card_1": "Our model combines sustainability, transparency and technological trends, providing you with new revenue streams and opportunities",
+      "card_2": "Place on the Board: advise and management",
+      "card_3": "Share of profits and share of  UNCO",
+      "card_4": "Collaboration and advise: increase your investment",
+      "card_5": "Invest in where you are professional"
+    },
+    "buttons": {
+      "button_1": "buy NFT “UNCO888”",
+      "button_2": "Download pitch"
+    }
+  },
+  "investors": {
+    "title": "For Angel Investors",
+    "title_1": "For",
+    "title_2": "Angel Investors",
+    "subtitle_1": "Investment income and development",
+    "subtitle_2": "of “UNCO Exchange” - the food investment platform",
+    "cards": {
+      "card_1": "Your next investment in digital assets linked to the real economy",
+      "card_2": "Place on the board: control and advise",
+      "card_3": "Share of  UNCO with an open exit option",
+      "card_4": "Team of professionals and AI ERP",
+      "card_5": "Interns from all over the World "
+    },
+    "buttons": {
+      "button_1": "buy NFT “UNCO888”",
+      "button_2": "Download pitch"
+    }
+  },
+  "feedback": {
+    "subtitle": "Feedback",
+    "button_text": "Leave a review"
+  },
+  "feedbackForm": {
+    "placeholderName": "Enter your name",
+    "labelPhoto": "Upload your photo",
+    "placeholderMessage": "Enter your message",
+    "labelName": "Your name",
+    "labelMessage": "Feedback",
+    "agreeText": "I agree with the Privacy policy on this resource",
+    "btnText": "SEND"
+  },
+  "buyandsell": {
+    "title": "you can buy and sell ",
+    "disclaimer": "As \"UNCO Eco-System\" develops with new collaborations, business results, etc., this may affect the price and supply of \"UNCO888\". Holders of \"UNCO888\" are free to sell and buy this NFT until the moment it is exchanged for company shares. Exchange of each NFT \"UNCO888\" could be only one time. For more details, read the option agreement.",
+    "button_text": "place offer",
+    "card": {
+      "quantity": "Quantity",
+      "price": "Price",
+      "button": "buy"
+    }
+  },
+  "sellForm": {
+    "placeholderQuantity": "Enter quantity for sale ",
+    "placeholderPrice": "Enter price for sale ",
+    "placeholderLink": "Add your link",
+    "placeholderContactInfo": "Enter your contact information ",
+    "labelQuantity": "Quantity for sale",
+    "labelPrice": "Price for sale",
+    "labelLink": "Your link to offer ",
+    "labelContactInfo": "Your contact information",
+    "agreeText": "I agree with the Privacy policy on this resource",
+    "btnText": "send"
+  },
+  "textRoadMap": {
+    "title": "OUR STORY",
+    "text_1": "Andrey Yusupov initiated the creation and headed a consumer cooperative with neighbors to jointly purchase products from farmers. The roles were distributed among the members of the cooperative: One takes the groceries today, another tomorrow",
+    "text_2": "Our successful experience quickly spread throughout the city, and many people asked for help in starting their own cooperatives. To simplify ordering, accounting, and document management, we organized the development of our first IT platform. Such cooperatives began to organize themselves in offices and factories where neighbors worked.",
+    "text_3": "The first office of our cooperative was opened. We are starting to actively invest in the development of IT: solutions for automating cross-docking, first- and last-mile delivery solutions appear, we've developed ordering terminals for offices and factories.",
+    "text_4": "In order to expand to other regions and countries, the commercial organization 'EdaEco.club'  was created. Branding, packaging, and many other marketing solutions have been developed, tested, and launched. We started home delivery. The first Eco-Points were opened - solutions for pickup orders in cafes.",
+    "text_5": "Andrey Yusupov created 'United Cooperatives' - the beginning of the UNCO story. Our first farm-to-table business in Germany was launched in Berlin: https://unco.club",
+    "text_6": "We have launched our new business solution: 'UNCO Farmer's Corner'. A new version of our IT solution was released.",
+    "text_7": "Our first 'white label' launched in Germany.",
+    "text_8": "Launched in Italy 'white label', the development of a conceptually new eco-friendly and worldwide available business solution and IT solution has begun.",
+    "text_9": "We launched the 'white label' in Serbia. The platform https://unco.market - the first solution within the concept 'UNCO Global' goes online.",
+    "text_10": "First paying customer in the \"UNCO Food Futures for Food Retail\" product. The launch of the Freemium \"UNCO eco-system\" has begun:  https://foodfutures.net  https://foodfutures.club  https://unco.market  https://foodnft.org  https://unco.bio  https://unco.trade"
+  },
+  "contact": {
+    "title": "Please feel free to contact us with any questions",
+    "subtitle": "Write your request, a convenient way of communicationand we will answer you",
+    "placeholderEmail": "Enter email",
+    "btnText": "Contact us"
+  },
+  "contactForm": {
+    "placeholderMessage": "Enter your message",
+    "labelName": "Your email",
+    "labelMessage": "Message text",
+    "agreeText": "I agree with the Privacy policy on this resource",
+    "btnText": "SEND"
+  },
+  "services": {
+    "title": "Eco - System"
+  },
+  "footer": {
+    "title": "Contact us:",
+    "links": {
+      "link_1": "Buy/Sell",
+      "link_2": "UFF",
+      "link_3": "Pitch-deck",
+      "link_4": "News",
+      "link_5": "Q&A",
+      "link_6": "Our Story",
+      "link_7": "UNCO Eco-System",
+      "link_8": "Impressum",
+      "link_9": "Datenschutz",
+      "link_10": "Rückgaberecht",
+      "link_11": "AGB"
+    },
+    "text": {
+      "text_1": "All rights reserved. Any parts of this presentation are subject to change by the owner at any time without prior notice. This presentation or parts of it does not form a business proposal or part of a contract. Items are approximate and subject to negotiation. Any copying and use for commercial purposes requires the written consent of the copyright holder.",
+      "text_2": "*All figures, designations, abbreviations and data in this web pages are solely for the purpose of explaining the pattern of operation, are not based on actual facts and events and may not be used for any other purpose (including but not limited to: investment decisions, buying, education, predictions) other than a general understanding of the business model. Trading services are provided by third-party companies under the relevant agreements and licenses of the respective countries where the sales and other transactions take place. Past performance is not a reliable indicator of future results. Your returns may increase or decrease as a result of currency fluctuations. Your capital is at risk. View Trading Disclosures  on the websites of the respective trading platforms."
+    }
+  },
+  "not found": {
+    "text": "Page not found",
+    "button": "Go to main page"
+  }
+}
