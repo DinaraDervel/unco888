@@ -12,7 +12,7 @@ import { FeedbackRecords, transformFeedback } from '@/functions/transformFeedbac
 
 interface FeedbackItem {
   name: string;
-  message: string,
+  message: string;
   photo: string;
 }
 
@@ -36,7 +36,7 @@ const Feedback: React.FC = () => {
         if (res && res.status === 200 && res.data) {
           setfeedbackData(transformFeedback(res.data));
         }
-        console.log(res.data);
+        //console.log(res.data);
       } catch (error) {
         console.log(error);
       }

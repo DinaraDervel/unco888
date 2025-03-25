@@ -17,7 +17,6 @@
   font-family: var.$font-montserrat;
   position: relative;
   max-width: 1920px;
-  height: 1113px;
   background: var.$bg-primary-gradient;
 
   &::after {
@@ -93,6 +92,7 @@
   align-items: center;
   gap: 30px;
   padding-top: 98px;
+  padding-bottom: 152px;
 
   @media screen and (max-width: 1700px) {
     padding-top: 125px;
@@ -105,9 +105,10 @@
   }
 
   @media screen and (max-width: 1440px) {
+    padding-bottom: 0;
     gap: 60px;
     max-width: 1174px;
-    position: relative; 
+    position: relative;
 
     &::after {
       content: '';
@@ -169,11 +170,11 @@
 
 .block {
   display: flex;
-  gap: 32px; 
+  gap: 32px;
   justify-content: center;
   align-items: center;
   min-height: 226px;
-  height: auto; 
+  height: auto;
   padding: 40px 52px;
   background-color: rgba(20, 7, 31, 1);
   border-top: 2px solid;
@@ -212,7 +213,6 @@
   }
 
   @media screen and (max-width: 767px) {
-    
     width: 100%;
     padding: 32px 40px;
     position: relative;
@@ -297,14 +297,14 @@
   color: var.$gray;
   font-size: 24px;
   font-weight: 600;
-  line-height: 1.6; 
+  line-height: 1.6;
   transition: all 0.3s ease;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
 
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: 1701px) {
     -webkit-line-clamp: 3;
   }
 

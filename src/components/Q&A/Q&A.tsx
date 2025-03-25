@@ -13,9 +13,9 @@ const QandA: React.FC = () => {
   const [activeBlock, setActiveBlock] = useState<number | null>(null);
 
   const [response, setResponse] = useState<TransformedObject[] | null>([]);
-  const { locale } = useParams();
+  //const { locale } = useParams();
 
-  console.log(locale);
+  //console.log(locale);
 
   const handleClick = (e: React.MouseEvent, index: number) => {
     e.preventDefault();

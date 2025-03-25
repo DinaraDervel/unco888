@@ -59,9 +59,7 @@ function Header({ data }: Props) {
           >
             <div ref={buttonRef} className={styles.container}>
               <LanguageButton
-                onClick={() => {
-                  isOpenLanguage ? handleCloseMenu() : setIsOpenLanguage(true);
-                }}
+                onClick={() => (isOpenLanguage ? handleCloseMenu() : setIsOpenLanguage(true))}
               />
             </div>
             <LanguageMenu

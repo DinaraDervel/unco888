@@ -37,7 +37,7 @@ const News: React.FC = () => {
         if (res && res.status === 200 && res.data) {
           setNews(transformNews(res.data));
         }
-        console.log(res.data);
+        //console.log(res.data);
       } catch (error) {
         console.log(error);
       }

@@ -20,7 +20,7 @@ function BuyAndSell() {
         if (res && res.status === 200 && res.data) {
           setSellOffers(transformSellOffers(res.data));
         }
-        console.log(res.data);
+        //console.log(res.data);
       } catch (error) {
         console.log(error);
       }
@@ -103,8 +103,8 @@ function BuyAndSell() {
           {t('button_text')}{' '}
         </button>
       </div>
-        <SellForm isOpen={isModalOpen} onClose={handleCloseModal} />
-     </div>
+      <SellForm isOpen={isModalOpen} onClose={handleCloseModal} />
+    </div>
   );
 }
 
