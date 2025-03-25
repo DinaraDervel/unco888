@@ -1,5 +1,5 @@
 "use client";
-import React, { ReactElement, useState, useEffect } from "react";
+import React, { ReactElement, useState, useEffect, useCallback } from 'react';
 import Modal from "react-modal";
 import styles from "./ModalComponent.module.scss";
 interface ChildrenProps {
@@ -21,21 +21,21 @@ const ModalComponent: React.FC<ModalComponentProps> = ({
 }) => {
     const [isClosing, setIsClosing] = useState(false);
 
-    const handleKeyDown = (event: KeyboardEvent) => {
-        if (event.key === "Escape") {
-            handleClose();
-        }
-    };
-
-    const handleClose = () => {
+    const handleClose = useCallback(() => {
         setIsClosing(true);
         setTimeout(() => {
             setIsClosing(false);
             onRequestClose();
         }, 600);
-    };
+    }, [onRequestClose, setIsClosing]);
 
     useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === "Escape") {
+                handleClose();
+            }
+        };
+
         if (isOpen) {
             document.addEventListener("keydown", handleKeyDown);
         }
@@ -43,7 +43,7 @@ const ModalComponent: React.FC<ModalComponentProps> = ({
         return () => {
             document.removeEventListener("keydown", handleKeyDown);
         };
-    }, [isOpen]);
+    }, [isOpen, handleClose]);
 
     const overlayClassName = `${styles.overlay} ${isClosing ? styles.closing : ''}`;
     const contentClassName = `${styles.content} ${isClosing ? styles.closing : ''}`;
