@@ -8,6 +8,7 @@ import styles from '@/components/FeedbackForm/FeedbackForm.module.scss';
 import { useRecaptcha } from '@/hooks/useRecaptcha';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useMediaQuery } from 'react-responsive';
+import Image from 'next/image';
 
 type FeedbackFormProps = {
   isOpen: boolean;
@@ -129,7 +130,13 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({ isOpen, onClose }) => {
             <div className={`${styles.input} ${styles.photo}`}>
               <label className={styles.photo_label} htmlFor='photo'>
                 <div className={styles.photo_icon}>
-                  <img src='/images/Feedback/add-a-photo-outline.svg' alt='' />
+                  <Image
+                    src='/images/Feedback/add-a-photo-outline.svg'
+                    alt=''
+                    sizes='31px'
+                    fill
+                    className={styles.photo_icon_image}
+                  />
                 </div>
                 {photo ? <></> : <p className={styles.photo_text}>{t('labelPhoto')}</p>}
               </label>
