@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Q&A.module.scss';
 import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
+//import { useParams } from 'next/navigation';
 import { getQaData, TransformedObject } from '@/app/[locale]/actions';
 import useSearchLinks from '@/hooks/useSearchLinks';
 
