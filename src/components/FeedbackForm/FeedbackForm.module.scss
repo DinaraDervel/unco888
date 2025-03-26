@@ -240,8 +240,14 @@
 }
 
 .photo_icon {
+  margin: 0 auto;
+  position: relative;
+  width: 31px;
   height: 31px;
-  text-align: center;
+
+  .photo_icon_image {
+    object-fit: contain;
+  }
 }
 
 .photo_name_container {
