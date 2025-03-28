@@ -204,7 +204,7 @@
   }
 
   @media screen and (min-width: 1001px) and (max-width: 1255px) {
-    max-width: 1000px;
+    max-width: 966px;
     justify-content: space-between;
   }
 
@@ -227,11 +227,11 @@
 
   @media screen and (max-width: 510px) {
     gap: 74px;
-    max-width: 350px;
+    max-width: 330px;
   }
 
-  @media screen and (max-width: 390px) {
-    max-width: 350px;
+  @media (max-width: 390px) {
+    width: clamp(19.375rem, 120vw - 6.125rem, 23.125rem);
   }
 }
 
