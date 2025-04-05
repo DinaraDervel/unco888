@@ -55,18 +55,18 @@ function Footer({ data }: Props) {
           </div>
           <div className={styles.info}>
             <div className={styles.contacts}>
-              <Link href='tel:+4915777074889' className={styles.phone}>
+              {/* <Link href='tel:+4915777074889' className={styles.phone}>
                 +49 157 77074889
-              </Link>
-              <Link href='mailto:cvo@unco.club' className={styles.email}>
-                cvo(at)unco.club
+              </Link> */}
+              <Link href='mailto:ac@foodfutures.net' className={styles.email}>
+                ac(at)foodfutures.net
               </Link>
               <Link
-                href='https://maps.google.com/?q=Schönenberger Straße 49, 53783 Eitorf, Germany'
+                href='https://maps.google.com/?q=Mikonkatu 8 A, 00100 HELSINKI Finland'
                 target='_blank'
                 className={styles.address}
               >
-                UNCO Club
+                Discovery Freshness Club
               </Link>
             </div>
 
