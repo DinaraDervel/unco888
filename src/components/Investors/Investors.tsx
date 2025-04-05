@@ -36,7 +36,7 @@ function Investors() {
       <div className={styles.flare}></div>
       <div className={styles.buttons}>
         <Button link='#buy' text={t('buttons.button_1')} />
-        <Button2 link='' text={t('buttons.button_2')} />
+        <Button2 link='/files/UNCO_Food_Futures_en_unco888_pre-seed.pdf' text={t('buttons.button_2')} />
       </div>
     </section>
   );

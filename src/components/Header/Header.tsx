@@ -14,6 +14,7 @@ import Button from '../Button/Button';
 export type ArrProps = {
   href: string;
   text: string;
+  isDownloadable?: boolean;
 };
 
 type Props = {
