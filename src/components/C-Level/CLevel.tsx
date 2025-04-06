@@ -35,7 +35,7 @@ function CLevel() {
 </span>
       <div className={styles.buttons}>
         <Button link='#buy' text={t('buttons.button_1')} />
-        <Button2 link='' text={t('buttons.button_2')} />
+        <Button2 link='/files/UNCO_digital_transformation_for_food_retail.pdf' text={t('buttons.button_2')}/>
       </div>
     </section>
   );
