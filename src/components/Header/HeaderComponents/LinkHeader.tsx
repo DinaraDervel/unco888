@@ -32,20 +32,34 @@ export default function LinkHeader({ links, style, onClick, isOpenBurger }: Prop
         <ButtonHeader style={'close_icon'} onClick={onClick as () => void | undefined} />
       )}
       <ul className={styles.navigation}>
-        {links.map(({ text, href }, index) => (
+        {links.map(({ text, href, isDownloadable }, index) => (
           <li key={text}>
-            <Link
-              ref={setLinkRef(index)}
-              className={styles.link}
-              href={href}
-              onClick={(e) => {
-                e.stopPropagation();
-                scrollToSection(index);
-                if (onClick) onClick();
-              }}
-            >
-              {text}
-            </Link>
+            {isDownloadable ? (
+              <a
+                className={styles.link}
+                href={href}
+                download
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (onClick) onClick();
+                }}
+              >
+                {text}
+              </a>
+            ) : (
+              <Link
+                ref={setLinkRef(index)}
+                className={styles.link}
+                href={href}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  scrollToSection(index);
+                  if (onClick) onClick();
+                }}
+              >
+                {text}
+              </Link>
+            )}
           </li>
         ))}
       </ul>

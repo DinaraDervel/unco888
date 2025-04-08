@@ -4,7 +4,6 @@ import { useTranslations } from 'next-intl';
 import { useState, useRef, useEffect } from 'react';
 import styles from './buyAndSell.module.scss';
 import BuyCard from './BuyCard/BuyCard';
-import ModalComponent from '../ModalСomponent/ModalСomponent';
 import SellForm from '../SellForm/SellForm';
 import { SellOffersRecords, transformSellOffers } from '@/functions/transformSellOffers';
 import { loadSellOffers } from '@/app/[locale]/actions';
@@ -21,7 +20,7 @@ function BuyAndSell() {
         if (res && res.status === 200 && res.data) {
           setSellOffers(transformSellOffers(res.data));
         }
-        console.log(res.data);
+        //console.log(res.data);
       } catch (error) {
         console.log(error);
       }
@@ -104,10 +103,7 @@ function BuyAndSell() {
           {t('button_text')}{' '}
         </button>
       </div>
-
-      <ModalComponent isOpen={isModalOpen} onRequestClose={handleCloseModal}>
-        <SellForm onClose={handleCloseModal} />
-      </ModalComponent>
+      <SellForm isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   );
 }

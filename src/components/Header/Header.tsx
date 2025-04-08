@@ -14,6 +14,7 @@ import Button from '../Button/Button';
 export type ArrProps = {
   href: string;
   text: string;
+  isDownloadable?: boolean;
 };
 
 type Props = {
@@ -59,9 +60,7 @@ function Header({ data }: Props) {
           >
             <div ref={buttonRef} className={styles.container}>
               <LanguageButton
-                onClick={() => {
-                  isOpenLanguage ? handleCloseMenu() : setIsOpenLanguage(true);
-                }}
+                onClick={() => (isOpenLanguage ? handleCloseMenu() : setIsOpenLanguage(true))}
               />
             </div>
             <LanguageMenu

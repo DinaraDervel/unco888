@@ -14,7 +14,7 @@ export async function GetFooterData() {
       { text: t('links.link_7'), href: '#services' },
       { text: t('links.link_8'), href: 'https://club.unco.market/files/Impressum.pdf' },
       { text: t('links.link_9'), href: 'https://club.unco.market/files/Datenschutz.pdf' },
-      { text: t('links.link_10'), href: 'https://club.unco.market/files/Ru%CC%88ckgaberecht.pdf' },
+      // { text: t('links.link_10'), href: 'https://club.unco.market/files/Ru%CC%88ckgaberecht.pdf' },
       { text: t('links.link_11'), href: 'https://club.unco.market/files/AGB.pdf' },
     ],
   };

@@ -16,19 +16,15 @@ const RoadMap = () => {
 
   const { width } = useWindowSize();
 
-  const updateImageSize = () => {
-    if (width < 390) {
-      setImageSize('img390');
-    } else if (width < 760) {
-      setImageSize('img760');
-    } else {
-      setImageSize('img1440');
-    }
-  };
-
   useEffect(() => {
     if (width) {
-      updateImageSize();
+        if (width < 390) {
+          setImageSize('img390');
+        } else if (width < 760) {
+          setImageSize('img760');
+        } else {
+          setImageSize('img1440');
+        }
     }
   }, [width]);
 
