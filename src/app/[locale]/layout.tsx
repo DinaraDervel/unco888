@@ -48,3 +48,15 @@ export default async function RootLayout({ children }: Props) {
     </html>
   );
 }
+
+export async function generateStaticParams() {
+  return [
+    { locale: 'en' },
+    { locale: 'ru' },
+    { locale: 'de' },
+    { locale: 'es' },
+    { locale: 'fr' },
+    { locale: 'it' },
+    { locale: 'ua' },
+  ];
+}
